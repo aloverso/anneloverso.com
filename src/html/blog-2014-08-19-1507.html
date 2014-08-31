@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="
+		bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="
+		font-awesome/css/font-awesome.css" />
+		<link type="text/css" rel="stylesheet" media="screen" href="github-commit-history/demo/style.css">
+		<style>
+			#blogpost{
+				width: 100%;
+				height:100%;
+				padding: 10px;
+				margin-top:8px;
+				margin-bottom:8px;
+				background-color: #E8E8E8;
+				background-image: none;
+				font-size:16px;
+				font-family:times;
+			}
+			#title{
+				font-family:Cambria;
+				font-size:48px;
+				background-color: #FF9966;
+				padding: 8px;
+			}
+			#he{
+				margin: 8px;
+			}
+			#date{
+				background-color: #FFCC99;
+				font-family: monospace;
+				font-size:16px; 
+				text-align: right;
+				right-margin:20px;
+				padding: 8px;
+			}
+			#snippet{
+				background-color: #E8E8E8;
+				margin-left:16px;
+				text-align: center;
+				padding: 5px;
+
+			}
+			#pagename{
+				font-color:#FFFFFF;
+				font-size:32px;
+			}
+			#pagename.hover{
+				font-color:#FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<a id="top"></a>
+		<header class="navbar navbar-inverse navbar-static-top"> 
+			<div class="navbar-inner">
+				<div class="container">
+					<nav>
+						<ul class="nav nav-pills nav-pull-left">
+							<li><a href="index.html"><div id="pagename"><font color="#FFFFFF"><b>Anne LoVerso</b></font></div></a></li>
+						</ul>
+						<ul class="nav nav-pills pull-right"> 
+							<li class="active"><a href="index.html"><div title="Home"><i class="fa fa-home fa-3x"></i></div></a></li>
+							<li><a href="about.html"><div title="About"><i class="fa fa-info fa-3x"></i></div></a></li>
+							<li><a href="portfolio.html"><div title="Portfolio"><i class="fa fa-briefcase fa-3x"></i></div></a></li>
+							<li><a href="contact.html"><div title="Contact"><i class="fa fa-envelope fa-3x"></i></div></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		</br>
+
+		<div class="container">
+			<div class="row">
+				<div class="span8">
+					<div id="blogpost">
+						<a href="index.html#blog-2014-08-19-1507" style="text-decoration: none"><font color="#000000"><div id="title">Readable Code is better than Sexy Code</div></a>
+						<div id="date">August 19, 2014 15:07</div>
+						</br>
+						<p>Early in my internship, I had the dilemma of choosing between two coding practices
+						that technically had had the exact same function, but looked different.  Take a look:</p>
+
+						<h4>Option 1:</h4>
+						<pre><code>
+if (deployments->pdata[0]==booted_deployment)
+  {
+    defaultBootMessage = "";
+    defaultInstruct = "Use command 'rpm-ostree rollback' to switch defaults\n";
+  }
+else
+  {
+    defaultBootMessage = " not";
+    defaultInstruct = "Use command 'rpm-ostree rollback' to make it default\n";
+  }
+
+g_print ("You are%s booted into the default deployment", defaultBootMessage);
+						</code></pre>
+										 
+						<h4>Option 2:</h4>
+						<pre><code>
+defaultBootMessage = (deployments->pdata[0]==booted_deployment) ? "" : " not";
+defaultInstruct = (deployments->pdata[0]==booted_deployment) 
+	? "Use command 'rpm-ostree rollback' to switch defaults\n"
+	: "Use command 'rpm-ostree rollback' to make it default\n";
+
+g_print ("You are%s booted into the default deployment", defaultBootMessage);
+						</code></pre>
+
+						<p>Which is better?  I was drawn immediately towards Option 2.  Look how sexy it is!
+						Just two small lines of code, making use of the efficient ternary operator.  Also, those two little lines showcased my incredible programming skills in knowing what a ternary operator was.  It was small, concise, and got the job done.  Such sexy, efficient use of space!</p>
+						
+						<p>I've since learned to sway away from that kind of thinking.  I've learned that Option 1 is inherently a better choice because of a saying my dad likes to repeat.  It goes something like "Code gets written once, and read a thousand times."  What that means is that when coding, you shouldn't take shortcuts to make the one writing session easier.  You should write in a way to make those thousand reads easier. </p>
+
+						<p>Because a year from now, when I look at those ternary operators, I'd have to squint for a bit, parse it in my head, and mentally set my variables to the right outcome.  And then do it again.  And I might do that wrong, or lose track of something, and waste time and thinking power on something insubstantial compared to whatever bug I'm tracking.  Not only that, but in mentioning debugging, that ternary operator makes a small logic error a lot harder to see than when it's all out in the open under those big if/else braces.</p>
+
+						<p>Lesson here: write for future you, and future strangers reading your code.  Be nice to them.</p>
+						
+						<p> Of course, the trick here was, neither of these two options is better, because they both utilize inserting conditionalized words into a complete sentence, breaking the <a href="http://www.gnu.org/prep/standards/standards.html#Internationalization">GNU Coding Standards' internationalization guidelines</a> and making any kind of foreign-language translation of this program unreadable.</p>
+						
+					</div>
+				</div>
+	
+				<div class="span4">
+					<div id="he"><h2>Quick Facts</h2></div>
+					<div id="snippet">
+						<b>Anne LoVerso</b>
+					</div>
+					<div id="snippet">
+						Olin College of Engineering c/o 2017
+					</div>
+					<div id="snippet">
+						Electrical and Computer Engineering major
+					</div></br>
+					<div id="snippet">
+						Red Hat Summer 2014 Intern
+					</div></br>
+					<div id="snippet">
+						Passionate about FOSS & women in STEM
+					</div></br>
+					<div id="snippet">
+						Avid rock climber and aerialist
+					</div></br>
+
+					<div id="he"><h2>Quick Links</h2></div>
+					<div id="snippet">
+						Resume
+					</div></br>
+					<a href="https://github.com/aloverso"><div id="snippet">
+						Github
+					</div></a></br>
+					<a href="http://www.linkedin.com/pub/anne-loverso/83/ab8/818"><div id="snippet">
+						LinkedIn
+					</div></a></br>
+					<a href="contact.html"><div id="snippet">
+						Contact
+					</div></a></br>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

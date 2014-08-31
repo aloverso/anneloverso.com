@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="
+		bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link type="text/css" rel="stylesheet" media="screen" href="github-commit-history/demo/style.css">
+		<style>
+			#linky {color:black;}
+			#linky:hover{color:#003399;}
+			#pagename{
+				font-color:#FFFFFF;
+				font-size:32px;
+			}
+			#pagename.hover{
+				font-color:#FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<a id="top"></a>
+		<header class="navbar navbar-inverse navbar-static-top"> 
+			<div class="navbar-inner">
+				<div class="container">
+					<nav>
+						<ul class="nav nav-pills nav-pull-left">
+							<li><a href="index.html"><div id="pagename"><font color="#FFFFFF"><b>Anne LoVerso</b></font></div></a></li>
+						</ul>
+						<ul class="nav nav-pills pull-right"> 
+							<li class="active"><a href="index.html"><div title="Home"><i class="fa fa-home fa-3x"></i></div></a></li>
+							<li><a href="about.html"><div title="About"><i class="fa fa-info fa-3x"></i></div></a></li>
+							<li><a href="portfolio.html"><div title="Portfolio"><i class="fa fa-briefcase fa-3x"></i></div></a></li>
+							<li><a href="contact.html"><div title="Contact"><i class="fa fa-envelope fa-3x"></i></div></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		</br>
+
+		<div class="container">
+			<div class="row">
+				<div class="span4">
+					<div id="linky">
+						<a href="http://www.linkedin.com/pub/anne-loverso/83/ab8/818"><i class="fa fa-linkedin-square fa-4x"></i></div><b>Connect on LinkedIn</b></a>
+					</div>
+				<div class="span4">
+					<div id="linky">
+						<a href="https://github.com/aloverso"><i class="fa fa-github-square fa-4x"></i></div><b>Explore my GitHub projects</b></a>
+				</div>
+			</div>
+
+			</br>
+			</br>
+
+			<h3>Send e-mail to <a href="mailto:anne.loverso@students.olin.edu?Subject=Hello" target="_top">
+			anne.loverso@students.olin.edu</a>:</h3>
+
+			<form action="MAILTO:anne.loverso@students.olin.edu" method="post" enctype="text/plain">
+			<div class="row">
+				<div class="span6">
+					<b>Name:</b><br>
+					<input type="text" name="name" style="width: 350px;"><br>
+					</br>
+					<b>E-mail:<b><br>
+					<input type="text" name="mail" style="width: 350px"><br>
+				</div>
+				<div class="span6">
+					<b>Comment:</b><br>
+						<textarea id="data" style="width: 400px; height: 100px" rows="10" cols="80"></textarea>
+				</div>
+			</div>
+
+			<input type="submit" value="Send">
+			<input type="reset" value="Reset">
+			</form>
+		</div>
+	</body>
+</html>
