@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Blog</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css" />
+		<link type="text/css" rel="stylesheet" media="screen" href="github-commit-history/demo/style.css">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<style>
+			body {background-color: #F3F3F3}
+			html { 
+			  overflow-y: scroll; 
+			}
+
+			.blogpost{
+				width: 100%;
+				height:100%;
+				padding: 18px 24px;
+				margin-top:8px;
+				margin-bottom:8px;
+				background-color: white;
+				background-image: none;
+				font-size:15px;
+				border-radius: 15px;
+				-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+				-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+				box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+			}
+			.title{
+				font-family:Cambria;
+				font-size:32px;
+				background-color: #a1b6d1;/*#81aad2; /*#c1c2cf; */
+				padding: 14px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+			.he{
+				position: fixed;
+				margin-left: 36px;
+			}
+			.date{
+				background-color: #d1deed; /*#b7d3ed; #eaeaed;*/
+				font-family: monospace;
+				font-size:16px; 
+				text-align: right;
+				right-margin:20px;
+				padding: 10px;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+			.snippet{
+				position: fixed;
+				background-color: white;
+				margin-left:36px;
+				text-align: center;
+				padding: 8px 10px;
+				border-radius: 8px;
+				-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+				-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+				box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+			}
+			#pagename{
+				font-color:#FFFFFF;
+				font-size:34px;
+			}
+			#pagename.hover{
+				font-color:#FFFFFF;
+			}
+			.top-link-block {
+			    position: fixed; /* keeps it on the bottom once in view */
+			    bottom: 20px;
+			    right: 10px;
+			}
+		</style>
+
+		<script language="JavaScript" type="text/javascript">
+
+		if (document.getElementById) {
+		document.writeln('<style type="text/css"><!--')
+		document.writeln('.texter {display:none} @media print {.texter {display:block;}}')
+		document.writeln('//--></style>') }
+
+		function openClose(theID) 
+		  {
+			if (document.getElementById(theID).style.display == "block") 
+			  {
+				document.getElementById(theID).style.display = "none" 
+			  }
+			else
+			  {  
+				document.getElementById(theID).style.display = "block" 
+			  } 
+		  }
+
+
+		document.addEventListener('DOMContentLoaded', function() {
+   			var x = document.getElementsByClassName("title");
+
+
+   			document.getElementById('log').innerHTML += "<h4>Archive ("+x.length+")</h4>";
+		    for (i=0; i<x.length; i++) {
+		    	var link = x[i].innerHTML.replace(/\s/g, '');
+		    	document.getElementById('log').innerHTML += '<div align="left"><a href=#'+link+'> <i class="fa fa-caret-right"></i> '+x[i].innerHTML+'</a></div></br>';
+		    }
+		}, false);
+
+		</script>
+
+
+	</head>
+	<body>
+		<a id="top"></a>
+		<header class="navbar navbar-inverse navbar-static-top"> 
+			<div class="navbar-inner">
+				<div class="container">
+					<nav>
+						<ul class="nav nav-pills nav-pull-left">
+							<li><a href="index.html"><div id="pagename"><font style="Alpha54" color="#FFFFFF"><b>Anne LoVerso</b></font></div></a></li>
+						</ul>
+						<ul class="nav nav-pills pull-right"> 
+							<li><a href="index.html"><div title="Home"><i class="fa fa-home fa-3x"></i></div></a></li>
+							<li><a href="about.html"><div title="About"><i class="fa fa-info-circle fa-3x"></i></div></a></li>
+							<li><a href="portfolio.html"><div title="Portfolio"><i class="fa fa-briefcase fa-3x"></i></div></a></li>
+							<li><a href="contact.html"><div title="Contact"><i class="fa fa-envelope fa-3x"></i></div></a></li>
+							<li class="active"><a href="blog.html"><div title="Blog"><i class="fa fa-edit fa-3x"></i></div></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		</br>
+
+		<span class="top-link-block" >
+		    <a href="#top" class="btn btn-large" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+		        <i class="fa fa-arrow-up fa-2x"></i> Back to Top
+		    </a>
+		</span>
+
+		<div class="container">
+			<div class="row">
+				<div class="span8">
+					<!--
+					Python 2 vs 3
+					print function good for beginners
+					annoying parentheses print and list for range
+					int division good for beginners hard when you go to c or anything else
+					input is very good but i hate using input anyways
+					pattern not available sad face
+					if beginner learn python 3
+					if advanced start with 2
+					but everyone should really know both
+					unicode support is good since this is an international class
+
+					other 
+					intlnat teaching
+					python common errors
+					-->
+					<a id="GoodMealsIFoundWhenCookingforMyself"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a7')" style="cursor:hand; cursor:pointer"><div class="title">Good Meals I Found When Cooking for Myself</div></div>
+						<div class="date">April 6, 2015 22:11</div>
+						</br>
+
+						<p><a href="http://www.reddit.com/r/comics/comments/2qyg9l/yes_no/"><img src="img/blog/cooking.png" alt="Owl Turd cooking webcomic" width="40%" align="right" style="margin:5px 10px" title="source: owl turd"></a>Living in S&atilde;o Paulo this semester has brought another new thing into my life: living in an apartment and cooking for myself.  And as a student who would prefer to eat well without spending a lot of money, I quickly figured out how to make some excellent healthy meals from a few staple ingredients.</p>
+						<p>It costs a lot to go buy new stuff for each new recipe, so having a variety of recipes that taste diverse but use the same basic ingredients is key.  I thought I'd share a few of my favorites here.</p>
+
+						<div id="a7" style="display: none;">
+
+						<h3>The Ingredients</h3>
+						<p>These basic ingredients are in almost all of these dishes, and you should always have them ready in your kitchen.  I'll try to add in the prices, which I know in Brazilian reals.  As of writing this, the exchange rate is R$3 to one USD, but that might change.
+							<ul>
+								<li><b>Boneless chicken breast</b> (six pieces - R$8)</li>
+								<li>At least <b>two vegetables of choice</b> - I usually prefer broccoli (R$5 per head), green beans (R$3 per bag), and carrots (R$1 per carrot)</li>
+								<li><b>Shredded kale</b> - hear me out on this one.  You can eat it raw in a sandwich like lettuce, but cook it for dinner too.  Also super healthy but tastes good with the right stuff.  Super versatile and definitely a must (R$5 for 230g)</li>
+								<li><b>Cheese</b> - I prefer mozzarella, but anything works.  Slices, chunks, whatever (R$5 for 8 slices)</li>
+								<li><b>Favorite pasta</b> - I like ditalini or penne, but your choice (R$4 for a bag)</li>
+								<li><b>Onions</b> - a must.  They go in everything.  I love the mini onions because it's the perfect size for one recipe without leftovers (R$6 for a bag of 15 mini onions)</li>
+								<li><b>Garlic</b> - fresh cloves or pre-crushed and dried, your choice</li>
+								<li><b>Salt and pepper</b>, and whatever other seasonings you like.  I also highly recommend basil</li>
+								<li><b>Olive oil</b></li>
+							</ul></p>
+							
+						<h3>Chicken with Strawberry Sauce and Kale with Eggs</h3>
+						<p align="center"><img src="img/blog/strawberry-chicken.jpg" alt="Strawberry chicken" width="80%"></p>
+						<p><b>Extra Ingredients:</b>
+						<ul>
+							<li>Strawberries</li>
+							<li>Hard-boiled eggs (I usually always have a tub of these around)</li>
+						</ul></p>
+						<p>Here's the thing: I don't have a grill.  So I "grill" my chicken on the stove, which by technical cooking terms might make it fried, but it tastes grilled.  Anyways, this recipe is super easy.</p>
+						<p>Cook your chicken, with some seasoning.  I have a "lemon and herb" seasoning mix that goes really well, but even just salt and pepper will work.  While it's cooking, make the strawberry sauce by throwing in some chopped strawberries, some olive oil, and fresh basil and letting it cook until it is mushy and smells good.</p>
+						<p>For the kale, cook it in a pot with some olive oil and some chopped onion.  Careful not to let the kale over-cook.  Pour the strawberry sauce over the chicken and serve the kale with a sliced hard-boiled egg.</p>
+						</br>
+						<h3>Baked Chicken Vegetable Casserole</h3>
+						<p align="center"><img src="img/blog/baked-casserole.jpg" width="80%" alt="Baked chicken casserole"></p>
+						<p><b>Extra Ingredients:</b>
+						<ul>
+							<li>Tortillas (this recipe needs 2)</li>
+						</ul></p>
+						<p>This recipe is so easy, and so delicious.  I made one serving by layering a "bottom crust" of 1.5 tortillas on the bottom of a glass baking dish (the only one I have).</p>
+						<p>Butter the bottom of the tortillas so that it's easy to get off after it cooks.  And then just toss a bunch of stuff into the casserole: chopped vegetables (beans, broccoli, and carrots work great), then some chunked chicken breast, then some cheese sliced or chunked so it spreads out.  Add some chopped garlic and onions, sprinkle some salt and pepper in and maybe a drizzle of olive oil.</p>
+						<p>The final touch is to rip up that last half of a tortilla and sprinkle it around - it gets all crispy and adds some excellent texture.  Mix it all up a bit and put it in the oven at about 200 C for about 30 minutes, and enjoy!</p>
+						</br>
+						<h3>Kale Pesto</h3>
+						<p align="center"><img src="img/blog/pesto.jpg" width="80%" alt="Kale pesto"></p>
+						<p><b>Extra Ingredients:</b>
+						<ul>
+							<li>Walnuts - I bought these whole because they were cheaper than pre-shelled and pre-crushed</li>
+							<li>Strawberries - optional but a nice touch</li>
+							<li>Parmesan cheese</li>
+							<li>Basil - fresh or dried, just have a bunch of it</li>
+						</ul></p>
+						<p>Another favorite.  Start your pasta cooking, and grill up some chunked chicken on the stove.  While those are cooking, mix up the pesto in a smallish bowl.  Take your kale, walnuts, garlic, basil, and Parmesan cheese and and shred them in a food processor.  If you are like me and don't have a food processor, this can be done by hand through extreme chopping, dicing, and shredding.</p>
+						<p>Mix the result in a bowl, adding as much olive oil as needed until it gets to the right consistency.  Then, just mix it in with the chicken and pasta, and sprinkle even more Parmesan cheese on top, because why not?  Serve with chopped strawberries on top for an excellent touch</p>
+						</br>
+						<h3>Classic Stir-Fry</h3>
+						<p align="center"><img src="img/blog/stirfry.jpg" width="80%" alt="Stir-Fry"></p>
+						<p><b>Extra Ingredients:</b>
+						<ul>
+							<li>Rice</li>
+							<li>Soy sauce</li>
+						</ul></p>
+						<p>This is incredibly easy to make, but tastes really good.  Cook your rice, and in a frying pan or wok, fry up chunked chicken with the vegetables of your choice, and some garlic and chopped onion, and as they're cooking keep drizzling on some soy sauce so that they get flavored.  Serve the stir-fry over the rice.</p>
+						</br>
+						<h3>Pasta Primavera</h3>
+						<p align="center"><img src="img/blog/primavera.jpg" width="80%" alt="Pasta Primavera"></p>
+						<p><b>Extra Ingredients:</b>
+						<ul>
+							<li>Tomato sauce</li>
+							<li>Parmesan cheese (optional)</li>
+						</ul></p>
+						<p>Another easy classic.  Just cook up your pasta, and in a separate pot, cook the chunks of chicken and vegetables.  As they're finishing cooking, add in the tomato sauce with chopped garlic and onions to heat them.  Pour the whole thing out over your pasta and top with cheese if you want.</p>
+						</br>
+
+						<h3>Apple Chicken</h3>
+						<p align="center"><img src="img/blog/apple.jpg" width="80%" alt="Apple chicken"></p>
+						<p><b>Extra Ingredients:</b>
+						<ul>
+							<li>Apples (1 per serving)</li>
+						</ul></p>
+						<p>This one is just a flavored chicken seasoning, so cook your vegetables separately in your favorite vegetable-cooking method, and grill the chicken on the stovetop.</p>
+						<p>For the apple seasoning sauce, chop up your apple into as small chunks as possible.  It will probably look prettier if you peel the apple, but I did not, and it still tasted delicious and was probably healthier.  Then, start cooking the apple chunks along with some chopped onion and a few spoonfuls of olive oil.</p>
+						<p>Add some salt, pepper, basil, or other seasonings you have around to taste, and be sure to keep stirring pretty consistently to get the apples cooked.  They also take longer to cook than you would expect.  But when it's done, serve it over the chicken.</p>
+						<p>Although I didn't have any on hand, I'm certain this recipe would be even better if you added some honey mustard to the apple sauce.</p>
+						</br>
+						<h3>Orange Chicken</h3>
+						<p align="center"><img src="img/blog/orange-chicken.jpg" width="80%" alt="Orange chicken"></p>
+						<p><b>Extra Ingredients:</b>
+						<ul>
+							<li>Orange Juice</li>
+						</ul></p>
+						<p>This is another one of my experiments in fruit-based chicken sauces.  This recipe is very similar to the one before it: cook up your veggies and chicken, and then heat your sauce in a separate pot.</p>
+						<p>In this sauce, I added orange juice, chopped onions, and a tad bit of butter, and some cornstarch to thicken it.  This is another recipe I'm sure would be improved with honey mustard, but it was excellent nonetheless.</p>
+						</br>
+
+						<h3>Bonus Recipe - Five-Ingredient Thumbprint Cookies</h3>
+						<p align="center"><img src="img/blog/cookies.jpg" width="80%" alt="Thumprint cookies"></p>
+						<p>Without a doubt, <i>the</i> best cookies on a budget.  They're delicious, soft, moist, and only five ingredients, three of which you only have to buy once and they last long enough for at least five batches.</p>
+						<p><b>Ingredients:</b>
+						<ul>
+							<li>About 100g (4oz) cream cheese</li>
+							<li>One stick (about 115g) of butter</li>
+							<li>A little over 1 cup (1 cup 3 tbsp) all-purpose flour</li>
+							<li>A little over 1 cup (1 cup 3 tbsp) granulated sugar</li>
+							<li>Raspberry jam</li>
+						</ul></p>
+						<p>First, mix the cream cheese and butter together until they're light and fluffy.  I'd recommend doing it with an electric mixer if you have one, but I didn't, and I can assure you that a wooden spoon and a little vigor work just fine.</p>
+						<p>Next, add the sugar and mix it in.  Finally, add the flour, a little bit at a time, until it is fully incorporated.  Let the batter chill in the fridge for at least 45 minutes, up to 2 hours.</p>
+						<p>Then, prepare your baking sheet with cooking spray or layer it with parchment paper.  I had neither of these, so a fine alternative is to spread a thin layer of butter on the bottom of the pan, then dust flour on top of it.</p>
+						<p>Roll balls of dough about an inch in diameter.  Then, make the divot for the jam by pressing either your thumb or the butt end of a wooden spoon into each cookie ball.  Whichever you use (I do the spoon method, but your choice), just be sure to put flour on it beforehand so the dough doesn't stick.</p>
+						<p>Spoon a little bit of jam into each divot.  Bake the cookies at around 190 degrees C (375F) for about 12 minutes, or until the cookies are just starting to get brown on the edges.  They'll seem soft when you take them out but that's a good thing.  Cool and enjoy!</p>
+
+						</div>
+
+						<div onClick="openClose('a7')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>				
+						
+
+					</div>
+
+					<a id="CompleteIntelGalileoAdaptedSet-UpforWindows"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a6')" style="cursor:hand; cursor:pointer"><div class="title">Complete Intel Galileo Adapted Set-Up for Windows</div></div>
+						<div class="date">March 17, 2015 10:02</div>
+						</br>
+
+						<p><img src="img/blog/galileo.jpg" width="40%" align="right" style="margin:5px 10px" alt="Intel Galileo">One of my projects working at an engineering school at Insper was to create an Internet of Things 8-hour workshop for our first-year engineering students to get a feel for using a microprocesser and have some fun.</p>
+
+						<p>So we were handed our Intel Galileo boards and Getting Started kits, and started playing around, setting them up, and figuring out what activities we could come up with.  The <a href="https://learn.sparkfun.com/tutorials/galileo-getting-started-guide">Getting Started Guide on Sparkfun</a> was very useful but we still ran into a couple issues.</p>
+
+						<p>Because random internet blog posts often proved very useful in helping me, I'm putting this together so that anyone else who might need a hand can see it.</p>
+
+						<div id="a6" style="display: none;">
+
+						<h4>1. Download the Arduino Software for Galileo for Windows</h4>
+						<ol>
+							<li>Download it from <a href="https://communities.intel.com/docs/DOC-22226">here</a></li>
+							<li>Go to your downloads folder or wherever you saved the zip file it downloaded.  Unzip it and move the folder (<i>arduino-1.5.3</i>) to your top-level directory <b>C:</b></li>
+							<li>Rename it Galileo to make it easy to find, or any name you want as long as it <b>has no spaces</b></li>
+							<li>Double-click the <i>arduino.exe</i> application to run it and make sure it starts up</li>
+						</ol>
+
+						<h4>Install the Device Drivers</h4>
+						<ol>
+							<li>Connect the 5V power supply to the board, and into a wall plug</li>
+							<li>Connect a micro-USB cable from the board to one of your computer's USB ports</li>
+							<li>Upon connecting the board, Windows will automatically attempt to install the driver and, unsurprisingly, it will fail. We'll have to manually install the driver.</li>
+							<li>Open up the <b>Device Manager</b>. (Either <i>Start > Run > devmgmt.msc</i>, or go to the Control Panel, select <i>System and Security > System</i> and click Device Manager.)</li>
+							<li>Locate the <b>Gadget Serial v2.4</b> device, under the Other devices tree. Right-click that and select <b>Update Driver Software</b></li>
+							<li>On the first window that pops up, click <b>Browse my computer for driver software</b>. And on the next page select <b>Browse...</b> and navigate to the <kbd>hardware\arduino\x86\tools</kbd> folder within your Arduino Galileo software installation. Then click <b>Next</b>.</li>
+							<li>Click <b>Install</b> on the next <i>Windows Security</i> window that pops up. And, after a number of loading-bar-scrolls, the installation should complete and you should be greeted with a <i>Windows has successfully updated your driver software</i> window.</li>
+							<li>Look back at the Device Manager, under the <i>Ports</i> tree now. There should be an entry for <b>Galileo (COM #)</b>. Remember which COM # your Galileo is assigned, it'll be important for Arduino sketch uploading and the next step.</li>
+						</ol>
+
+						<h4>Updating Firmware</h4>
+						<ol>
+							<li>Reboot the Galileo by <b>FIRST unplugging the micro-USB cable</b> and <b>NEXT unplugging the 5V power</b></li>
+							<li>Reboot by <b>FIRST plugging in 5V power</b> and <b>NEXT plugging in the micro-USB cable</b></li>
+							<li>Run the <i>arduino.exe</i> application in the software you downloaded in the first step</li>
+							<li>Go to <b>Tools</b> and select <b>Serial Port</b> (this might take a few moments to be un-greyed out while the board starts up).  Select the <b>COM port</b> that you saw earlier in Device Manager</li>
+							<li>Go to <b>Tools > Board</b> and select Intel Galileo Gen 2</li>
+							<li>Go to <b>Help > Firmware Update</b>.  Click <i>yes</i> to proceed, and the process will begin.  It will take a few minutes. <b>Be sure not to unplug the power or USB while it is updating</b></li>
+							<li>When it is done it will pop up with a <i>Target Firmware updated successfully</i> message</li>	
+						</ol>
+
+						<h4>Uploading Your First Sketch</h4>
+						<ol>
+							<li>Go to <b>File > Examples > 01.Basics > Blink</b></li>
+							<li>Make sure the <b>Serial Port</b> and <b>Board</b> are still correct</li>
+							<li>Click the <b>Upload</b> button</li>
+							<li>After the upload completes, you should see a tiny green LED blinking once per second.  The LED is connected to Pin 13 and is labeled “L” directly next to the USB port on the board</li>
+
+						</ol>
+
+						<h4>Connecting to the Linux Shell</h4>
+
+						<ol>
+							<li>Plug in the <b>6-pin serial-USB</b> cable from the Galileo into your USB drive.  Pay attention - it should be marked on your board which end is black and which is green</li>
+							<li>Reopen <b>Device Manager</b> to find the COM number of the serial USB port.  It will also be listed in the <i>Tools > Serial Port</i> menu in Arduino</li>
+							<li>Open a <b>Serial terminal program</b>.  You will likely have to download one off the internet.  I recommend <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a> and the Intel page recommends <a href="https://learn.sparkfun.com/tutorials/terminal-basics/tera-term-windows">Tera Term</a> - your choice!</li>
+							<li>Open your Serial terminal program and set the <b>COM port</b> to the same as your serial cable and set the <b>baud rate (speed) to 115200</b></li>
+							<li>Connect, and it should open a text terminal window.  Hit enter, and you will be prompted for a login.  Enter <b>root</b> and hit enter (no password)</li>
+							<li>You are now in the shell!  Make sure it works by running a command like <kbd><b>pwd</b></kbd>, which should return <kbd><b>/home/root</b></kbd></li>
+						</ol>
+	
+						<h4>Testing the Linux Shell (a few Linux commands)</h4>
+						<h5><i>You can skip this if you have experience in UNIX or Linux systems</i></h5>
+
+						<ol>
+							<li>Type <kbd><b>pwd</b></kbd>. This stands for <b>print working directory</b> and will print the path to your current location in the directory tree (in Linux, folders are called directories).  This path might be the <b>root directory</b> (/) or a deeper directory like </b>/home/root/</b></li>
+							<li>Type <kbd><b>cd</b></kbd>.  Without any arguments, this returns you to the root directory.</li>
+							<li>Type <kbd><b>ls</b></kbd>.  This lists the folders and files in your current directory.  If you are in the root directory, you will see a bunch of folders.  If you are in another directory, you might see files and folders or even nothing at all.</li>
+							<li>Type <kbd><b>cd [directory name]</b></kbd> (pick any one of the directories that was listed when you typed <kbd>ls</kbd>).  For example, type <kbd><b>cd home</b></kbd> or <kbd><b>cd usr</b></kbd>.  <kbd>cd</kbd> means <b>change directory</b> and will move you into the directory name that you've chosen.  Type <kbd><b>pwd</b></kbd> to show that it worked.</li>
+							<li>Type <kbd><b>ls</b></kbd> to see what's in your new directory, and the <kbd><b>cd</b></kbd> to return to the root directory</li>
+							<li>Try making a file!  Type <kbd><b>touch [filename].txt</b></kbd> to create a new file.  Choose any filename you want.  For example, I might say <kbd><b>touch test.txt</b></kbd></li>
+							<li>Add content to your file by typing <kbd><b>echo "Hello, World!" > test.txt</b></kbd>.  Substitute with any string of text you want and the name of your file</li>
+							<li>Check that it worked by using the <kbd>cat</kbd> command to read the contents of your file.  For example, <kbd><b>cat test.txt</b></kbd> and the terminal will print <i>Hello, World!</i> to the terminal.</li>
+							<li>Remove your file by typing <kbd><b>rm test.txt</b></kbd></li>
+
+						</ol>
+
+						<h4>Downloading the Bigger Linux Image (<a href="https://learn.sparkfun.com/tutorials/galileo-getting-started-guide/bigger-linux-image">source</a>)</h4>
+
+						<ol>
+							<li>Download the image from <a href="https://communities.intel.com/docs/DOC-22226">here</a> (It's called SD-Card Linux Image)</li>
+							<li>When it downloads, unzip the file</li>
+							<li>Get a micro-SD card and adapter and insert it into your computer</li>
+							<li><b>Format</b> the SD card by opening a Windows Explorer and finding the SD card (in <i>My Computer > Devices</i> likely)</li>
+							<li>Right-click the card and select <b>Format</b> from the menu</li>
+							<li>Make sure the File System setting is set to <b>FAT32</b></li>
+							<li>Click <b>Start</b> and <b>OK</b></li>
+							<i>Note: this will ERASE all contents on the card, so be sure to move any important files off the card first</i>
+							<li>When it's complete, <b>move the contents of the unzipped download onto the card</b>.  Make sure they are in the <b>top level</b></li>
+							<li>Remove the SD card from the computer and power down the Galileo by removing first USB and then power.  Insert the micro-SD into the slot on the Galileo and power it back up</li>
+							<li><b>Connect to the board via your Linux shell</b> and type <kbd><b>python</b></kbd> into the command window.  This should open a python interpreter.  Your new Linux image includes Python and other programs</li>
+
+						</ol>
+
+						<h4>Moving Files to the Galileo: A Mini Python Project (<a href="https://communities.intel.com/docs/DOC-23764">source</a>)</h4>
+						<ol>
+							<li>Open your favorite text editor in Windows (no, Word is not a text editor.  Windows come pre-installed with Notepad if you have not used others)</li>
+							<li>Copy the following python program into your new file:</li>
+							<pre><code>
+# -*- coding: utf-8 -*-
+
+from datetime import datetime
+ 
+# Get current time, if Intel® Galileo Gen 2 is connect to internet
+# It should automatically get the real time
+n=datetime.now()
+res=n.strftime("%d/%m/%y %H:%M:%S")
+ 
+# Append time to log file located in home directory of Intel® Galileo Gen 2
+f=open("/home/root/buttonLog.txt","a+")
+ 
+f.write(res+"\n")
+f.close()
+							</code></pre>
+							<li>Save it as <b>recordTime.py</b></li>
+							<i>You may be tempted to name this file something unique, which is fine.  However, be sure NOT to name it</i> datetime.py <i>because it will overwrite the existing datetime python libraries and make it not work</i>
+							<li>Connect to your Linux shell, <b>and plug in an ethernet cable from the board to your laptop</b></li>
+							<li>You need to use the utility <b>scp</b> to transfer files.  This already exists on Mac.  On Windows, download the <b>pscp</b> program, which can be found <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">here</a> called <i>pscp.exe</i></li>
+							<li>Either follow <a href="http://windowsitpro.com/systems-management/how-can-i-add-new-folder-my-system-path">these instructions</a> to add pscp to your windows path, or simply save the exe file in the same directory as you saved recordTime.py, or any other files you want to transfer (which is kind of bad practice but oh well)</li>
+							<li>Open a <b>Windows Command Prompt</b> and navigate to the directory where you saved <i>recordTime.py</i> by using <kbd><b>cd</b></kbd> to change directories and <kbd><b>dir</b></kbd> to list the contents of a directory (because this is Windows, not Unix/Linux)</li>
+							<li>In your <b>Linux shell</b>, type the command <kbd><b>ifconfig</b></kbd> to see internet connection settings.  Under the <kbd>eth0</kbd> (ethernet) output, on the second line, look for the phrase <kbd>inet addr</kbd> followed by an IP address.  Note or copy this address.</li>
+							<li>Type <kbd><b>pscp -scp ./recordTime.py root@[YOUR IP ADDRESS HERE]:/home/root</b></kbd> - for example, mine might look like <kbd>pscp -scp ./recordTime.py root@10.201.17.231:/home/root</kbd>, but your IP will be different</li>
+							<li>When prompted, type <kbd><b>y</b></kbd> to store the key in cache</li>
+							<li>This saved the file into the <kbd>/home/root</kbd> directory on the Galileo.  In your Galileo command prompt, type <kbd><b>cd /home/root</b></kbd> to access this directory and <kbd><b>ls</b></kbd> to list the contents.  <i>recordTime.py</i> should be listed in the contents</li>
+							<li>Run the file by typing <kbd><b>python recordTime.py</b></kbd> in the command window. The program will access the current date and time and write it into a text file.  Feel free to run the program a couple times</li>
+							<li>Use the command <kbd><b>ls</b></kbd> again to list the contents of the directory.  Now that you have run the program, you should see a file called <i>buttonLog.txt</i></li>
+							<li>View the contents of the text file with the <kbd><b>cat buttonLog.txt</b></kbd> command.  It will show the timestamps of when you ran the recordTime program</li>
+
+						</ol>
+
+						</div>
+
+						<div onClick="openClose('a6')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>						
+
+					</div>
+
+					<a id="OptimalImmunizationDistributiontoaNigerClinic"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a5')" style="cursor:hand; cursor:pointer"><div class="title">Optimal Immunization Distribution to a Niger Clinic</div></div>
+						<div class="date">October 29, 2014 19:12</div>
+						</br>
+						<p><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3592976/"><img src="img/blog/supply_chain.png" width="50%" align="right" style="margin:5px 10px" title="source: Yee, Bruce (2012)" alt="Vaccine Supply Chain diagram"></a>For a Linearity II (multivariable calculus and PDEs) project in optimization, my partner and I optimized vaccine distributions to a Niger clinic in order to maximize lives saved, varying factors like the clinic's budget and the amount of cold-storage space available.  Read on for a description of our work and to see the code and analysis done on the model.</p>
+
+						<h4>The Problem</h4>
+						<p>Many developing nations still use outdated vaccination schedules which do not take into account new vaccinations or supply chains.  The major constraints these countries must work with are limited funds and limited amount of refrigerated storage space. </p>
+						<p>We work towards the development of a new model for vaccine distribution, by finding the optimal distribution of specific vaccines to clinics in order to minimize the number of people infected with any disease.  We use Niger as the theoretical location of our model clinic and examine the sensitivity of the model to changes in our constant values to consider possible changes in our solution for other regions.</p>
+
+						<div id="a5" style="display: none;">
+
+						<h4>Questions</h4>
+
+						<p><i>What is the optimal distribution of vaccines to minimize infected people?</i><p>
+
+						<p><i>Given a current budget of X and storage space of Y, how could you adjust storage space and budget minimally to achieve the greatest increase in number of people saved?</i></p>
+
+						<h4>The Abstraction</h4>
+						<ul>
+							<li>Single clinic in Niger</li>
+							<li>Assume identical clinics</li>
+							<li>Assume 6 vaccines</li>
+							<li>No transportation constraints</li>
+						</ul>
+
+						<h4>The Vaccines (Decision Variables)</h4>
+						<table border="1" style="width:100%">
+						  <tr>
+							<td><b>Index</b></td>
+							<td><b>Variable Name</b></td> 
+							<td><b>Vaccine</b></td>
+						  </tr>
+						  <tr>
+							<td>1</td>
+							<td>BCG</td> 
+							<td>Bacille-Calmette Guerin (to treat tuberculosis)</td>
+						  </tr>
+						  <tr>
+							<td>2</td>
+							<td>DPT</td> 
+							<td>Diptheria-tetanus-pertussis-hepatitis B-haemophilius influenza type B 
+</td>
+						  </tr>
+						  <tr>
+							<td>3</td>
+							<td>YF</td> 
+							<td>Yellow Fever</td>
+						  </tr>
+						  <tr>
+							<td>4</td>
+							<td>OPV</td> 
+							<td>Oral Polio Virus</td>
+						  </tr>
+						  <tr>
+							<td>5</td>
+							<td>TT</td> 
+							<td>Tetanus Toxoid</td>
+						  </tr>
+						  <tr>
+							<td>6</td>
+							<td>M</td> 
+							<td>Measles</td>
+						  </tr>
+						</table>
+
+						<h4>Objective Function</h4>
+						<p>Minimizing people affected directly translates to maximizing people “saved”
+						Our objective function is then linear:</p>
+						<b>&#931; <i>vd</i></b>
+						<p>where <i>v</i> is the amount of each vaccine and <i>d</i> is the percentage of the population who would get that disease</p>
+
+						<h4>Constraints</h4>
+
+						<p><ul>
+							<li><b>Cost</b> - Sum of cost of all vaccines must not exceed a budget</li>
+							<li><b>Storage Space</b> - Each clinic has a limited cold storage space to store</li>
+							vaccines
+							<li><b>Prevent Outbreak</b> - Over 1 year, must vaccinate at least 60% of population per vaccine</li>
+							<li><b>Common Sense</b> - Can't vaccinate more than 100% of population</li>
+						</ul></p>
+
+						<h4>Iteration One Results</h4>
+
+						<p>Budget = $6995/mo</p>
+						<p>Storage Space = 28000 cm^3</p>
+						<table border="1" style="width:100%">
+						  <tr>
+							<td><b>Variable</b></td> 
+							<td><b>Number of Vaccines to Provide per Month</b></td>
+						  </tr>
+						  <tr>
+							<td>BCG</td> 
+							<td>0</td>
+						  </tr>
+						  <tr>
+							<td>DPT</td> 
+							<td>0</td>
+						  </tr>
+						  <tr>
+							<td>YF</td> 
+							<td>8530</td>
+						  </tr>
+						  <tr>
+							<td>OPV</td> 
+							<td>0</td>
+						  </tr>
+						  <tr>
+							<td>TT</td> 
+							<td>0</td>
+						  </tr>
+						  <tr>
+							<td>M</td> 
+							<td>0</td>
+						  </tr>
+						</table>
+
+						Number of people "saved": 682
+
+						<h4>Hmm...That's Weird</h4>
+						<h5>Why did we get all Yellow Fever Vaccines?</h5>
+
+						<table border="1" style="width:100%">
+						  <tr>
+							<td><b>Variable</b></td> 
+							<td><b>Cost Per Immunization ($)</b></td>
+							<td><b>Volume per Immunization (cm^3)</b></td> 
+							<td><b>Percent of people getting disease</b></td> 
+							<td><b>Cost per cm^3</b></td> 
+							<td><b>People saved per cost per cm^3</b></td> 
+						  </tr>
+						  <tr>
+							<td>BCG</td> 
+							<td>0.13</td>
+							<td>1.2</td>
+							<td>0.00174</td>
+							<td>0.1083</td>
+							<td>0.016066</td>
+						  </tr>
+						  <tr>
+							<td>DPT</td> 
+							<td>29.64</td>
+							<td>16.8</td>
+							<td>0.19</td>
+							<td>1.7643</td>
+							<td>0.10769</td>
+						  </tr>
+						  <tr>
+							<td>YF</td> 
+							<td>0.82</td>
+							<td>2.5</td>
+							<td>0.08</td>
+							<td>0.328</td>
+							<td BGCOLOR="#ffff00">0.2439</td>
+						  </tr>
+						  <tr>
+							<td>OPV</td> 
+							<td>0.84</td>
+							<td>4</td>
+							<td>0.000022434</td>
+							<td>0.21</td>
+							<td>0.0001068</td>
+						  </tr>
+						  <tr>
+							<td>TT</td> 
+							<td>0.99</td>
+							<td>15</td>
+							<td>0.0000000088</td>
+							<td>0.066</td>
+							<td>0.00000013336</td>
+						  </tr>
+						  <tr>
+							<td>M</td> 
+							<td>1.29</td>
+							<td>2.6</td>
+							<td>0.08</td>
+							<td>0.4962</td>
+							<td>0.1612253</td>
+						  </tr>
+						</table>
+
+						<p>When we analyzed the results more closely, we saw that by optimizing for "people saved" within the constraints of budget and space, we had inadvertently fixed the outcome.  MATLAB's <kbd>linprog</kbd> function optimized this by calculating the vaccine withe the most people saved per cost per cm^3 - basically, the one vaccine that saved the most people in the most space- and money-efficient way.  But this wasn't satisfactory because it doesn't make sense to order nothing but Yellow Fever vaccines when it's not even the most prevalent disease.</p>
+
+						<h4>Iteration Two Results</h4>
+						<p>We added the constraint that 60% of the population must be vaccinated for any given disease within 12 months to prevent outbreak (as defined by the World Health Organization) and got some new results:</p>
+
+						<img src="img/blog/1year.png" alt="Vaccine distribution schedule - 1 year">
+
+						<p>This shows the vaccines that the clinic should purchase over the course of a year.  In the first two months, we still purchase only Yellow Fever, but as the population gets vaccinated in Yellow Fever, we start buying other vaccines.</p>
+
+						<h4>Validation, Part One - "Toy Vaccines"</h4>
+						<p>We created a petri-dish version of our model with only 2 vaccines, to see how small changes in parameters impacted the final ratios.  This was used a sanity check that our equations were working correctly.</p>
+
+						Results were easy to see that they were qualitatively correct:
+						<ul>
+							<li>All parameters the same -> equal ratios</li>
+							<li>Increase cost or storage space for one -> decreased amounts for that one</li>
+							<li>Increase infection rate -> increased amounts of vaccine</li>
+						</ul>
+
+						<h4>Validation, Part Two - What if All Vaccines were Free and Volumeless?</h4>
+
+						<p>This graph verifies that if we were to make all vaccines free and volumeless, our model would suggest that we buy enough vaccines to vaccinate 100% of the population in each disease.</p>
+
+						<img src="img/blog/valid.png" alt="Vaccine validation">
+
+						<h4>Sensitivity Analysis</h4>
+						<p>We decided to analysis how sensitive our results were to changing the budget and storage space of our model clinic (the initial numbers were decided through some research on existing clinics).</p>
+
+						<img src="img/blog/meshplot.png" alt="Effects of changing budget and storage space">
+
+						<p>In this graph, the grey O represents the the current constraint levels, and the red O represents the ideal levels of each.   One of the interesting results of this graph is that by using gradient descent, one can see whether increasing the budget or the storage space would result in more lives saved.  Here, we can see that moving along the budget axis while holding the storage space constant would save lives more quickly.</p>
+
+						<b>Ideal (Red Dot) Constraints to Vaccinate Everyone</b>
+
+						<p>Budget = $5,090,000</p>
+						<p>Storage Space = 356,600 cm^3</p>
+						<table border="1" style="width:100%">
+						  <tr>
+							<td><b>Variable</b></td> 
+							<td><b>Number of Vaccines to Provide</b></td>
+						  </tr>
+						  <tr>
+							<td>BCG</td> 
+							<td>7825</td>
+						  </tr>
+						  <tr>
+							<td>DPT</td> 
+							<td>15906</td>
+						  </tr>
+						  <tr>
+							<td>YF</td> 
+							<td>17189</td>
+						  </tr>
+						  <tr>
+							<td>OPV</td> 
+							<td>0</td>
+						  </tr>
+						  <tr>
+							<td>TT</td> 
+							<td>0</td>
+						  </tr>
+						  <tr>
+							<td>M</td> 
+							<td>14238</td>
+						  </tr>
+						</table>
+
+						<h4>Work We Can Do</h4>
+						<ul>
+							<li>Determine the optimal ratios of vaccines a clinic should provide to maximize people saved</li>
+							<li>Determine the budget and storage space necessary to vaccinate everyone</li>
+							<li>Determine whether increasing the storage capacity or the budget of a clinic would allow for more vaccinations</li>
+						</ul>
+
+						<h4>Future Work</h4>
+						<ul>
+							<li>Include fatality rate, consider which disease is most deadly as a factor</li>
+							<li>Model over time more precisely</li>
+							<li>Find the effect of one vaccination changing cost on ...</li>
+							<li>Include more constraints, such as transportation and associated costs, variance in regions, and age of population (infancy vaccines vs. adult)</li>
+						</ul>
+
+						<p><a href="./vaccineInteractions.m">See our MATLAB code</a>
+
+						</div>
+
+						<div onClick="openClose('a5')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>						
+
+					</div>
+					<a id="MyRealResumeSkillsfromRedHat"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a4')" style="cursor:hand; cursor:pointer"><div class="title">My Real Resume Skills from Red Hat</div></div>
+						<div class="date">August 31, 2014 14:44</div>
+						</br>
+
+						<p>I gained a lot of experience working at Red Hat, and most of those have to be summarized concisely into three-word phrases in order to fit on a one-page resume.  So I figured I'd write a blog post with the long version of those skills.</p>
+
+						<div id="a4" style="display: none;">
+
+						<h4>Worked on an Agile-style sprint team</h4>
+
+						<p>What I was trying to convey with this line was the general teamwork I did, as well as my experience with Agile techniques.  My sprint team was made up of about ten people, and we were one of six teams on a larger "Application Infrastructure" team.  The AppInfra team ran itself on two-week sprint cycles beginning with a sprint planning meeting and ending with each sprint team demo-ing what they had accomplished that sprint</p>
+
+						<p>This style of work allowed me to learn time management around focusing projects into two-week runs and public speaking when presenting my work to the entire team as a demo.  In addition, our smaller subteam met every day for a scrum video call to update the team on progress we'd made, what we planned to do today, and any blockers we had.  That allowed me to keep track on my projects in a daily to-do sense as well as be oriented into the larger picture of what our team was working on.</p>
+
+						<h4>Wrote C code...</h4>
+
+						<p>Honestly, the only C experience I had before this internship was writing code for Arduino.  I learned a ton that my high school C++ classes never covered, such as pointers, memory leaks, Valgrind, debugging tools, Makefiles, and more.</p>
+
+						<h4>...that intersects and builds off my coworkers' projects</h4>
+
+						<p>This was based on an article I read once about preparing students for internships.  It said that one of the biggest culture-shocks for CS students in industry is that for school projects, they're used to writing their own code, creating an entire project from scratch.  It's been true for me.</p>
+
+						<p>But in industry, that situation is uncommon.  You're reading code other people have written, and writing patches, or adding features that meld seamlessly with what already exists.  This takes skill and practice.  Reading and understanding other people's code takes different skills from composing your own.  In addition, it requires writing readable, well-commented patches that follow the existing coding guidelines.  My code at Red Hat was built off the code of my coworkers, and other coworkers based their projects off my code.  It all fits into a larger scheme, and knowing how to write code as a piece of a whole is crucial.</p>
+
+						<h4>Made significant contributions to the open source community</h4>
+
+						<p>Red Hat was my first experience with open source communities and "pushing code upstream" for review and acceptance, both of which were exciting new concepts.  But watching my patches get merged into the main project repository was a feeling I'll never forget.</p></div>
+
+						<div onClick="openClose('a4')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>						
+
+					</div>
+
+					<a id = "OtherThingstoRememberWhenWritingCodeforRealPeople"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a3')" style="cursor:hand; cursor:pointer"><div class="title">Other Things to Remember When Writing Code for Real People</div></div>
+						<div class="date">August 21, 2014 12:29</div>
+						</br>
+						<p>I'm going to be honest here, my internship at Red Hat was my first true experience
+						with writing code for Real People.  That is, people besides me, maybe my professor.
+						I'd never written code that would be distributed to the masses.  Programs that would
+						be used by a significant number of people.</p>
+
+						<p>There are a few things to adapt in your coding style when Writing For Many, especially
+						if you didn't enforce these habits when you were learning:</p>
+
+						<div id="a3" style="display: none;">
+
+						<h4>Internationalization</h4>
+
+						<p>I mentioned this briefly in my previous article, but you have to remember that your code output will be translated into multiple languages.  Write in a way that will preserve that meaning across language boundaries and syntactical differences.  That means no code along the lines of:
+
+						<pre><code>printf ("%s has %s point%s of karma", user, points, points > 1 ? "s" : "");</code></pre>
+
+						which makes a lot of sense, but not every language uses an "s" to pluralize. No good.</p>
+
+						<h4>Readability</h4>
+
+						<p>This is another item that is always talked about in coding classes but not all too often enforced.  Make your code readable.  Use indents correctly.  COMMENT YOUR CODE.  Name your variables sane things and not just "thing1" and "x".  Make your commit messages more informative than "update".  When it's just written for you and your professor, you both know what that function is supposed to do.  When someone in Europe is trying to add a feature two years from now, it won't be so clear to them.</p>
+
+						<h4>Worst-Use-Case Scenarios: Don't Cut Corners</h4>
+
+						<p>Recently, I was working on a feature to name deployments in OSTree.  One piece of this was making sure they user-defined custom name was unique and not already assigned to another deployment, and listed in a key-value file.</p>
+
+						<p>Obviously, my first notion was to cycle through the key-value pairs and check if the values match.  But loops are expensive.  Could I do it another way?</p>
+
+						<p>So I thought for a bit.  What if I converted the contents of the key-value file to a string, using a simple library-defined command, and then used a string utility function to check if the proposed name was contained in this long string of the whole file.</p>
+
+						<p>This was a bad idea, I quickly realized.  If the proposed new name was "e", and you had another deployment named "red", it would register as non-unique.  No good at all.  Obviously, in the target use case, you'd be naming your deployments "v1.0-stable" or "wip-no-metalinks" and the functionality would be correct.  But users don't behave like your target use cases.  So you have to plan for every use case, and just go with the loop.</p>
+
+						<p>Besides, when you think about it, converting to a string is probably uses a loop anyways.</p></div>
+
+						<div onClick="openClose('a3')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>
+
+					</div>
+
+					<a id="ReadableCodeisbetterthanPrettyCode"></a>
+					<div class="blogpost">					
+						<div onClick="openClose('a2')" style="cursor:hand; cursor:pointer"><div class="title">Readable Code is better than Pretty Code</div></div>
+						<div class="date">August 19, 2014 15:07</div>
+						</br>
+							<p>Early in my internship, I had the dilemma of choosing between two coding practices
+							that technically had had the exact same function, but looked different.  Take a look:</p>
+
+						<div id="a2" style="display: none;">
+						
+
+						<h4>Option 1:</h4>
+						<pre><code>
+if (deployments->pdata[0]==booted_deployment)
+  {
+	default_boot_message = "";
+	default_instruction = "Use command 'rpm-ostree rollback' to switch defaults\n";
+  }
+else
+  {
+	default_boot_message = " not";
+	default_instruction = "Use command 'rpm-ostree rollback' to make it default\n";
+  }
+
+printf ("You are%s booted into the default deployment\n", default_boot_message);
+printf ("%s\n", default_instruction);
+
+						</code></pre>
+										 
+						<h4>Option 2:</h4>
+						<pre><code>
+default_boot_message = (deployments->pdata[0]==booted_deployment) ? "" : " not";
+default_instruction = (deployments->pdata[0]==booted_deployment) 
+	? "Use command 'rpm-ostree rollback' to switch defaults\n"
+	: "Use command 'rpm-ostree rollback' to make it default\n";
+
+printf ("You are%s booted into the default deployment\n", default_boot_message);
+printf ("%s\n", default_instruction);
+
+						</code></pre>
+
+						<p>Which is better?  I was drawn immediately towards Option 2.  Look how beautiful it is!
+						Just two small lines of code, making use of the efficient ternary operator.  Also, those two little lines showcased my incredible programming skills in knowing what a ternary operator was.  It was small, concise, and got the job done.  Such nice, efficient use of space!</p>
+						
+						<p>I've since learned to sway away from that kind of thinking.  I've learned that Option 1 is inherently a better choice because of a saying my dad likes to repeat.  It goes something like "Code gets written once, and read a thousand times."  What that means is that when coding, you shouldn't take shortcuts to make the one writing session easier.  You should write in a way to make those thousand reads easier. </p>
+
+						<p>Because a year from now, when I look at those ternary operators, I'd have to squint for a bit, parse it in my head, and mentally set my variables to the right outcome.  And then do it again.  And I might do that wrong, or lose track of something, and waste time and thinking power on something insubstantial compared to whatever bug I'm tracking.  Not only that, but in mentioning debugging, that ternary operator makes a small logic error a lot harder to see than when it's all out in the open under those big if/else braces.</p>
+
+						<p>Lesson here: write for future you, and future strangers reading your code.  Be nice to them.</p>
+						
+						<p> Of course, the trick here was, neither of these two options is better, because they both utilize inserting conditional words into a complete sentence, breaking the <a href="http://www.gnu.org/prep/standards/standards.html#Internationalization">GNU Coding Standards' internationalization guidelines</a> and making any kind of foreign-language translation of this program unreadable.</p></div>
+
+						<div onClick="openClose('a2')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>
+					</div>
+
+					<a id="TheEconomicsofChocolateintheBreakrooms"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a1')" style="cursor:hand; cursor:pointer"><div class="title">The Economics of Chocolate in the Breakrooms</font></div></div>
+						<div class="date">August 18, 2014 18:23</div>
+						</br>
+						<p><a href="http://www.cookinglight.com/eating-smart/smart-choices/candy-nutrition-comparison/hersheys-assorted-miniatures-nutrition"><img src="http://img1.cookinglight.timeinc.net/sites/default/files/styles/400xvariable/public/image/2011/10/1110p42-hersheys-assorted-miniatures-m.jpg?itok=5rjVxylM" width="40%" align="right" style="margin:5px 10px" title="source: cooking light" alt="Assorted Hershey's candy"></a>I think about this situation a lot, because it's a great allegory to real life and how we're all
+						definitely going to do if the world ever does reach some kind of mass apocalypse.</p>
+
+						<h4>The background:</h4> 
+						<p>At Red Hat, we have these fabulous well-stocked break rooms full of coffee, drinks, snacks, and more.  One snack supplied is a basket full of tiny Hershey's chocolate bars, which as the reader may know, come in variety packs of Mr. Goodbars, Krackels, Milk Chocolate, and Special Dark.</p>
+
+						<div id="a1" style="display: none;">
+
+						<h4>The situation:</h4>
+						<p>As I quickly observed within my first week or so on the job, software engineers are picky.  They are picky in what text editors they like to use.  They are picky in coding standards.  And they are picky in chocolate tastes.  I mean that last one literally, because software engineers at Red Hat like to pick the Special Darks out of the mixed baskets.  So much so that finding a single Special Dark bar in the basket is an incredible rarity, like finding a unicorn in the parking lot instead of your car after a particularly long day, or writing some code with no bugs.</p>
+
+						<h4>The economic avalanche:</h4>
+						<p>When I first came to Red Hat, I was a casual Special Dark user.I enjoyed it occasionally, nibbling while mulling over code.  But, after I had first made the realization that Special Darks were rare and precious, my behavior changed.  If I saw a Special Dark in the basket, I grabbed it immediately, even if I hadn't been in the mood for one.  I was practically a slightly-saner Gollum, caressing my Special Dark bar and whispering "my precious."</p>
+
+						<p>But that's not even the worst of it.  On occasion, I would find myself in the breakroom right after it had been restocked.  Right after the Special Darks had been restored to 25% of the basket population.  So what did I do?  I considered the options.  Special Darks were a rare commodity.  I could take one or two, even though I wasn't there looking for them.  But, when I did want some, they would almost certainly be gone when I came back.  So I did what any reasonable person would do under the circumstances.  I took almost all of them and hid them in a drawer in my cube.  Yes, you heard me.  I hoarded the Special Darks.  I created my own stash, a dragon hoard of my own brand of gold.  Now I had them whenever I wanted.</p>
+
+						<p>I like to think that I'm not a bad person, I'm just the product of the situation.  The Red Hat Special Dark Shortage is a self-perpetuating problem.  Because I noticed other people taking the Special Darks, I was forced to amp up my hoarding game in order to get any.  Because of me, more people were affected by the shortage I caused and the problem continues.</p>
+
+						<p>I'd be a terrible citizen in a real apocalypse.  A meteor crashes into the Earth, things are looking dire, the President is advising everyone stay calm and wait for them to distribute even rations, and I'll be at the supermarket stocking up on canned vegetables and bottled water.  Because if something is rare, I'm galvanized into every-person-for-themself mode.</p>
+
+						<p>The way to solve the chocolate bar problem?  I don't know.  If they stocked more, I would just take more.  Only a full market saturation, of so many Special Darks that demand could not possibly exceed supply, would stopper that behavior.  That, or waiting until my co-workers have given up on Special Darks to the extent that they are no longer so in-demand.</p>
+
+						<p>If you read that last sentence again in the context of an apocalypse, I'm suggesting we hoard until enough people die of starvation that it's no longer necessary.</p>
+
+						<p>Economics are crazy, man.</p></div>
+
+						<div onClick="openClose('a1')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>
+					</div>
+				</div>
+	
+				<div class="span4">
+					<div class="snippet" id="log">
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+</html>
