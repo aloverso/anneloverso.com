@@ -9,10 +9,46 @@
 		<link type="text/css" rel="stylesheet" media="screen" href="github-commit-history/demo/style.css">
 		<link rel="stylesheet" href="font-mfizz/font-mfizz.css">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
 		<style>
 			body {background-color: #F3F3F3}
 			html { 
 			  overflow-y: scroll; 
+			}
+
+			.ck-button {
+			    border:1px solid #D0D0D0;
+			    display:inline-block;
+				height: 100%;
+				margin: 2px;
+				background-color: #F0F0F0;
+				border-radius: 3px;
+				overflow:auto;
+
+			}
+
+			.ck-button label {
+			    float:left;
+			}
+
+			.ck-button label span {
+			    text-align:center;
+			    display:block;
+			    padding:5px 8px;
+			}
+
+			.ck-button label input {
+			    position:absolute;
+			    top:-20px;
+			}
+
+			.ck-button input:hover + span {
+			    background-color:#e0e0e0;
+			}
+
+			.ck-button input:checked + span {
+			    background-color:#1c1c1c; /*0088cc*/
+			    color:#fff;
 			}
 
 			.experience{
@@ -74,8 +110,220 @@
 			}
 			</style>
 
+			
+			<script type="text/javascript">
+				function openClose(theID) 
+				  {
+					if (document.getElementById(theID).style.display == "block") 
+					  {
+						document.getElementById(theID).style.display = "none" 
+					  }
+					else
+					  {  
+						document.getElementById(theID).style.display = "block" 
+					  } 
+				  }
+				function selectall() {
+					var all_tags = document.getElementsByName("checktag");
+					for (i=0; i<all_tags.length; i++) {
+						all_tags[i].checked = true;
+					}
+					showhide();
+				}
+
+				function selectnone() {
+					var all_tags = document.getElementsByName("checktag");
+					for (i=0; i<all_tags.length; i++) {
+						all_tags[i].checked = false;
+					}
+					showhide();
+				}
+				function selectone(text) {
+					selectnone();
+					var all_tags = document.getElementsByName("checktag");
+					for (i=0; i<all_tags.length; i++) {
+						if (text == all_tags[i].innerText) {
+							all_tags[i].checked = true;
+							break;
+						}
+					}
+					showhide();
+
+				}
+
+				function showhide() {
+					//document.getElementById("log").innerHTML = "";
+					var checked_tags = [];
+					var unchecked_tags = [];
+					var all_tags = document.getElementsByName("checktag");
+					var all_tags_divs = document.getElementsByName("checktagdiv");
+					for (i=0; i<all_tags.length; i++) {
+						if (all_tags[i].checked == true) {
+							checked_tags.push(all_tags_divs[i]);
+						}
+						else {
+							unchecked_tags.push(all_tags_divs[i]);
+						}
+					}
+
+					var det_tags = document.getElementsByClassName("tag");
+					var blocks_to_show = []
+
+					for (i=0; i<det_tags.length; i++) {
+						var pid = det_tags[i].parentNode.parentNode.parentNode.id;
+						if (blocks_to_show.indexOf(pid) == -1) { // block not already to hide
+							for (j=0; j<checked_tags.length; j++) {
+								if (det_tags[i].innerText == checked_tags[j].innerText) {
+									blocks_to_show.push(pid);
+									break;
+								}
+							}
+						}
+					}
+
+					var all_exp = document.getElementsByClassName("experience");
+
+					for (i=0; i<all_exp.length; i++) {
+						if (blocks_to_show.indexOf(all_exp[i].getAttribute("name")) > -1) { 
+							//document.getElementById("log").innerHTML += all_exp[i].getAttribute("name");
+							//var exp = document.getElementsByName(all_exp[i].getAttribute("name"))[0];
+							//exp.style.display="block";
+							all_exp[i].style.display="block";
+						}
+						else {
+							all_exp[i].style.display="none";
+						}
+					}
+					resort();
+				}
+
+				function showall() {
+					selectall();
+					var all_exp = document.getElementsByClassName("experience");
+					for (i=0; i<all_exp.length; i++) {
+						all_exp[i].style.display="block";
+					}
+					resort();
+				}
+
+				function sort_by_order(list) {
+					var arr = [];
+					for (i=0; i<list.length; i++) {
+						arr[i] = list[i];
+					}
+					arr.sort(function(a,b) { return b.getAttribute("order") - a.getAttribute("order") } );
+					return arr;
+				}
+
+				function resort() {
+					var all_exp = document.getElementsByClassName("experience");
+					all_exp = sort_by_order(all_exp);
+					var shown = [],
+						hidden = [];
+					for (i=0; i<all_exp.length; i++) {
+						if (all_exp[i].style.display=="block") {
+							shown.push(all_exp[i]);
+						}
+						else {
+							hidden.push(all_exp[i]);
+						}
+					}
+					var num = shown.length;
+					var fullstr = ""
+					var count=0;
+					var sec = document.getElementById("resortsection");
+					if (num%3==1) {
+						for (row=0; row<num/3; row++) {
+							var str="",
+								n=0,
+								span="";
+							str += "<div class='row'>";
+							if (row==0 || row==1) {
+								if (num==1) {
+									n=1;
+								}
+								else {
+									n=2;
+								}
+								span = "<div class='span6'>";
+							}
+							else {
+								n=3;
+								span = "<div class='span4'>";
+							}
+							for (i=0; i<n; i++) {
+								str += span;
+								var elem = shown[count];
+								str += "<div class='experience' name='"+elem.getAttribute("name")+"' order='"+elem.getAttribute("order")+"'>";
+								str += elem.innerHTML;
+								str += "</div></div>";
+								count+=1;
+							}
+							str += "</div>";
+							fullstr += str;
+						}
+					} else if (num%3==2) {
+						for (row=0; row<num/3; row++) {
+							var str="",
+								n=0,
+								span="";
+							str += "<div class='row'>";
+							if (row==0) {
+								n=2;
+								span = "<div class='span6'>";
+							}
+							else {
+								n=3;
+								span = "<div class='span4'>";
+							}
+							for (i=0; i<n; i++) {
+								str += span;
+								var elem = shown[count];
+								str += "<div class='experience' name='"+elem.getAttribute("name")+"' order='"+elem.getAttribute("order")+"'>";
+								str += elem.innerHTML;
+								str += "</div></div>";
+								count+=1;
+							}
+							str += "</div>";
+							fullstr += str;
+						}
+					} else if (num%3==0) {
+						for (row=0; row<num/3; row++) {
+							var str=""
+							str += "<div class='row'>";
+							for (i=0; i<3; i++) {
+								str += "<div class='span4'>";
+								var elem = shown[count];
+								str += "<div class='experience' name='"+elem.getAttribute("name")+"' order='"+elem.getAttribute("order")+"'>";
+								str += elem.innerHTML;
+								str += "</div></div>";
+								count+=1;
+							}
+							str += "</div>";
+							fullstr += str;
+						}
+					} else {}
+					for (i=0; i<hidden.length; i++) {
+						var elem = hidden[i];
+						fullstr += "<div class='experience' name="+elem.getAttribute("name")+" order="+elem.getAttribute("order")+" style='display: none;'>"+elem.innerHTML + "</div>";
+					}
+					//var l = sec.innerHTML.length;
+					sec.innerHTML=fullstr;
+					//alert(fullstr);
+					//var s = sec.innerHTML.substring(l,sec.innerHTML.length);
+					//sec.innerHTML = s;
+					//sec.innerHTML +=fullstr;
+					//alert(sec.innerHTML);
+
+					//WORKS but out of order issue
+
+				}
+
+			</script>
+				
+
 	</head>
-	<body>
+	<body onload="javascript:showall()">
 		<a id="top"></a>
 		<header class="navbar navbar-inverse navbar-static-top"> 
 			<div class="navbar-inner">
@@ -103,109 +351,176 @@
 		        <i class="fa fa-arrow-up fa-2x"></i> Back to Top
 		    </a>
 		</span>
-		
+
 		<div class="container">
-			<div class="row">
+			<div onClick="openClose('tagselect')" style="cursor:hand; cursor:pointer"><font color="#0088cc"><h4>Sort by Tags</h4></font></div>
+			<div id="tagselect" style="display: none;">
+				<div class="row">
+					<div class="span12" align="center">
+						<button onClick="selectall()"><label><span>Select All</span></label></button>
+						<button onClick="selectnone()"><label><span>Select None</span></label></button>
+					</div>
+				</div>
+				</br>
+				<div class="row">
+					<div class="span4" id="dates">
+						<div class="ck-button" onclick="showhide()" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Spring 2015</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Fall 2014</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Summer 2014</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Spring 2014</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Fall 2013</span></label>
+						</div>
+					</span></label>
+				</div>
+					<div class="span4" id="categs">
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Olin</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Work Experience</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Education</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Personal</span></label>
+						</div>
+					</span></label>
+				</div>
+					<div class="span4" id="langs">
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Python</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Arduino</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> C</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> Linux</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> MATLAB</span></label>
+						</div>
+						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+							<i class="fa fa-tag"></i> HTML/CSS</span></label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="resortsection">
+			<!--<div class="row">
 				<div class="span12">
-					<a href="#insper" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/saopaulo.jpg" alt="Work at Insper">
+					<div class="experience" name="insper"><a href="#insper" style="text-decoration: none"><font color="#000000"><img src="img/saopaulo.jpg" alt="Work at Insper">
 					<b>Desafio Insper</b></br>Developing and Implementing a brand-new Brazilian engineering school</font></br>
-					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
+				</div>
+			</div>-->
+			<div class="row">
+				<div class="span4">
+					<div class="experience" name="pianobot" order="14"><a href="#pianobot" style="text-decoration: none"><font color="#000000"><img src="img/pianobot.png" alt="PianoBot project">
+					<b>PianoBot</b></br>Piano-Playing Robot that Reads Sheet Music</font></br>
+					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
+				</div>
+				<div class="span4">
+					<div class="experience" name="comprobo" order="13"><a href="#comprobo" style="text-decoration: none"><font color="#000000"><img src="img/comprobo.png" alt="Computational Robotics project">
+						<b>Robot Obstacle Course</b></br>Using Computer Vision and Mobile Robotics</font></br>
+					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
+				</div>
+				<div class="span4">
+					<div class="experience" name="4thgrademath" order="12"><a href="#4thgrademath" style="text-decoration: none"><font color="#000000"><img src="img/math.png" alt="Math curriculum design">
+						<b>Curricular Design</b></br>Creating a Math Curriculum for Fourth Graders</br></font>
+						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="span4">
-					<a href="#pianobot" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/pianobot.png" alt="PianoBot project">
-					<b>PianoBot</b></br>An Autonomous Piano-Playing Robot that Reads Sheet Music</font></br>
-					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
-				</div>
-				<div class="span4">
-					<a href="#comprobo" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/comprobo.png" alt="Computational Robotics project">
-						<b>Robot Obstacle Course</b></br>The Union of Computer Vision and Mobile Robotics</font></br>
-					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
-				</div>
-				<div class="span4">
-					<a href="#4thgrademath" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/math.png" alt="Math curriculum design">
-						<b>Curricular Design</b></br>An Extracurricular Math Curriculum for Fourth Graders</br></font>
-						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span4">
-					<a href="#redhat" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/redhat.png" alt="RedHat internship">
+					<div class="experience" name="redhat" order="11"><a href="#redhat" style="text-decoration: none"><font color="#000000"><img src="img/redhat.png" alt="RedHat internship"></br>
 					<b>Red Hat Summer Internship</b></br>Systems Management Intern in Project Atomic</font></br>
-					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
 				<div class="span4">
-					<a href="#3dscanner" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/cupscan.png" alt="3D scanner project">
+					<div class="experience" name="3dscanner" order="10"><a href="#3dscanner" style="text-decoration: none"><font color="#000000"><img src="img/cupscan.png" alt="3D scanner project">
 						<b>3D Scanner</b></br>Infrared Imaging with Arduino</font></br>
-					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
 				<div class="span4">
-					<a href="#frisbe" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/frisbe_logo.png" alt=
+					<div class="experience" name="frisbe" order="9"><a href="#frisbe" style="text-decoration: none"><font color="#000000"><img src="img/frisbe_logo.png" alt=
 						"frisbe app project">
 						<b>FrisbE</b></br>An Engineering Education App for Kids</br></font>
-						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="span4">
-					<a href="#research" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/research.png" alt="Education Research">
+					<div class="experience" name="research" order="8"><a href="#research" style="text-decoration: none"><font color="#000000"><img src="img/research.png" alt="Education Research">
 						<b>Engineering Education Research</b></br>What Motivates Learners to Be Teachers?</br></font>
-						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 					</div>
 				<div class="span4">
-					<a href="#website" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/thiswebsitecode.png" alt="Personal website construction">
+					<div class="experience" name="website" order="7"><a href="#website" style="text-decoration: none"><font color="#000000"><img src="img/thiswebsitecode.png" alt="Personal website construction">
 						<b>This Website</b></br>An Adventure in HTML and CSS</br></font>
-					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
 				<div class="span4">
-					<a href="#jumpman" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/jumpman.png" alt="Jumpman video game project">
+					<div class="experience" name="jumpman" order="6"><a href="#jumpman" style="text-decoration: none"><font color="#000000"><img src="img/jumpman.png" alt="Jumpman video game project">
 						<b>Software Design Project</b></br>"Jumpman"-inspired Platformer Video Game</br></font>
-						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 					</div>
 			</div>
 
 			<div class="row">
 				<div class="span4">
-					<a href="#hpv" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/hpv2.png" alt="Human Powered Vehicles Dyno project">
+					<div class="experience" name="hpv" order="5"><a href="#hpv" style="text-decoration: none"><font color="#000000"><img src="img/hpv2.png" alt="Human Powered Vehicles Dyno project">
 						<b>Human-Powered Vehicles Team</b></br>Building a Dynomometer from a treadmill</br></font>
-					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
 				<div class="span4">
-					<a href="#weatherballoons" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/up.png" alt="Modeling weather balloons project">
+					<div class="experience" name="weatherballoons" order="4"><a href="#weatherballoons" style="text-decoration: none"><font color="#000000"><img src="img/up.png" alt="Modeling weather balloons project">
 						<b>Modeling and Simulation Class Project</b></br>The Mechanics of Weather Balloon Flight</br></font>
-						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
 				<div class="span4">
-					<a href="#camel" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/camel.png" alt="Bio-Inspired Camel Design project">
+					<div class="experience" name="camel" order="3"><a href="#camel" style="text-decoration: none"><font color="#000000"><img src="img/camel.png" alt="Bio-Inspired Camel Design project">
 						<b>Building a Bio-Inspired Toy</b></br>A Camel that Spits Water</br></font>
-						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 					</div>
 			</div>
 
 			<div class="row">
 				<div class="span4">
-					<a href="#cartemp" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/thermal.png" alt="Modeling Car Temperature project">
+					<div class="experience" name="cartemp" order="2"><a href="#cartemp" style="text-decoration: none"><font color="#000000"><img src="img/thermal.png" alt="Modeling Car Temperature project">
 						<b>Modeling and Simulation Class Project</b></br>Exploring Systems of Car Temperature</br></font>
-					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
 				<div class="span4">
-					<a href="#circuit" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/modcon.png" alt="Circuits project">
+					<div class="experience" name="circuit" order="1"><a href="#circuit" style="text-decoration: none"><font color="#000000"><img src="img/modcon.png" alt="Circuits project">
 						<b>Modeling and Controls Final Project</b></br>Oscillating Electromagnets Circuit</br></font>
-						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
 				<div class="span4">
-					<a href="#girlcurve" style="text-decoration: none"><font color="#000000"><div class="experience"><img src="img/girlcurvelogo.jpg" alt="End the Girl Curve project">
+					<div class="experience" name="girlcurve" order="0"><a href="#girlcurve" style="text-decoration: none"><font color="#000000"><img src="img/girlcurvelogo.jpg" alt="End the Girl Curve project">
 						<b>End the Girl Curve</b></br>Website to Advocate for Women in STEM</br></font>
-						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></div></a>
+						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
+			</div>
 			</div>
 
 			</br>
 			</br>
 
-			<a id="insper"></a>
-			<div class="detail">
+			
+			<div class="detail" id="insper">
 				<h2>Desafio Insper</h2>
 				<h4>A semester of teaching and learning in S&atilde;o Paulo, Brazil</h4>
 				<div class="row">
@@ -219,16 +534,15 @@
 
 						<p>Other projects include assisting students with creating clubs and giving program feedback, doing research on student motivation in their courses, coordinating activities between Olin and Insper, and designing future courses.  Currently, I am working on a mini-workshop for students to learn to use an Intel Galileo for Arduino and Python projects (<a href="blog.html#CompleteIntelGalileoAdaptedSet-UpforWindows">see the blog post I wrote about it</a>).  Later on, I'll be designing and prototyping a class for the computer science students based on <a href="http://www.nand2tetris.org/">this book</a> that starts at basic principles of logic gates and works up, step-by-step, to constructing a processor and making a Tetris game.</p>
 
-						<div class="tag"><i class="fa fa-tag"></i> Spring 2015</div>
-						<div class="tag"><i class="fa fa-tag"></i> Work Experience</div>
+						<div class="tag" onclick="selectone(this.innerText)"><i class="fa fa-tag"></i> Spring 2015</div>
+						<div class="tag" onclick="selectone(' Work Experience')"><i class="fa fa-tag"></i> Work Experience</div>
 						<div class="tag"><i class="fa fa-tag"></i> Education</div>
 					</div>
 				</div>
 			</div>
 
 			</br>
-			<div class="detail">
-				<a id="pianobot"></a>
+			<div class="detail" id="pianobot">
 				<h2>Piano-Playing Robot</h2>
 				<h4>An 8-week project to integrate electrical, mechanical, and software components</h4>
 				<div class="row">
@@ -263,8 +577,7 @@
 
 			</br>
 
-			<a id="comprobo"></a>
-			<div class="detail">
+			<div class="detail" id="comprobo">
 				<h2>Applied Computational Robotics</h2>
 				<h4>Using hacked Neato robotic vacuum cleaners</h4>
 				<div class="row">
@@ -286,8 +599,7 @@
 
 				</br>
 
-				<a id="4thgrademath"></a>
-				<div class="detail">
+				<div class="detail" id="4thgrademath">
 				<h2>A Dive into Curricular Design</h2>
 				<h4>How can I get fourth graders excited about math?</h4>
 				<div class="row">
@@ -330,8 +642,7 @@
 			</br>
 
 
-			<a id="redhat"></a>
-			<div class="detail">
+			<div class="detail" id="redhat">
 				<h2>My Red Hat Summer Internship</h2>
 				<h4>Or, the story of how I became an Open Source activist</h4>
 				<div class="row">
@@ -353,8 +664,7 @@
 
 			</br>
 
-			<a id="3dscanner"></a>
-			<div class="detail">
+			<div class="detail" id="3dscanner">
 				<h2>Building a 3D Scanner</h2>
 				<h4>Six Weeks and $100 budget - why not?</h4>
 				<div class="row">
@@ -381,8 +691,7 @@
 
 			</br>
 
-			<a id="frisbe"></a>
-			<div class="detail">
+			<div class="detail" id="frisbe">
 				<h2>FrisbE: the Engineering Education App for Kids</h2>
 				<h4>It stands for "Fostering Real Innovation in Students Beginning Engineering"</h4>
 				<div class="row">
@@ -413,8 +722,7 @@
 
 			</br>
 
-			<a id="research"></a>
-			<div class="detail">
+			<div class="detail" id="research">
 				<h2>Engineering Education Research</h2>
 				<h4>Writing a full conference paper is tough</h4>
 				<div class="row">
@@ -441,8 +749,7 @@
 
 			</br>
 
-			<a id="website"></a>
-			<div class="detail">
+			<div class="detail" id="website">
 				<h2>Coding this Website from Scratch</h2>
 				<h4>AKA: A crash course in HTML and CSS</h4>
 				<div class="row">
@@ -463,8 +770,7 @@
 
 			</br>
 
-			<a id="jumpman"></a>
-			<div class="detail">
+			<div class="detail" id="jumpman">
 				<h2>"Jumpman"-inspired Platformer</h2>
 				<h4>Your favorite Atari game now available in Python</h4>
 				<div class="row">
@@ -485,8 +791,7 @@
 
 			</br>
 
-			<a id="hpv"></a>
-			<div class="detail">
+			<div class="detail" id="hpv">
 				<h2>Converting a Treadmill to a Dynomometer</h2>
 				<h4>HPV: as we like to say, "Vehicles, not Viruses"</h4>
 				<div class="row">
@@ -506,8 +811,7 @@
 
 			</br>
 
-			<a id="weatherballoons"></a>
-			<div class="detail">
+			<div class="detail" id="weatherballoons">
 				<h2>Modeling Weather Balloon Mechanics in MATLAB</h2>
 				<h4>Can you <i>really</i> fly your house to South America with balloons?</h4>
 				<div class="row">
@@ -528,8 +832,7 @@
 
 			</br>
 
-			<a id="camel"></a>
-			<div class="detail">
+			<div class="detail" id="camel">
 				<h2>Nature-Inspired Camel Toy</h2>
 				<h4>"The project where your final grade is literally determined by nine-year-olds"</h4>
 				<div class="row">
@@ -549,8 +852,7 @@
 
 			</br>
 
-			<a id="cartemp"></a>
-			<div class="detail">
+			<div class="detail" id="cartemp">
 				<h2>Modeling Continuous Thermal Systems in MATLAB</h2>
 				<h4>You really shouldn't leave your kids in a car</h4>
 				<div class="row">
@@ -573,8 +875,7 @@
 
 			</br>
 
-			<a id="circuit"></a>
-			<div class="detail">
+			<div class="detail" id="circuit">
 				<h2>Oscillating Electromagnets Circuit</h2>
 				<h4>"At least the oscillations worked"</h4>
 				<div class="row">
@@ -594,8 +895,7 @@
 
 			</br>
 
-			<a id="girlcurve"></a>
-			<div class="detail">
+			<div class="detail" id="girlcurve">
 				<h2>End the Girl Curve</h2>
 				<h4>I'm a girl in STEM who's passionate about girls in STEM</h4>
 				<div class="row">
