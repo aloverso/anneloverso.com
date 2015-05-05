@@ -9,6 +9,7 @@
 		<link type="text/css" rel="stylesheet" media="screen" href="github-commit-history/demo/style.css">
 		<link rel="stylesheet" href="font-mfizz/font-mfizz.css">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<script type="text/javascript" src="portfolio_script.js"></script>
 
 		<style>
 			body {background-color: #F3F3F3}
@@ -108,222 +109,10 @@
 			.alignright {
 				float: right;
 			}
-			</style>
-
-			
-			<script type="text/javascript">
-				function openClose(theID) 
-				  {
-					if (document.getElementById(theID).style.display == "block") 
-					  {
-						document.getElementById(theID).style.display = "none" 
-					  }
-					else
-					  {  
-						document.getElementById(theID).style.display = "block" 
-					  } 
-				  }
-				function selectall() {
-					var all_tags = document.getElementsByName("checktag");
-					for (i=0; i<all_tags.length; i++) {
-						all_tags[i].checked = true;
-					}
-					showhide();
-				}
-
-				function selectnone() {
-					var all_tags = document.getElementsByName("checktag");
-					for (i=0; i<all_tags.length; i++) {
-						all_tags[i].checked = false;
-					}
-					showhide();
-				}
-				function selectone(text) {
-					selectnone();
-					var all_tags = document.getElementsByName("checktag");
-					for (i=0; i<all_tags.length; i++) {
-						if (text == all_tags[i].innerText) {
-							all_tags[i].checked = true;
-							break;
-						}
-					}
-					showhide();
-
-				}
-
-				function showhide() {
-					//document.getElementById("log").innerHTML = "";
-					var checked_tags = [];
-					var unchecked_tags = [];
-					var all_tags = document.getElementsByName("checktag");
-					var all_tags_divs = document.getElementsByName("checktagdiv");
-					for (i=0; i<all_tags.length; i++) {
-						if (all_tags[i].checked == true) {
-							checked_tags.push(all_tags_divs[i]);
-						}
-						else {
-							unchecked_tags.push(all_tags_divs[i]);
-						}
-					}
-
-					var det_tags = document.getElementsByClassName("tag");
-					var blocks_to_show = []
-
-					for (i=0; i<det_tags.length; i++) {
-						var pid = det_tags[i].parentNode.parentNode.parentNode.id;
-						if (blocks_to_show.indexOf(pid) == -1) { // block not already to hide
-							for (j=0; j<checked_tags.length; j++) {
-								if (det_tags[i].innerText == checked_tags[j].innerText) {
-									blocks_to_show.push(pid);
-									break;
-								}
-							}
-						}
-					}
-
-					var all_exp = document.getElementsByClassName("experience");
-
-					for (i=0; i<all_exp.length; i++) {
-						if (blocks_to_show.indexOf(all_exp[i].getAttribute("name")) > -1) { 
-							//document.getElementById("log").innerHTML += all_exp[i].getAttribute("name");
-							//var exp = document.getElementsByName(all_exp[i].getAttribute("name"))[0];
-							//exp.style.display="block";
-							all_exp[i].style.display="block";
-						}
-						else {
-							all_exp[i].style.display="none";
-						}
-					}
-					resort();
-				}
-
-				function showall() {
-					selectall();
-					var all_exp = document.getElementsByClassName("experience");
-					for (i=0; i<all_exp.length; i++) {
-						all_exp[i].style.display="block";
-					}
-					resort();
-				}
-
-				function sort_by_order(list) {
-					var arr = [];
-					for (i=0; i<list.length; i++) {
-						arr[i] = list[i];
-					}
-					arr.sort(function(a,b) { return b.getAttribute("order") - a.getAttribute("order") } );
-					return arr;
-				}
-
-				function resort() {
-					var all_exp = document.getElementsByClassName("experience");
-					all_exp = sort_by_order(all_exp);
-					var shown = [],
-						hidden = [];
-					for (i=0; i<all_exp.length; i++) {
-						if (all_exp[i].style.display=="block") {
-							shown.push(all_exp[i]);
-						}
-						else {
-							hidden.push(all_exp[i]);
-						}
-					}
-					var num = shown.length;
-					var fullstr = ""
-					var count=0;
-					var sec = document.getElementById("resortsection");
-					if (num%3==1) {
-						for (row=0; row<num/3; row++) {
-							var str="",
-								n=0,
-								span="";
-							str += "<div class='row'>";
-							if (row==0 || row==1) {
-								if (num==1) {
-									n=1;
-								}
-								else {
-									n=2;
-								}
-								span = "<div class='span6'>";
-							}
-							else {
-								n=3;
-								span = "<div class='span4'>";
-							}
-							for (i=0; i<n; i++) {
-								str += span;
-								var elem = shown[count];
-								str += "<div class='experience' name='"+elem.getAttribute("name")+"' order='"+elem.getAttribute("order")+"'>";
-								str += elem.innerHTML;
-								str += "</div></div>";
-								count+=1;
-							}
-							str += "</div>";
-							fullstr += str;
-						}
-					} else if (num%3==2) {
-						for (row=0; row<num/3; row++) {
-							var str="",
-								n=0,
-								span="";
-							str += "<div class='row'>";
-							if (row==0) {
-								n=2;
-								span = "<div class='span6'>";
-							}
-							else {
-								n=3;
-								span = "<div class='span4'>";
-							}
-							for (i=0; i<n; i++) {
-								str += span;
-								var elem = shown[count];
-								str += "<div class='experience' name='"+elem.getAttribute("name")+"' order='"+elem.getAttribute("order")+"'>";
-								str += elem.innerHTML;
-								str += "</div></div>";
-								count+=1;
-							}
-							str += "</div>";
-							fullstr += str;
-						}
-					} else if (num%3==0) {
-						for (row=0; row<num/3; row++) {
-							var str=""
-							str += "<div class='row'>";
-							for (i=0; i<3; i++) {
-								str += "<div class='span4'>";
-								var elem = shown[count];
-								str += "<div class='experience' name='"+elem.getAttribute("name")+"' order='"+elem.getAttribute("order")+"'>";
-								str += elem.innerHTML;
-								str += "</div></div>";
-								count+=1;
-							}
-							str += "</div>";
-							fullstr += str;
-						}
-					} else {}
-					for (i=0; i<hidden.length; i++) {
-						var elem = hidden[i];
-						fullstr += "<div class='experience' name="+elem.getAttribute("name")+" order="+elem.getAttribute("order")+" style='display: none;'>"+elem.innerHTML + "</div>";
-					}
-					//var l = sec.innerHTML.length;
-					sec.innerHTML=fullstr;
-					//alert(fullstr);
-					//var s = sec.innerHTML.substring(l,sec.innerHTML.length);
-					//sec.innerHTML = s;
-					//sec.innerHTML +=fullstr;
-					//alert(sec.innerHTML);
-
-					//WORKS but out of order issue
-
-				}
-
-			</script>
-				
+			</style>			
 
 	</head>
-	<body onload="javascript:showall()">
+	<body onload="javascript:showAll()">
 		<a id="top"></a>
 		<header class="navbar navbar-inverse navbar-static-top"> 
 			<div class="navbar-inner">
@@ -357,87 +146,87 @@
 			<div id="tagselect" style="display: none;">
 				<div class="row">
 					<div class="span12" align="center">
-						<button onClick="selectall()"><label><span>Select All</span></label></button>
-						<button onClick="selectnone()"><label><span>Select None</span></label></button>
+						<button onClick="selectAll()"><label><span>Select All</span></label></button>
+						<button onClick="selectNone()"><label><span>Select None</span></label></button>
 					</div>
 				</div>
 				</br>
 				<div class="row">
 					<div class="span4" id="dates">
-						<div class="ck-button" onclick="showhide()" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Spring 2015</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Fall 2014</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Summer 2014</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Spring 2014</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Fall 2013</span></label>
 						</div>
 					</span></label>
 				</div>
 					<div class="span4" id="categs">
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Olin</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Work Experience</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Education</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Personal</span></label>
 						</div>
 					</span></label>
 				</div>
 					<div class="span4" id="langs">
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Python</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Arduino</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> C</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> Linux</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> MATLAB</span></label>
 						</div>
-						<div class="ck-button" onclick="showhide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
+						<div class="ck-button" onclick="showHide()"><label><input type="checkbox" name="checktag"><span name="checktagdiv">
 							<i class="fa fa-tag"></i> HTML/CSS</span></label>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="resortsection">
-			<!--<div class="row">
-				<div class="span12">
-					<div class="experience" name="insper"><a href="#insper" style="text-decoration: none"><font color="#000000"><img src="img/saopaulo.jpg" alt="Work at Insper">
-					<b>Desafio Insper</b></br>Developing and Implementing a brand-new Brazilian engineering school</font></br>
+			<div class="row">
+				<div class="span6">
+					<div class="experience" name="insper" order="15"><a href="#insper" style="text-decoration: none"><font color="#000000"><img src="img/engroom2.jpg" alt="Work at Insper">
+					<b>Desafio Insper</b></br>Developing a new engineering school in Brazil</font></br>
 					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
-			</div>-->
-			<div class="row">
-				<div class="span4">
+				<div class="span6">
 					<div class="experience" name="pianobot" order="14"><a href="#pianobot" style="text-decoration: none"><font color="#000000"><img src="img/pianobot.png" alt="PianoBot project">
 					<b>PianoBot</b></br>Piano-Playing Robot that Reads Sheet Music</font></br>
 					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
-				<div class="span4">
+			</div>
+			<div class="row">
+				<div class="span6">
 					<div class="experience" name="comprobo" order="13"><a href="#comprobo" style="text-decoration: none"><font color="#000000"><img src="img/comprobo.png" alt="Computational Robotics project">
 						<b>Robot Obstacle Course</b></br>Using Computer Vision and Mobile Robotics</font></br>
 					<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
 				</div>
-				<div class="span4">
+				<div class="span6">
 					<div class="experience" name="4thgrademath" order="12"><a href="#4thgrademath" style="text-decoration: none"><font color="#000000"><img src="img/math.png" alt="Math curriculum design">
 						<b>Curricular Design</b></br>Creating a Math Curriculum for Fourth Graders</br></font>
 						<i class="fa fa-arrow-right fa-4x" style=color:white;></i></a></div>
@@ -534,8 +323,8 @@
 
 						<p>Other projects include assisting students with creating clubs and giving program feedback, doing research on student motivation in their courses, coordinating activities between Olin and Insper, and designing future courses.  Currently, I am working on a mini-workshop for students to learn to use an Intel Galileo for Arduino and Python projects (<a href="blog.html#CompleteIntelGalileoAdaptedSet-UpforWindows">see the blog post I wrote about it</a>).  Later on, I'll be designing and prototyping a class for the computer science students based on <a href="http://www.nand2tetris.org/">this book</a> that starts at basic principles of logic gates and works up, step-by-step, to constructing a processor and making a Tetris game.</p>
 
-						<div class="tag" onclick="selectone(this.innerText)"><i class="fa fa-tag"></i> Spring 2015</div>
-						<div class="tag" onclick="selectone(' Work Experience')"><i class="fa fa-tag"></i> Work Experience</div>
+						<div class="tag"><i class="fa fa-tag"></i> Spring 2015</div>
+						<div class="tag"><i class="fa fa-tag"></i> Work Experience</div>
 						<div class="tag"><i class="fa fa-tag"></i> Education</div>
 					</div>
 				</div>
