@@ -15,7 +15,7 @@ function openClose(theID) {
  * Checks all tags and calls showHide to update display
  */
 function selectAll() {
-	var all_tags = document.getElementsByName("checktag");
+	var all_tags = document.getElementsByTagName("input");
 	for (i=0; i<all_tags.length; i++) {
 		all_tags[i].checked = true;
 	}
@@ -26,7 +26,7 @@ function selectAll() {
  * Unchecks all tags and calls showHide to update display
  */
 function selectNone() {
-	var all_tags = document.getElementsByName("checktag");
+	var all_tags = document.getElementsByTagName("input");
 	for (i=0; i<all_tags.length; i++) {
 		all_tags[i].checked = false;
 	}
@@ -35,7 +35,7 @@ function selectNone() {
 
 function selectOne(text) {
 	selectNone();
-	var all_tags = document.getElementsByName("checktag");
+	var all_tags = document.getElementsByTagName("input");
 	for (i=0; i<all_tags.length; i++) {
 		if (text == all_tags[i].innerText) {
 			all_tags[i].checked = true;
@@ -61,7 +61,7 @@ function showHide() {
 	// declare variables
 	var checked_tags = [],
 		unchecked_tags = [],
-		all_tags = document.getElementsByName("checktag"),
+		all_tags = document.getElementsByTagName("input"),
 		all_tags_divs = document.getElementsByName("checktagdiv"),
 		det_tags = document.getElementsByClassName("tag"),
 		blocks_to_show = [],
