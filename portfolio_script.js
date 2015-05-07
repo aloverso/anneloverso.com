@@ -33,6 +33,7 @@ function selectNone() {
 	showHide();
 }
 
+/*
 function selectOne(text) {
 	selectNone();
 	var all_tags = document.getElementsByTagName("input");
@@ -43,7 +44,7 @@ function selectOne(text) {
 		}
 	}
 	showHide();
-}
+}*/
 
 /*
  * Selects and displays all tags
@@ -83,7 +84,7 @@ function showHide() {
 		var pid = det_tags[i].parentNode.parentNode.parentNode.id; // ID of detail is name of exp block
 		if (blocks_to_show.indexOf(pid) == -1) { // add only if block not already marked to hide
 			for (j=0; j<checked_tags.length; j++) {
-				if (det_tags[i].innerText == checked_tags[j].innerText) {
+				if (det_tags[i].textContent.replace(/\s+/g, '') == checked_tags[j].textContent.replace(/\s+/g, '')) {
 					blocks_to_show.push(pid);
 					break;
 				}
