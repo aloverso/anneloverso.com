@@ -62,6 +62,7 @@ function showHide() {
 	// declare variables
 	var checked_tags = [],
 		unchecked_tags = [],
+		checked_tags_textContents = [],
 		all_tags = document.getElementsByTagName("input"),
 		all_tags_divs = document.getElementsByName("checktagdiv"),
 		det_tags = document.getElementsByClassName("tag"),
@@ -72,6 +73,7 @@ function showHide() {
 	for (i=0; i<all_tags.length; i++) {
 		if (all_tags[i].checked == true) {
 			checked_tags.push(all_tags_divs[i]);
+			checked_tags_textContents.push(all_tags_divs[i].textContent.replace(/\s+/g, ''));
 		} else {
 			unchecked_tags.push(all_tags_divs[i]);
 		}
@@ -83,11 +85,9 @@ function showHide() {
 	for (i=0; i<det_tags.length; i++) {
 		var pid = det_tags[i].parentNode.parentNode.parentNode.id; // ID of detail is name of exp block
 		if (blocks_to_show.indexOf(pid) == -1) { // add only if block not already marked to hide
-			for (j=0; j<checked_tags.length; j++) {
-				if (det_tags[i].textContent.replace(/\s+/g, '') == checked_tags[j].textContent.replace(/\s+/g, '')) {
-					blocks_to_show.push(pid);
-					break;
-				}
+			// if it's in the checked tags list
+			if (checked_tags_textContents.indexOf(det_tags[i].textContent.replace(/\s+/g, '')) > -1) {
+				blocks_to_show.push(pid);
 			}
 		}
 	}
