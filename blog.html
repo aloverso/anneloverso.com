@@ -85,11 +85,14 @@
 		  {
 			if (document.getElementById(theID).style.display == "block") 
 			  {
-				document.getElementById(theID).style.display = "none" 
+				document.getElementById(theID).style.display = "none"
+				document.getElementById("read_"+theID).innerHTML = "<font color='#0088c'>Read More</font>"
 			  }
 			else
 			  {  
 				document.getElementById(theID).style.display = "block" 
+				document.getElementById("read_"+theID).innerHTML = "<font color='#0088c'>Read Less</font>"
+
 			  } 
 		  }
 
@@ -157,6 +160,151 @@
 					intlnat teaching
 					python common errors
 					-->
+
+					<a id="MyGooglewhackScraper"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a11')" style="cursor:hand; cursor:pointer"><div class="title">My Googlewhack Scraper</div></div>
+						<div class="date">May 28, 2015 11:53</div>
+						</br>
+
+						<p>I recently found out about <a href="http://en.wikipedia.org/wiki/Googlewhack">Googlewhacks</a>, a thing it seems the rest of the world has already heard of, so I guess I'm late jumping on this ship.</p>
+
+						<p>Nonetheless, the "contest" intrigued me, and after a few futile attempts to search random words that popped into my head, I decided to try and automate the process so that I too could claim the fleeting discovery of a googlewhack.</p>
+
+						<div id="a11" style="display: none;">
+
+						<p>Writing the scraper was easy - I used one of my favorite Python packages: <a href="http://www.clips.ua.ac.be/pattern">pattern</a>.  It's a powerful web mining module with built-in functionality for searching Google, Wikipedia, Facebook, Twitter, and more.  Using this, it only took a few short lines to implement my random Googlewhack finder:</p>
+<pre><code>
+from pattern.web import *
+import random
+from firebase import firebase
+
+# create list of all possible english words
+f = open("corncob_lowercase.txt")
+words = list(f)
+f.close()
+
+firebase_url = "https://googlewhack.firebaseio.com/"
+g = Google()
+results = 2
+word1 = ""
+word2 = ""
+
+# keep searching until we find a googlewhack
+while results != 1:
+	word1 = random.choice(words).strip()
+	word2 = random.choice(words).strip()
+	results = len(g.search(word1 + " " + word2))
+	print word1, word2, results
+
+# add the whack on an online firebase database
+print "FOUND A WHACK:", word1, word2
+fb = firebase.FirebaseApplication(firebase_url, None)
+fb.put("/","whacks",word1+" "+word2)
+</code></pre>
+						<p>This program depends on <b>pattern</b>, which you can install with <code>sudo pip install pattern</code> and <b><a href="http://www.mieliestronk.com/wordlist.html">Mieliestronk's List of English Words</a></b> which you can download with <code>wget http://www.mieliestronk.com/corncob_lowercase.txt</code>.</p>
+
+						<p>The program keeps running (in theory) until it finds a whack.  I later added the <a href="https://www.firebase.com/">firebase</a> so that if anyone who sees this here and decides to download and run it finds a whack, I'll be able to know about it.  (Please, feel free!)</p>
+
+						<p>The downside: it turns out, Google has barriers in place to prevent scrapers from making too many search requests like this.  It will only loop about 80 times until we get a 403 Forbidden Error response.  It seems that the barrier only lasts about a day, though.</p>
+
+						<p>What does this tell us?  I could try using Google's own API, which would probably allow more requests per day.  But as is, I could probably search more than 80 times manually and be more likely to find a whack that with two randomly selected words.  And although I have yet to find a whack, I'll write a script to automatically execute this scraper script each day and keep you updated.</p>
+
+
+						</div>
+						</br>
+
+						<div id="read_a11" onClick="openClose('a11')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>				
+					</div>
+
+					<a id="Python2vsPython3"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a10')" style="cursor:hand; cursor:pointer"><div class="title">Python 2 vs Python 3</div></div>
+						<div class="date">May 14, 2015 09:31</div>
+						</br>
+
+						<p style="line-height: 150%"><a href="https://xkcd.com/353/"><img src="img/pythonxkcd.png" alt="XKCD Python webcomic" width="50%" align="right" style="margin:5px 10px" title="source: xkcd"></a>I learned Python in Python 2.  I found the language simple, clean, and not at all difficult to understand, having come from a high-level object-oriented language background from learning Java in AP CS in high school.</p>
+
+						<p>So, admittedly, when I came to <a href="portfolio.html/#Insper">Insper</a> and found they were teaching Software Design in Python 3, at first I didn't understand.  Most third-party libraries aren't even supported in Python 3!  Why bother switching when Python 2 works well?</p>
+
+						<p>This is the story of how I learned to stop worrying and love the Python 3.</p>
+
+						<div id="a10" style="display: none;">
+
+						<p>So, I did my research, and I changed my mind.  It turns out, amazingly enough, that when you're well-informed about the reasonings that drive changes, you are much more open to change itself.</p>
+
+						<p>In fact, as a general rule of thumb, understanding reasoning behind decisions is important.  As a teacher, explaining <i>why</i> you give a test or homework assignment drives up student feelings of relevance and with that, intrinsic motivation.  And as a student or employee, people tend to resist change when they don't understand why it's taking place.  Tradition is heavily rooted in today's society.</p>
+
+						<p>But, excusing that brief divergence, here are some of the reasons I became convinced Python 3 was in fact a better language to teach to the first-years here at Insper.  There are still some cons though.</p>
+
+						<h4>The <code>print</code> function</h4>
+						<p>My immediate gut reaction to this change - the most glaring, obvious one - was "But <i>why</i>?"  I'll admit, I still continuously screw it up.  I get syntax errors all the time because I forget to put those darn parentheses around my print statements.  It's inconvenient.</p>
+
+						<p><b>But...</b> on the flip side, now that I'm helping teach the language, I understand why the changes were made.  <code>print</code> is a function, after all.  It makes sense to keep this consistency and explain to beginner programmers that you put parentheses after a function call with the arguments inside, instead of saying this with an "...except for <code>print</code>!" addendum.</p>
+
+						<h4>Integer Division</h4>
+						<p>In the new and improved Python 3, dividing two integers returns a float, and you need to use the new <code>//</code> operator to get the previous flooring behavior.</p>
+
+<pre><code>
+>>> 3/2
+1.5
+>>> 3//2
+1
+</code></pre>
+						<p>It just makes more sense.  Yes, Python 2 had a staunch believe that typing should be explicit, and again makes the language more accessible to beginners.  You don't need to worry about teaching the C-like floating-point division.  That said, if you ever decide to move on to learning a language like C that does have that floating-point division quirk, you might have some habits from Python that are hard to break.</p>
+
+						<p>Also, I do have small concerns from watching the language be taught that the students don't have a complete grasp of typing their variables.  This might be a separate issue, with Python instead of Python 3, because if they were learning a language like Java they would have to explicitly declare each variable's type.</p>
+
+						<p>Too often I see them trying to use string methods on things that are not strings, dictionary methods on things that are not dictionaries, etc.  Would the explicit typing of int vs floating-point division force them to keep types in mind?  Maybe.  But I expect it's larger issue than int division.</p>
+
+						<h4><code>input()</code> function</h4>
+
+						<p>I never learned the <code>input()</code> function back when I was learning Python (in Python 2), which I found odd, coming from Java and high school programming competitions where the first thing you did always was create a Scanner object to receive input.</p>
+
+						<p>Looking back, I wonder if that was due to the concerning abilities of the <code>input()</code> function - it tried to be helpful and guess the type of the input instead of just returning a string.  This allows people to go ahead and enter a few lines of Python code that the program would then execute.  Not the best plan.</p>
+
+						<p>In Python 3, <code>input()</code> now has the behavior of the Python 2 function <code>raw_input()</code>, which is the one that always returns a string and you should have used always anyways.</p>
+
+						<h4>Strings are Unicode!</h4>
+
+						<p>This is a problem I never ran into in my intro-level Python class, happily unknowingly declaring all my strings as bytes because that's how Python 2 did it.</p>
+
+						<p>But, teaching internationally, this was one of the main reasons that convinced me Python 3 was worth using.  I have a class of 30 Brazilian students whose first language is Portuguese.  They want their strings and variable names to contain Portuguese words with accents.  Python 3 allows this, and Python 2 would have made it a pain in the neck.  This international accessibility is a huge bonus.</p>
+
+						<p>These are some of the main differences, but there are so many more - bug fixes, changing bad behavior we didn't even know existed, making things simpler and make more sense.  Yes, it's incredibly annoying that some of my favorite packages (<a href="http://www.clips.ua.ac.be/pattern">*cough cough*</a>) are not available in Python 3, and porting them is a hassle.  But for teaching beginner programmers who've never touched code before, Python 3 makes for a smoother introduction than its older counterpart.</p>
+
+						<p>For more info on other changes between Python 2 and 3:
+							<ul>
+								<li><a href="http://python3porting.com/differences.html">Extensive list of differences</a></li>
+								<li><a href="http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/key_differences_between_python_2_and_3.ipynb">List of changes and performance comparisons</a></li>
+								<li><a href="http://blog.teamtreehouse.com/python-2-vs-python-3">Someone with similar feelings</a></li>
+								<li><a href="https://wiki.python.org/moin/Python2orPython3">Python Wiki on the differences</a></li>
+							</ul>
+						</p>
+
+						</div>
+						</br>
+
+						<div id="read_a10" onClick="openClose('a10')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>				
+					</div>
+
+					<!--<a id="ThinkingAbouttheFutureofCombiningEducationandTechnology"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a9')" style="cursor:hand; cursor:pointer"><div class="title">Thinking About the Future of Combining Education and Technology</div></div>
+						<div class="date">May 10, 2015 12:55</div>
+						</br>
+
+
+						<div id="a9" style="display: none;">
+
+						<p>To Professor Nilsson we say: "Yes, and."</p>
+
+						</div>
+						</br>
+
+						<div id="read_a9" onClick="openClose('a9')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>				
+					</div>-->
+
 					<a id="MembersoftheOlincommunityrespondtoNYT&quot;HowToAttractFemaleEngineers&quot;article"></a>
 					<div class="blogpost">
 						<div onClick="openClose('a8')" style="cursor:hand; cursor:pointer"><div class="title">Members of the Olin community respond to NYT &quot;How To Attract Female Engineers&quot; article</div></div>
@@ -257,7 +405,7 @@
 
 						</div>
 					</br>
-						<div onClick="openClose('a8')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>				
+						<div id="read_a8" onClick="openClose('a8')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>				
 						
 
 					</div>
@@ -380,8 +528,7 @@
 
 						</div>
 
-						<div onClick="openClose('a7')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>				
-						
+						<div id="read_a7" onClick="openClose('a7')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>				
 
 					</div>
 
@@ -521,7 +668,7 @@ f.close()
 
 						</div>
 
-						<div onClick="openClose('a6')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>						
+						<div id="read_a6" onClick="openClose('a6')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>						
 
 					</div>
 
@@ -793,9 +940,69 @@ f.close()
 
 						</div>
 
-						<div onClick="openClose('a5')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>						
+						<div id="read_a5" onClick="openClose('a5')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>						
 
 					</div>
+
+					<a id="FrontiersinEducationConference:Reflections"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a4.5')" style="cursor:hand; cursor:pointer"><div class="title">Frontiers in Education Conference: Reflections</div></div>
+						<div class="date">November 1, 2014 15:32</div>
+						</br>
+
+						<p>My trip to Madrid was pretty life changing.  The more I think about it, the more I realized how much I learned about education in a broader sense as it is applied in so many different contexts.  It was an incredible experience.</p>
+						
+						<div id="a4.5" style="display: none;">
+						<p>For starters, the keynote speaker on the very first day gave a presentation on Massive Open Online Courses (MOOCs) and Small Private Online Course (SPOCs) and how they can be used in different combinations with live lectures to provide new and better learning experiences.</p>
+
+						<p>It was an interesting lecture, but even more interesting was the chance to discuss it afterwards and think critically about its validity.  For example, the presenter argued for SPOCs to precede a Physics 0 course as introduction.  He compared grades with the SPOC to grades without it to prove it was effective.</p>
+
+						<p>To us, it didn't seem very valid because he had zero student input and feedback and setup.  He didn't seem to realize that there was more to learning than the "deliverable" grades from the experience.</p>
+
+						<p>That was a common thread I noticed through the conference, that myself and the other Olin students were often able to present a new viewpoint as undergrads that the researchers were seeking or hadn't considered.  Often, presenters referred to students as "they", that is, seeing a strict dichotomy that lent itself little to really understanding the student experience.</p>
+
+						<p>Another moment that was pretty defining was when I sat in on Jon Stolk's and Zhenya's workshop on motivation.  Because it was a workshop instead of a presentation, it was structured as a bit of lecture and then intermittent breakout sessions and discussions and activities and worksheets.</p>
+
+						<p>Myself and other Oliners came and dispersed ourselves at different tables, spread out to help facilitate discussion.  Talking to the people at the table was so valuable as they struggled to figure out what changes they could make to encourage their students to be intrinsically motivated instead of extrinsically.</p>
+
+						<p>For example, one woman pointed out that her students in an intro-computer programming class had very little to no autonomy in their assignments, and that might prevent intrinsic motivation.  Her first thought, as a way to increase student autonomy, was to give more flexible due dates for the pre-defined structured assignments.</p>
+
+						<p>I was then able, as a undergrad perspective, to suggest that a flexible due date does little to increase autonomy if the assignment is still stiff and un-personalized.  I suggested that she give more flexible assignments instead, maybe structured and scaffolded but still variable enough that students can apply their learning to an assignment of mini-project that really interests them, and makes them excited to work on it.</p>
+
+						<p>I was surprised to hear she hadn't even thought of that.  Moments like that made me feel like my input and presence was really important at the conference.  We went back and forth, and she explained that in a 160-student lecture with one professor and 5 TAs, it was hard to allow individual- or group-defined assignments and make sure they all follow the learning goals for that lesson in the time they had.</p>
+
+						<p>It was an interesting problem to tackle and talk to her about.  How could we apply autonomy in assignment subject matter to such a huge environment?</p>
+
+						<p>I ended up suggesting a system we used in my POE class, that is, using a forum like Google Moderator where students can post ideas for projects or assignments that follow with what they're learning.  Other students can upvote and downvote ideas, so the most popular ones rise to the top.  Then, students can have input into assignment design, but the teaching team has fewer ideas to wrangle and make sure they all cover the curriculum well.</p>
+
+						<p>She wrote down my ideas and made it clear she was going to bring them up with her teaching team.  Moments like that were really empowering, seeing how my ideas and input could make a difference in the lives of students, even in a class that's thousands of miles away that I've never seen before.</p>
+
+						<p>I haven't even gotten to the part where my team actually presented our research.  My team was Adam Coppola, myself, Cecilia Auerswald, and Doyung Lee.  Cecilia and Doyung are actually spending this semester in Brazil at Insper, so seeing them in Madrid was the first time seeing them all semester.  Previously, we had been practicing our presentation with them on Skype.</p>
+
+						<p>We had worked really hard on our presentation for over a month.  We had four presenters, which was pretty much unheard of at FIE, so we really had a chance to do something new and creative.  Our paper is about making teachers from learners, and investigates factors at "Celadon College" (a relatively new, small college that graduates only engineering degrees) that may influence its students and graduates to be dis-proportionally teaching-minded and have interest in going into a teaching career or activity.</p>
+
+						<p>Our data was based on survey responses and primarily qualitative, so we presented the important emergent themes through the use of three personas, or composite personalities.  Cecilia, Doyung, and I each presented a monologue from a student point of view that was composed of quotes from the data, edited only for coherence within the monologue.  Adam was the one who introduced the study, the methods, and each of use "students".</p>
+
+						<p>Our presentation was at 9am, in a session about Faculty Roles.  The three presenters that went before us were really intriguing, with papers that all played off each other well and invoked interesting discussions.  Our session chair was really good at engaging discussion during a 10-minute break we had between presenters, and that got the audience really involved and paying attention.</p>
+
+						<p>We went last, and I honestly don't remember too much of the actual presentation.  I was focusing too hard on remembering what I had to say and saying it right.  I was looking at the audience, but I wasn't seeing them.</p>
+
+						<p>We had prepared for some pretty tough questions, expecting people to try to poke holes in our argument.  You can imagine our surprise when the first question was "When are you guys going to videotape this so I can show it to the rest of my school?"  All the questions afterward were similar - they wanted to know how they could apply what we'd seen at "Celadon" to their own colleges.</p>
+
+						<p>That was <i>precisely</i> the conversation we had been trying to open up as the purpose of our presentation, and it was incredibly rewarding to see that come to life.  The session chair said one thing that was really meaningful - even if we're still figuring out the translational work, the major impact of our presentation is within the impact and inspiration - showing this to that whole room of people so they can be inspired to carry it with them.</p>
+
+						<p>One woman came up to us afterwards and said that she had been attending FIE for 25 years, and our presentation was within the top five she'd seen of all time.</p>
+						
+						<p>Even typing this out, it's weird to think that all this was about the presentation and paper we've worked so hard on since the beginning of last semester.  The response to our presentation was overwhelming, and I've never felt so empowered that the work I've been doing has real purpose and real impact.  That feeling was something I'll likely never forget.  </p>
+
+					</div>
+
+					<div id="read_a4.5" onClick="openClose('a4.5')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>						
+
+					</div>
+
+
+
 					<a id="MyRealResumeSkillsfromRedHat"></a>
 					<div class="blogpost">
 						<div onClick="openClose('a4')" style="cursor:hand; cursor:pointer"><div class="title">My Real Resume Skills from Red Hat</div></div>
@@ -826,7 +1033,7 @@ f.close()
 
 						<p>Red Hat was my first experience with open source communities and "pushing code upstream" for review and acceptance, both of which were exciting new concepts.  But watching my patches get merged into the main project repository was a feeling I'll never forget.</p></div>
 
-						<div onClick="openClose('a4')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>						
+						<div id="read_a4" onClick="openClose('a4')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>						
 
 					</div>
 
@@ -869,7 +1076,7 @@ f.close()
 
 						<p>Besides, when you think about it, converting to a string is probably uses a loop anyways.</p></div>
 
-						<div onClick="openClose('a3')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>
+						<div id="read_a3" onClick="openClose('a3')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>
 
 					</div>
 
@@ -925,7 +1132,7 @@ printf ("%s\n", default_instruction);
 						
 						<p> Of course, the trick here was, neither of these two options is better, because they both utilize inserting conditional words into a complete sentence, breaking the <a href="http://www.gnu.org/prep/standards/standards.html#Internationalization">GNU Coding Standards' internationalization guidelines</a> and making any kind of foreign-language translation of this program unreadable.</p></div>
 
-						<div onClick="openClose('a2')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>
+						<div id="read_a2" onClick="openClose('a2')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>
 					</div>
 
 					<a id="TheEconomicsofChocolateintheBreakrooms"></a>
@@ -959,7 +1166,7 @@ printf ("%s\n", default_instruction);
 
 						<p>Economics are crazy, man.</p></div>
 
-						<div onClick="openClose('a1')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>
+						<div id="read_a1" onClick="openClose('a1')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>
 					</div>
 
 					<a id="WhatisaSoftwareEngineeringJobReallyLike?"></a>
@@ -997,19 +1204,19 @@ printf ("%s\n", default_instruction);
 						<p>What I know for sure is that I'll go to school in the fall a changed person. I'll be the one taking notes in Emacs instead of MS Word. I'll be the one re-teaching my classmates how to use git /correctly/ for collaborative projects. I'll be the one using my Fedora machine as much as possible over my school-issued Windows build. I'll be the one out there advocating for F/OSS, (free and open source software).</p>
 						</div>				
 
-						<div onClick="openClose('a0')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More/Less</font></div>
+						<div id="read_a0" onClick="openClose('a0')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>
 					</div>
 				</div>
 				
-	
 				<div class="span4">
 					<div class="snippet" id="log">
 					</div>
-					
 				</div>
+
 			</div>
 		</div>
 
 
 	</body>
+
 </html>

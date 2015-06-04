@@ -119,7 +119,7 @@
 				<div class="container">
 					<nav>
 						<ul class="nav nav-pills nav-pull-left">
-							<li><a href="index.html"><div id="pagename"><font style="Alpha54" color="#FFFFFF"><img src="img/headericon.png" width="40px"><b>nne LoVerso</b></font></div></a></li>
+							<li><a href="index.html"><div id="pagename"><font style="Alpha54" color="#FFFFFF"><img src="img/headericon.png" width="40px"><b>Anne LoVerso</b></font></div></a></li>
 						</ul>
 						<ul class="nav nav-pills pull-right"> 
 							<li><a href="index.html"><div title="Home"><i class="fa fa-home fa-3x"></i></div></a></li>
@@ -338,7 +338,7 @@
 					<div class="span8">
 						<p>Working with five other students for eight weeks, we built a piano-playing robot that could play three octaves of notes (including black keys).  It could read music digitally from a MIDI file as well as using computer vision to read a PDF or image file of sheet music.</p>
 						<p>My role on the team was primarily working on the Optical Music Recognition algorithms, although we all worked together on the fabrication and assembly of the electrical and mechanical components.  For this project, I learned <a href="http://opencv.org/">OpenCV</a>, a powerful computer vision package for Python and other languages.</p>
-						<p>The Optical Music Recognition (OMR) was one of the most exciting and most challenging projects I have ever worked on.  A breif overview is as follows, but for a full description of the process, please visit the <a href="http://poe.olin.edu/poe2014/pianobot/software.html">software page on our website</a>.
+						<p>The Optical Music Recognition (OMR) was one of the most exciting and most challenging projects I have ever worked on.  A brief overview is as follows, but for a full description of the process, please visit the <a href="http://poe.olin.edu/poe2014/pianobot/software.html">software page on our website</a>.
 						<ol>
 							<li>Convert a PDF of the sheet music into a PNG image file</li>
 							<li>Search through the entire image and use the HoughLines algorithm to find and save the y-location of every staff line within the image.</li>
@@ -372,7 +372,7 @@
 				<div class="row">
 					<div class="span8">
 						<p>For my final project in Computational Robotics, two other students and I worked together to created what we called the "Neato Carnival" - a obstacle course that a Neato robot could navigate autonomously.  We used the robot's onboard Lidar scanners in combination with video camera "seeing" to get sensory input from the environment, analyzed them in python, and controlled the robot's motor motion via ROS to respond.</p>
-						<p>The project worked such that the Neato could be placed anywhere in the "world".  It would look for an obstacle, approach it, and idenify what the obstacle was, through the use of fiducials.  Then, it would use a finite-state controller to switch into completing the steps for that obstacle, and when it was done it would go back to looking for obstacles again.  We had three obstacles in the world.  The first was a tunnel that the Neato had to navigate through without bumping into the walls.  It relied solely on Lidar data, because in reality, tunnels are dark and it wouldn't get feedback from the video input.  In the dominoes obstacle, it had to move carefully to knock over red dominoes without harming blue dominoes.  We used computer vision (the OpenCV package for python) to process camera input and identify domino colors. It also had to cross a bridge without falling off, again using computer vision to stay between two pink lines.</p>
+						<p>The project worked such that the Neato could be placed anywhere in the "world".  It would look for an obstacle, approach it, and identify what the obstacle was, through the use of fiducials.  Then, it would use a finite-state controller to switch into completing the steps for that obstacle, and when it was done it would go back to looking for obstacles again.  We had three obstacles in the world.  The first was a tunnel that the Neato had to navigate through without bumping into the walls.  It relied solely on Lidar data, because in reality, tunnels are dark and it wouldn't get feedback from the video input.  In the dominoes obstacle, it had to move carefully to knock over red dominoes without harming blue dominoes.  We used computer vision (the OpenCV package for python) to process camera input and identify domino colors. It also had to cross a bridge without falling off, again using computer vision to stay between two pink lines.</p>
 						<p>The project was a deep dive into concepts like finite-state machines and computer vision, and we learned a lot in those areas, as well as using third-party ROS packages and implementing within those packages.  The video to the right shows the robot successfully navigating the tunnel, locating the next obstacle (Dominoes), and lining up to complete Dominoes.  <a href="https://github.com/hmurraydavis/neato_carnival">View our Github repository</a> to see all the code we wrote, as well as an in-depth write-up and reflection of the project and its components, or <a href="img/comprobo_poster.png">view our poster</a> for an overview of the systems and the structure.</p>
 
 						<div class="tag"><i class="fa fa-tag"></i> Fall 2014</div>
@@ -405,19 +405,19 @@
 							<li>Be aware of each student's individual learning habits and how to best teach for them</li>
 							<li>Leaving time for one-on-one check-ins and individual exploration</li></ul></p>
 
-						<p>With these in mind, and inpsired by our own coursework in Discrete Mathematics, we chose to start our first lesson with the concept of infinity and work from there.  Lessons naturally flowed into place as we moved from infinity to fractals, and from there to sequences, tied together by a dive into the Fibonacci sequence.  We finished by talking about functions and defining sequences in functional notation.  The full list:
+						<p>With these in mind, and inspired by our own coursework in Discrete Mathematics, we chose to start our first lesson with the concept of infinity and work from there.  Lessons naturally flowed into place as we moved from infinity to fractals, and from there to sequences, tied together by a dive into the Fibonacci sequence.  We finished by talking about functions and defining sequences in functional notation.  The full list:
 						<ol>
 							<li>Infinity - Hilbert's Hotel</li>
 							<li>Fractals - Irregular and Sierpinski Triangle</li>
 							<li>Fractal sequences</li>
-							<li>Sequences - arithmetic, geomtric, word, Fibonacci</li>
+							<li>Sequences - arithmetic, geometric, word, Fibonacci</li>
 							<li>Fibonacci - spirals on plants, the Golden Ratio, flower spirals</li>
 							<li>Complex Numbers? - Functions</li>
 							<li>Ordered pairs, formulas from recursive definitions</li>
 							<li>Dragon fractal - structure behind the fractal</li>
 						</ol></p>
 
-						<p>We had an awesome time teaching the classes, and we think the kids did too.  Hands-on lessons like the Fibonacci lesson were a huge hit.  We brought in pineapples and artichokes and pinecones to have them find Fibonacci spiral patterns in nature, and then had them interact with a python script I wrote to see why plants grew that way and how the number phi fit into it all.  We also made some mistakes, and some lessons didn't go so well.  For example, in Lesson 6, we had planned to introduce complex numbers, with the hope of showing them how fractals like the Mandelbrot Set are created.  But we quickly realized we had assumed they knew more than they did, like the coordinate plane.  We switched gears halfway through to teaching the coordinate plane and functions.  But overall, the kids loved learning and it was so rewarding to see them go off to tell their teachers and parents about the Mandelbrot Set or the Sierpinski triangle.  One girl went home and showed her parents why Fibonacci spirals exist on pinecones.  Hearing those stories felt great.</p>
+						<p>We had an awesome time teaching the classes, and we think the kids did too.  Hands-on lessons like the Fibonacci lesson were a huge hit.  We brought in pineapples and artichokes and pine cones to have them find Fibonacci spiral patterns in nature, and then had them interact with a python script I wrote to see why plants grew that way and how the number phi fit into it all.  We also made some mistakes, and some lessons didn't go so well.  For example, in Lesson 6, we had planned to introduce complex numbers, with the hope of showing them how fractals like the Mandelbrot Set are created.  But we quickly realized we had assumed they knew more than they did, like the coordinate plane.  We switched gears halfway through to teaching the coordinate plane and functions.  But overall, the kids loved learning and it was so rewarding to see them go off to tell their teachers and parents about the Mandelbrot Set or the Sierpinski triangle.  One girl went home and showed her parents why Fibonacci spirals exist on pine cones.  Hearing those stories felt great.</p>
 
 						<p><a href="img/mathcurriculum.png">Click the image</a> for a detailed poster describing the lessons.  Feel free to <a href="contact.html">contact me</a> to learn more about the lesson plans.</p>
 
@@ -436,7 +436,7 @@
 				<h4>Or, the story of how I became an Open Source activist</h4>
 				<div class="row">
 					<div class="span8">
-						<p>In the summer of 2014, I worked as a Systems Management Intern at <a href="http://www.redhat.com">Red Hat</a>.  My role was on <a href="http://www.projectatomic.io">Project Atomic</a>, a lightweight OS that performs atomic upgrades and rollbacks, designed to run Docker containers.  My summer work focued on OSTree and rpm-ostree, the programs that allow deploying a new version of your OS alongside the current one and navigating between them.  Specifically, I made these programs and their command-line interface easier to use by sysadmins.  For a more detailed description of my various projects, <a href="reveal/expo_pres.html">check out this short presentation.</a></p>
+						<p>In the summer of 2014, I worked as a Systems Management Intern at <a href="http://www.redhat.com">Red Hat</a>.  My role was on <a href="http://www.projectatomic.io">Project Atomic</a>, a lightweight OS that performs atomic upgrades and rollbacks, designed to run Docker containers.  My summer work focused on OSTree and rpm-ostree, the programs that allow deploying a new version of your OS alongside the current one and navigating between them.  Specifically, I made these programs and their command-line interface easier to use by sysadmins.  For a more detailed description of my various projects, <a href="reveal/expo_pres.html">check out this short presentation.</a></p>
 
 						<p>My experience at Red Hat was a wholly positive one.  I learned so much about open source culture, Linux development, C programming, and Unix navigation and tools.  Not only that, but my first corporate experience gave me a lot of insight into teamwork, scrum meetings, working to follow established coding guidelines, working within a larger project, and the support structure of a sprint team that you don't get as much exposure to in school.  Overall, it was a great experience, and you can read more about what it felt like to be working in the Red Hat environment in <a href="https://opensource.com/life/14/7/red-hat-intern-sys-admin">this article I wrote about my internship published on opensource.com</a></p>
 
@@ -585,9 +585,9 @@
 				<h4>HPV: as we like to say, "Vehicles, not Viruses"</h4>
 				<div class="row">
 					<div class="span8">
-						<p>I'm on Olin's Human Powered Vehicles team, which builds bikes for competition in the <a href="https://www.asme.org/events/competitions/human-powered-vehicle-challenge-%28hpvc%29/2013-hpvc-east">ASME HPVC East</a>.  I was on a subteam that would esnure the efficiency of the bike design by measuring the power output of each biker and the power loss due to friction and other sinks.</p>
+						<p>I'm on Olin's Human Powered Vehicles team, which builds bikes for competition in the <a href="https://www.asme.org/events/competitions/human-powered-vehicle-challenge-%28hpvc%29/2013-hpvc-east">ASME HPVC East</a>.  I was on a subteam that would ensure the efficiency of the bike design by measuring the power output of each biker and the power loss due to friction and other sinks.</p>
 
-						<p>With two other students, we acquired a $1700 treadmill free off Craigslist, deconstructed it in an apartment attic, and carried the pieces down a fire escape and back to school.  We planned to use the bike wheels to turn the rollers, generating a voltage in the treadmill motor.  We would then measure that voltage and convert it to a power output.  Sounds easy, but it involved numerous calculations, and building a voltage divider that would reduce the frankly dangerous voltage levels coming from the motor, which included buying an enormous ceramic resistor.  I learned a lot from this project on both mechanical structure as well as electrical circuit construction, and improved my skills in both areas.</p>
+						<p>With two other students, we acquired a $1700 treadmill free off Craigslist, disassembled it in an apartment attic, and carried the pieces down a fire escape and back to school.  We planned to use the bike wheels to turn the rollers, generating a voltage in the treadmill motor.  We would then measure that voltage and convert it to a power output.  Sounds easy, but it involved numerous calculations, and building a voltage divider that would reduce the frankly dangerous voltage levels coming from the motor, which included buying an enormous ceramic resistor.  I learned a lot from this project on both mechanical structure as well as electrical circuit construction, and improved my skills in both areas.</p>
 
 						<div class="tag"><i class="fa fa-tag"></i> Spring 2014</div>
 						<div class="tag"><i class="fa fa-tag"></i> Olin</div>
@@ -669,7 +669,7 @@
 				<h4>"At least the oscillations worked"</h4>
 				<div class="row">
 					<div class="span8">
-						<p>My partner and I intended to design and build a system that used electromagnets to keep a metal ball centered on an oscillating ramp. It used a hysteretic oscillator to tilt up and down a lego bar attached in the center to a motor. The intent was to place a metal ball in the track of this bar and, using electromagnets placed at either end of the bar, keep the ball centered desipite the motor's oscillations. The electromagnets would do this by turning on and off in opposition with the tilt of the bar. The circuitry ended up successful but the practicality of the magnets on the ramp prevented us from fully achieving our goal. It was a complex circuit design challenge to cause the electromagnets to oscillate in opposition, that we eventually solved using transistors.</p>
+						<p>My partner and I intended to design and build a system that used electromagnets to keep a metal ball centered on an oscillating ramp. It used a hysteretic oscillator to tilt up and down a LEGO bar attached in the center to a motor. The intent was to place a metal ball in the track of this bar and, using electromagnets placed at either end of the bar, keep the ball centered despite the motor's oscillations. The electromagnets would do this by turning on and off in opposition with the tilt of the bar. The circuitry ended up successful but the practicality of the magnets on the ramp prevented us from fully achieving our goal. It was a complex circuit design challenge to cause the electromagnets to oscillate in opposition, that we eventually solved using transistors.</p>
 
 						<p><a href="http://youtu.be/XjaEr86l3gA">Watch a video on the circuit design and functionality</a></p>
 
