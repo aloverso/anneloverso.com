@@ -169,6 +169,88 @@
 					python common errors
 					-->
 
+					<a id="IntelGalileoWorkshop:ReflectionsonTeaching"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a14')" style="cursor:hand; cursor:pointer"><div class="title">Intel Galileo Workshop: Reflections on Teaching</div></div>
+						<div class="date">June 17, 2015 09:24</div>
+						</br>
+
+						<p>One of my other major projects at Insper was creating and then teaching a four-week course on the Intel Galileo board, 15 of which were generously donated to Insper.</p>
+
+						<p>My previous post on the Galileo goes through my process of setting up the board, but here I'll discuss the rest of the curriculum, how the class went, and what I might change if it ran again.</p>
+
+						<div id="a14" style="display: none;">
+
+						<h4>Curriculum Overview</h4>
+
+						<p>Because the course was offered in conjuction with the students' Software Design Python class, a lot of the course was focused in teaching how to use Python with the boards, which students were a lot more comfortable with than the Arduino language.</p>
+
+						<p>All materials used for the course are located in <a href="https://github.com/aloverso/IntelGalileoWorkshop">the course's GitHub repo</a>.  The course was organized into four 2-hour classes, and the plan for each class was as follows:</p>
+						<b>Class 1</b>
+						<ul>
+						<li>Setting up the Galileo</li>
+						<li>Introduction to Arduino environment</li>
+						<li>Making and running an Arduino script to illuminate a tri-color LED</li>
+						</ul>
+						<b>Class 2</b>
+						<ul>
+						<li>Setting up and connecting to the Galileo's Linux OS</li>
+						<li>Introduction to using a Linux shell</li>
+						<li>Setting up the Galileo's shared internet connection</li>
+						<li>What is Cheerlights, and accessing the current Cheerlights color via Python</li>
+						<li>Integrating Python and Arduino</li>
+						<li>Using Cheerlights to change the color of the tri-color LED</li>
+						</ul>
+						<b>Class 3</b>
+						<ul>
+						<li>Sending tweets from Python via Twython</li>
+						<li>Cheerlights selector project - adding a push button to send a Cheerlights tweet</li>
+						</ul>
+						<b>Class 4</b>
+						<ul>
+						<li>Using sensors in Arduino and recieving input</li>
+						<li>Publishing sensor data to Thingspeak</li>
+						<li>Sending emails via Python</li>
+						<li>IoT project - sending emails based on sensor data</li>
+						</ul>
+
+						<h4>How It Went</h4>
+
+						<p>As you might guess from looking at this list, Class 2 was a little overloaded.  In both Classes 1 and 2, the set-up steps took longer than anticipated.  Turns out, trying to get software installed and running on 15 different computers is pretty difficult.</p>
+
+						<p>Due to this, the contents listed in Class 2 actually spanned both Class 2 and Class 3.  The contents of Class 3 were then offered an an extra session ("Class 3.5") for students who wanted to finish the Cheerlights project.</p>
+
+						<p>During classes, people ran into weird, unique issues with internet connectivity, Linux connections, and other steps that required one-on-one help with me or the other teacher, Sawyer.  However, other people's computers worked perfectly on the first try, and they were often sitting and waiting bored while we helped other people get up to speed.</p>
+
+						<p>I think it would have been a lot easier if we had more TAs.  Then, they could be helping people with individual problems while I taught the next steps for students to move on.</p>
+
+						<p>Another thing I would like to restructure is the way I asked students to do work.  Sometimes, a slide would have instructions like "Open up Device Manager and find out the port number of your Galileo board".</p>
+
+						<p>The problem with this was, some people did this and it took just a few seconds.  Others needed a lot of help, and didn't know what Device Manager was or how to open it (working in English when all their computers were set to Portuguese didn't help).  But the problem was, I never knew how much time to give them before moving on to the next step, or how to know if everyone was finished.</p>
+
+						<h4>Restructuring</h4>
+
+						<p>Because of the difficulties in making sure everyone was on the same page, I think if I did this again, I would restructure the format of the class and activities so it was more self-paced.</p>
+
+						<p>The slides I created already go step-by-step through setting up the environment and working through the content.  I think I would make the content more hands-on for this approach.  Currently, only the projects in Class 3 and 4 require the students to change the code, but that could be changed so that they do it themselves and work through understanding at their own pace.</p>
+
+						<p>In this way, I would re-work some of the presentations as "labs" so that students understood what the purpose of, say, the Python tweet sender was.  They would complete a lab to learn how to send tweets from Python, and then use this skill in their final Cheerlights project.</p>
+
+						<p>This approach would be much more fitting with the hands-on project-based learning environment that Olin and Insper endorse and subscribe to.  It would fix my issues of keeping everyone on the same page by allowing them to be on completely different pages to satisfy their own learning requirements.</p>
+
+						<p>One thing about this approach, however, is that it would definitely require more TAs.  This course was taught just by myself and fellow Oliner Sawyer, and we had a lot of work running around to groups answering questions and fixing bugs.  We'd need more TAs to act as mentors if everyone was working more individually.</p>
+
+
+
+
+					
+
+						</div>
+						</br>
+
+						<div id="read_a14" onClick="openClose('a14')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>				
+					</div>
+
 					<a id="TheInsperComputingCurriculumProject"></a>
 					<div class="blogpost">
 						<div onClick="openClose('a13')" style="cursor:hand; cursor:pointer"><div class="title">The Insper Computing Curriculum Project</div></div>
@@ -387,7 +469,7 @@ fb.put("/","whacks",word1+" "+word2)
 
 						<p>The downside: it turns out, Google has barriers in place to prevent scrapers from making too many search requests like this.  It will only loop about 80 times until we get a 403 Forbidden Error response.  It seems that the barrier only lasts about a day, though.</p>
 
-						<p>What does this tell us?  I could try using Google's own API, which would probably allow more requests per day.  But as is, I could probably search more than 80 times manually and be more likely to find a whack that with two randomly selected words.  And although I have yet to find a whack, I'll write a script to automatically execute this scraper script each day and keep you updated.</p>
+						<p>What does this tell us?  I could try using Google's own API, which would probably allow more requests per day.  But as is, I could probably search more than 80 times manually and be more likely to find a whack than with two randomly selected words.  And although I have yet to find a whack, I'll write a script to automatically execute this scraper script each day and keep you updated.</p>
 
 
 						</div>
