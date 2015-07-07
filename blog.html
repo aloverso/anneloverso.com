@@ -50,7 +50,6 @@
 				border-bottom-right-radius: 5px;
 			}
 			.snippet{
-				position: fixed;
 				background-color: white;
 				margin-left:36px;
 				text-align: center;
@@ -67,6 +66,12 @@
 	            border-left: solid 1px #E8E8E8;
 	            border-right: solid 1px #E8E8E8;
 	        }
+
+	        .top-link-block {
+			    position: fixed; /* keeps it on the bottom once in view */
+			    bottom: 20px;
+			    right: 10px;
+			}
 
 			#pagename{
 				font-color:#FFFFFF;
@@ -134,7 +139,7 @@
 							<li><a href="about.html"><div title="About"><i class="fa fa-info-circle fa-3x"></i></div></a></li>
 							<li><a href="portfolio.html"><div title="Portfolio"><i class="fa fa-briefcase fa-3x"></i></div></a></li>
 							<li><a href="contact.html"><div title="Contact"><i class="fa fa-envelope fa-3x"></i></div></a></li>
-							<li class="active"><a href="blog.html"><div title="Blog"><i class="fa fa-edit fa-3x"></i></div></a></li>
+							<li class="active"><a href="blog.html"><div title="Blog"><i class="fa fa-comment fa-3x"></i></div></a></li>
 						</ul>
 					</nav>
 				</div>
@@ -153,17 +158,6 @@
 			<div class="row">
 				<div class="span8">
 					<!--
-					Python 2 vs 3
-					print function good for beginners
-					annoying parentheses print and list for range
-					int division good for beginners hard when you go to c or anything else
-					input is very good but i hate using input anyways
-					pattern not available sad face
-					if beginner learn python 3
-					if advanced start with 2
-					but everyone should really know both
-					unicode support is good since this is an international class
-
 					other 
 					intlnat teaching
 					python common errors
@@ -175,7 +169,7 @@
 						<div class="date">June 17, 2015 09:24</div>
 						</br>
 
-						<p>One of my other major projects at Insper was creating and then teaching a four-week course on the Intel Galileo board, 15 of which were generously donated to Insper.</p>
+						<p><img src="img/blog/galileo3.jpg" width="40%" align="right" style="margin:5px 10px" alt="Intel Galileo">One of my other major projects at Insper was creating and then teaching a four-week course on the Intel Galileo board, 15 of which were generously donated to Insper.</p>
 
 						<p>My previous post on the Galileo goes through my process of setting up the board, but here I'll discuss the rest of the curriculum, how the class went, and what I might change if it ran again.</p>
 
@@ -183,7 +177,7 @@
 
 						<h4>Curriculum Overview</h4>
 
-						<p>Because the course was offered in conjuction with the students' Software Design Python class, a lot of the course was focused in teaching how to use Python with the boards, which students were a lot more comfortable with than the Arduino language.</p>
+						<p>Because the course was offered in conjunction with the students' Software Design Python class, a lot of the course was focused in teaching how to use Python with the boards, which students were a lot more comfortable with than the Arduino language.</p>
 
 						<p>All materials used for the course are located in <a href="https://github.com/aloverso/IntelGalileoWorkshop">the course's GitHub repo</a>.  The course was organized into four 2-hour classes, and the plan for each class was as follows:</p>
 						<b>Class 1</b>
@@ -214,6 +208,8 @@
 						<li>IoT project - sending emails based on sensor data</li>
 						</ul>
 
+						<p align="center"><img src="img/blog/galileo1.jpg" alt="Galileo class" width="80%"></p>
+
 						<h4>How It Went</h4>
 
 						<p>As you might guess from looking at this list, Class 2 was a little overloaded.  In both Classes 1 and 2, the set-up steps took longer than anticipated.  Turns out, trying to get software installed and running on 15 different computers is pretty difficult.</p>
@@ -240,10 +236,13 @@
 
 						<p>One thing about this approach, however, is that it would definitely require more TAs.  This course was taught just by myself and fellow Oliner Sawyer, and we had a lot of work running around to groups answering questions and fixing bugs.  We'd need more TAs to act as mentors if everyone was working more individually.</p>
 
+						<h4>Final Thoughts</h4>
 
+						<p>This was an awesome experience.  I'm torn between which I enjoyed more - prepping the material and getting that chance to think hard about ordering of content, how much help and assistance to give, and the best way to explain something, or the actual process of delivering those plans and seeing it all come to life.</p>
 
-
+						<p>I can't wait to use these experiences as a driving force behind my choices this fall when I teach Javascript to middle schoolers in my community to further my teaching experiences!</p>
 					
+						<p align="center"><img src="img/blog/galileo2.jpg" alt="Galileo class" width="80%"></p>
 
 						</div>
 						</br>
@@ -298,6 +297,8 @@
 
 						<p>As we were leaving Insper, our proposal was in the process of getting accepted, and we hope the next Oliners at Insper will work to improve it even more.</p>
 
+						<p>I'm in the process of talking to Insper about what I can share here, but hopefully soon you will be able to read our original document!</p>
+
 						</div>
 						</br>
 
@@ -310,7 +311,7 @@
 						<div class="date">June 10, 2015 17:18</div>
 						</br>
 
-						<p>Well, I'm not in Brazil any more.  In fact, I'm in Seattle getting settled in at Microsoft, but that's a blog post for another time.  No, I'm here today to do what I really should have done a week ago: finish up my reflections on Brazil and Insper.</p>
+						<p><img src="img/blog/oliners.jpg" width="45%" align="right" style="margin:5px 10px" alt="Oliners in Sao Paulo">Well, I'm not in Brazil any more.  In fact, I'm in Seattle getting settled in at Microsoft, but that's a blog post for another time.  No, I'm here today to do what I really should have done a week ago: finish up my reflections on Brazil and Insper.</p>
 
 						<p>This will likely be long, slightly rambling, and overall my raw thoughts on what it meant for me to be at Insper, how my experience changed me, and how I changed Insper.  Buckle your seatbelts, folks.</p>
 
@@ -322,17 +323,51 @@
 
 						<p>What I mean by this is, I can't reflect on what my work at Insper meant without also reflecting on the internationality of the experience as well, and just being in Brazil.</p>
 						
-						[stuff here about how insper is not insper if not in brazil]
+						<p>My decision to come to Insper was sudden.  I heard about the call for students and, like too many others, I looked at it and thought "That would be really cool!  I wish I could go" and didn't think much more of it.</p>
+
+						<p>It wasn't until I went to the <a href="#FrontiersinEducationConference:Reflections">FIE conference in Spain</a> that things changed.  First, for three days I was surrounded by education.  All day, every day, I listened to talks about education, I helped run workshop about education, I presented my own research on education, and I had discussions about education.  It was everywhere.  And I thrived in that, I thrived in this environment and simply loved talking about it - the things I had learned, the talks I had attended, and so on.</p>
+
+						<p>Additionally, I spent those few days around my friends Doyung and Cecilia, two other Olin students who were in my research group and presented with me.  They spent the Fall 2014 semester in Brazil, helping to develop the classes and the culture at Insper that I am currently experiencing.</p>
+
+						<p>Hearing from them about what Insper was like was definitely the swaying factor.  I had not seriously considered it until I heard from them directly about the projects, the opportunities, and the chance to shape the curriculum and education structure of a brand new school.</p>
+
+						<p>Being surrounded by all that FIE education talk helped me, as I was convinced I wanted to do nothing but stay in Madrid and talk to all the interesting researchers at the conference about education.  Well, it seemed like Insper was offering me an opportunity to do just that, for a whole semester.</p>
+
+						<p>So, from there I applied to Inpser.  I talked to the faculty when they came to Olin.  And I decided to come to Brazil to help design a new engineering school.  As I tell anyone who asks me <i>why</i>, why I came to Brazil, I tell them it honestly didn't feel like going to Brazil, it was going to Insper.  I came for the project - the chance to help develop engineering curricula and have a hand in something new.  The fact that Insper happened to be located in an interesting foriegn country was just a bonus - I would have gone even if it was in New Jersey.</p>
+
+						<p>But from being here, I've learned to really value the fact that Insper is in Brazil.  I've learned that you can't just separate the college from the country or it's culture - an Insper located in New Jersey would not be Insper.</p>
+
+						<p>I've had to change the way I interact with students.  It's taken some practice to actually be a good NINJA here - you have to be very explicit about what you say and the words you pick.  I had a sort of epiphany about this near the beginning of classes, and I was trying to explain a software design concept related to lists, and I referred to the elements of a list as "slots", which seemed so natural to me.  And it was only because the student asked for clarification that I realized it was a slangy way to describe it, and a way they had never heard that word used before.</p>
+
+						<p>I remember the first few days I was here in Brazil.  My first night, I went alone to the grocery store to get some food.  I felt so lost, wandering around that store trying to figure out what food I possibly needed and where to find it.  I didn't buy much - I recall getting pasta, frozen corn, some sausage, and juice.  But being in the store, even though food is food and I recognized most of it - I felt so out of my element, so misplaced.</p>
+
+						<p>Now, I can go to any store and get what I need, I can ask employees if I can't find anything, I understand the questions they ask my as I check out.  I feel totally comfortable taking a bus downtown on the weekends to visit my favorite bookstore.</p>
+
+						<p>Ways that being in Brazil has made me more of a global citizen?  We consistently joke about the differences between the countries - how Brazil just doesn't have bagels, and explaining US open-container laws to Brazilian students.  But truly, there are cultural shifts that are hard to pinpoint, hard to describe, but you truly feel like you're living a new experience.</p>
+
+						<p>Comparing living in a US city (Seattle) to living in a Brazilian city, there's more to the culture than just language or food.  It's about how people interact, body language, conversation ticks, and more.  And it's fascinating to see the differences.</p>
 
 						<h4>Some Reflections on Successes</h4>
 
 						<p>A lot of things went well at Insper.  Our goal there was to support the faculty in any way we could to help them start the new engineering program.  I believe we accomplished this.  We acted as course assistants for classes, planning curricula, and any number of assorted tasks.</p>
 
+						<p>The Olin professors who came to visit were often the ones who, to me, acted as cheerleaders both for us and the Brazilian students.  They reminded us that <i>we had power</i>.  Us Oliners were there to be a voice in the curriculum, to give our opinions, make change, and make improvements.  Even to rock the boat a bit, because there's no point in bringing in consultants who just agree with you.  We pointed out problems, and we engineered solutions.</p>
 
+						<p>One example of this came at the very end of our time there - Insper was having issues with academic honesty, as any school does.  The professors were unsure of how to emphasize that there is a big difference between collaboration and cheating, and how to encourage one while discouraging the other.</p>
+
+						<p>We planned a two-hour workshop that was originally centered around discussing examples of academic (dis)honesty, but with advice from Olin professors we revised the plans into a more constructive discussion about what it means to be an Insper students and the social and community values that come with it.</p>
+
+						<p>I think this was a huge success.  Students ran the sessions themselves with student leaders acting as moderators, and after the workshop was over, the students and professors all ate lunch together, gathering in groups and circles to continue the discussions and keep the conversation going.</p>
+
+						<p>It looked amazing, and I know the students are passionate enough and the professors care enough, that I think the workshop was the right nudge to get them to open up and start having the conversations about what kind of community they wanted to build.  And although we left Brazil shortly after the workshop, I'm confident the conversations will continue beyond that day.  We were just there to give them the tools and the nudge they needed.</p>
+
+						<p>I can't possibly list all the successes here, all the times I felt like I was doing something that <i>mattered</i>, because that feeling came so often.  Sometimes it was big things - big projects getting completed, big ideas being passed around.</p>
+
+						<p>But probably even more common were those little victories.  When you're helping a student and they finally understand the problem and can solve it.  Even better are when you see those same moments, when it's a student teaching another student, because you know part of why you're there is to be a role model, for peer teaching and other things too.</p>
 
 						<h4>Some Reflections on Frustrations</h4>
 
-						<p>I learned a lot from Insper, about education and about myself.  I'll be honest – there was often a lot of frustration present, and directed at all sorts of people.  Often at myself, when I didn't manage my time well enough or didn't plan something quite well enough.</p>
+						<p>I learned a lot from Insper, about education and about myself.  I'll be honest - there was often a lot of frustration present, and directed at all sorts of people.  Often at myself, when I didn't manage my time well enough or didn't plan something quite well enough.</p>
 						
 						<p>Sometimes, I messed around on my computer during office hours and forgot to look up and see if there were students that needed help.</p>
 
@@ -348,27 +383,27 @@
 
 						<p>While the professor would seem receptive and enthusiastic about the idea at the time, I would follow up a few days later to ask how it was going, only to hear "well, I thought about it more/talked to someone else about it/revised my goals and decided not to follow through" which was not only a crummy feeling that hurt self-confidence but also, in my opinion, hurt the students because the ideas were designed to improve learning!</p>
 
-						<p>This could also be followed up with frustration at the administration, because often the professors would be on our side but the omni-present cloud of "this will never get approved by the business administration" prevented a lot of actual work. </p> 
+						<p>This could also be followed up with frustration at the administration, because often the professors would be on our side but the omni-present cloud of "this will never get approved by the business administration" prevented a lot of actual work.</p> 
 
 						<p>And sometimes, we never even asked because there was this pessimistic attitude that if we did, it would definitely be refused, and why even try.  I hate that attitude, and I never even met the administration but because of all this I had such a negative impression of them.</p>
 
-						<p>And my least-favorite type of frustration was the one I sometimes got with the engineering students.  There were a lot of different forms on this.  </p>
+						<p>And my least-favorite type of frustration was the one I sometimes got with the engineering students.  There were a lot of different forms on this.</p>
 
-						<p>I got frustrated when they cheated on assignments instead of working towards their own learning.  </p>
+						<p>I got frustrated when they cheated on assignments instead of working towards their own learning.</p>
 
-						<p>I got frustrated when they thought university at Insper would be just like high school, when they didn't apply themselves or work to make Insper what they wanted it to be.  </p>
+						<p>I got frustrated when they thought university at Insper would be just like high school, when they didn't apply themselves or work to make Insper what they wanted it to be.</p>
 
-						<p>But sometimes I got frustrated when I was supposed to be teaching them, and that's something I'm ashamed of, because no teacher should be frustrated towards a student.  </p>
+						<p>But sometimes I got frustrated when I was supposed to be teaching them, and that's something I'm ashamed of, because no teacher should be frustrated towards a student.</p>
 
-						<p>Teaching is hard.  Sometimes, the students expected to be coddled, asked me questions that the professor had just answered.  They messed around on Facebook during lectures and then during exercise work time they expected me to sit next to them and re-teach it all in a personal lesson.  </p>
+						<p>Teaching is hard.  Sometimes, the students expected to be coddled, asked me questions that the professor had just answered.  They messed around on Facebook during lectures and then during exercise work time they expected me to sit next to them and re-teach it all in a personal lesson.</p>
 
-						<p>That behavior frustrated me and I wish it didn't, because in order to be a good teacher, it really shouldn't matter how the student learns, just that they do learn.  And I don't know anything about a student's learning style – maybe they have difficulty learning from lectures and really need that one-on-one time to grok the concepts.  I'm there to act as a mentor in any way I can.  </p>
+						<p>That behavior frustrated me and I wish it didn't, because in order to be a good teacher, it really shouldn't matter how the student learns, just that they do learn.  And I don't know anything about a student's learning style - maybe they have difficulty learning from lectures and really need that one-on-one time to grok the concepts.  I'm there to act as a mentor in any way I can.</p>
 
 						<p>The other cause of frustration was at myself, when I know I'm not explaining something properly but just can't find the right words for it to help the student. </p>
 
-						<p>Sometimes, I slipped up and used English slang in my explanations, which would confuse students for whom English is their second language.  I remember one instance of  this in particular – I was explaining something related to lists in Python, and I at one point referred to the elements of a list as "slots".  </p>
+						<p>Sometimes, I slipped up and used English slang in my explanations, which would confuse students for whom English is their second language.  I remember one instance of this in particular - see the "slots" example above.</p>
 
-						<p>Luckily I had a student who interrupted me to ask for clarification, and I was able to rectify my mistake – students who learn English as a second language wouldn't really apply what they know of the word "slots" to elements of a list.  </p>
+						<p>Luckily I had a student who interrupted me to ask for clarification, and I was able to rectify my mistake - students who learn English as a second language wouldn't really apply what they know of the word "slots" to elements of a list.</p>
 
 						<p>It was something I always had to keep in mind, because a lot of students were not at all confident in their English skills, but too self-conscious to ask for clarification.</p>
 
@@ -408,13 +443,19 @@
 
 						<p>And the student's other option is to accept the help as is, go back to work with the problem unsolved, and then get more and more frustrated until maybe they give up, or cheat off the internet, or some other unfavorable behavior.</p>
 
-						<p>So even if a brave student does choose to continue asking, it still deals a blow to their self-esteem and self-efficacy.  Basically, both sitautions are ones we as educators want to avoid, which is why I say, never assume knowledge.  </p>
+						<p>So even if a brave student does choose to continue asking, it still deals a blow to their self-esteem and self-efficacy.  Basically, both situations are ones we as educators want to avoid, which is why I say, never assume knowledge.  </p>
 
-						<p>If I had just asked "do you know how to check if a number is divisible by another number?" - they would either answer "yes" and be on their way, or have the judgement-free opportunity to ask for clarification.</p>
+						<p>If I had just asked "do you know how to check if a number is divisible by another number?" - they would either answer "yes" and be on their way, or have the judgment-free opportunity to ask for clarification.</p>
 
-						<p>I'm getting off-topic here, but I swear I have a point.  And this whole section wraps up to – there were a lot of frustrations at Insper, and writing them down just now has helped me, in a therapeutic way, both recognize what was going on as well as admit that nothing is perfect.</p>
+						<p>I'm getting off-topic here, but I swear I have a point.  And this whole section wraps up to - there were a lot of frustrations at Insper, and writing them down just now has helped me, in a therapeutic way, both recognize what was going on as well as admit that nothing is perfect.</p>
 
 						<h4>Some Reflections on Personal Growth</h4>
+
+						<p>This is a huge topic but I'm going to keep it brief.  Being in Brazil opened my mind.  All the cliches people say - experiencing new cultures, meeting people, international study - they're cliches for a reason.  All these things are amazing experiences that taught me something about this world that we live, that I'm a part of.  And if I'm a part of it, I should know more about everyone else in it too.</p>
+
+						<p>I got to see so much more than my tiny slice of the world so far.  And I got to have a hand in shaping another slice of life.  That's a pretty incredible feeling.</p>
+
+						<p>I just can't wait to see the students that come out of Insper five years from now.  I can't wait to see the place that Insper becomes with those kids shaping and leading it.  I think it will be a hub for innovation and creativity and engineering on all fronts.  And I can't help but feel a little bit proud that I was there at the beginning, that I got to have a hand in creating this amazing thing.</p>
 
 						</div>
 						</br>
@@ -484,7 +525,7 @@ fb.put("/","whacks",word1+" "+word2)
 						<div class="date">May 14, 2015 09:31</div>
 						</br>
 
-						<p style="line-height: 150%"><a href="https://xkcd.com/353/"><img src="img/pythonxkcd.png" alt="XKCD Python webcomic" width="50%" align="right" style="margin:5px 10px" title="source: xkcd"></a>I learned Python in Python 2.  I found the language simple, clean, and not at all difficult to understand, having come from a high-level object-oriented language background from learning Java in AP CS in high school.</p>
+						<p><a href="https://xkcd.com/353/"><img src="img/pythonxkcd.png" alt="XKCD Python webcomic" width="50%" align="right" style="margin:5px 10px" title="source: xkcd"></a>I learned Python in Python 2.  I found the language simple, clean, and not at all difficult to understand, having come from a high-level object-oriented language background from learning Java in AP CS in high school.</p>
 
 						<p>So, admittedly, when I came to <a href="portfolio.html/#Insper">Insper</a> and found they were teaching Software Design in Python 3, at first I didn't understand.  Most third-party libraries aren't even supported in Python 3!  Why bother switching when Python 2 works well?</p>
 
