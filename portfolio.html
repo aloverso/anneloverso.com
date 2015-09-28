@@ -318,17 +318,57 @@
 			</br>
 			</br>
 
-			<div class="detail" id="insper">
+			<div class="detail" id="microsoft">
 				<h2>Microsoft Summer Internship</h2>
-				<h4>Learning Azure, Powershell, C#, and more</h4>
+				<h4>Learning Azure, Powershell, C#, and more while developing for Skype for Business</h4>
 				<div class="row">
 					<div class="span4">
-						<img src="img/engroom2.jpg" alt="Insper engineering conference room">
+						<img src="img/skype.png" alt="Skype for Business logo">
 						</br></br>
-						<img src="img/insperbuilding.jpg" alt="Insper, Sao Paulo, Brazil">
+						<img src="img/seattle.jpg" alt="Seattle, WA">
 					</div>
 					<div class="span8">
-						<p>MICROSOFT</p>
+						<p>In the summer of 2015, I worked as a software engineering intern at Microsoft.  I was working on Skype for Business (formerly Lync), on the server side, on the People Search team.  The People Search team manages the Address Book Service that allows users to search for contacts within their organization in Skype for Business - the backend behind the client search bar.</p>
+						
+						<p><img src="img/client.png" alt="Search bar in SfB client" width="60%"></p>
+
+						<p>My role this summer was creating a diagnostic toolkit to allow members of my team to debug and troubleshoot the new Address Book Service.</p>
+
+						<p>The team is moving its Address Book Service from GFS to Azure storage, and needs to keep tabs on the status of all tenants as they get synced between the data sources.  My toolkit provides ways to see the status of all seven worldwide deployments and how many tenants are synced and/or indexed at each.</p>
+
+						<p>This project had two major components - I first developed a Powershell cmdlet to display address book information.  Then, I created a web portal that displays graphs and tables for the syncing status of each service instance within each deployment, powered by an automatic data collection tool.</p>
+
+						<h4>Powershell cmdlet</h4>
+
+						<p>I created a Powershell cmdlet to query different informational components of a deployment in Azure storage.  To do this, I first added functionalities to the REST API that controlled what Azure table storage information could be accessed by an Http Client.  Then, I wrote a cmdlet with nine functions to give information about different parts of the system.</p>
+
+						<img src="img/cmdlet.png" alt="cmdlet help output">
+
+						<h4>Web Portal</h4>
+
+						<p>This portal allowed the team to view diagnostic information about which tenants exist in our Azure vs GFS data.  The software that syncs tenants between the old and new services will stop if an error is raised, and the team needs to be able to quickly see which tenants were not properly synced.  As the team works to enable Azure across all deployments, the portal will enable them to quickly view the status of each service instance and verify that all tenants are being synced properly.</p>
+
+						<h5>Design Goals</h5>
+						<ol>
+							<li>Create a web portal that allows the SBPS team to view syncing status data for each individual deployment, service instance, and tenant.</li>
+							<li>Deliver useful information about the status of each component</li>
+							<li>Enable visual comparisons between deployments and service instances, both currently and over a timespan</li>
+							<li>Create an intuitive design that allows users to find information they need as quickly as possible - Allow searching, sorting, and filtering to deliver the most relevant information for the user</li>
+						</ol>
+
+						<h5>Work Done</h5>
+						<p>Previously, the team ran a tool by hand to generate static tables of data.  The tool took several hours to run, so a team member looking to check the syncing status of deployments had to request that the tool get run, wait several hours, then look through the tables generated for the specific information needed.</p>
+
+						<p>My portal fixes the non-ideal parts of this process.  First of all, it ran a data collection automatically to always have the most recent data.  It creates and displays charts and graphs for a visual overview of syncing and indexing status for each deployment and service instance.  In addition to charts, it creates detailed logs and tables to troubleshoot each individual service instance or tenant.</p>
+
+						<p>The below chart describes the flow of data into my web portal.</p>
+						<img src="img/flowchart.png" alt="Flowchart illustrating data flow into portal">
+
+						<p>First, it runs a scheduled tool which accesses the GFS database and saves it to an Azure table.  At the same time, for each service instance or tenant, it queries the Azure ABS and saves that data to the same Azure table, as well as a comparison of how many tenants are synced between the two sources.  This Azure table is then accessed by a scheduled job running in an Azure VM, which logs the Azure table into MDS to increment performance counters so the logs and graphs can be viewed on the web portal.</p>
+
+						<p>A few important design decisions went into this.  The two different jobs are necessary, with the intermediary step of Azure table storage, because Corpnet access is required to access the GFS data, and the MDS data must be written from Azure VM.</p>
+
+						<p>I learned a lot from this internship.  Some technical skills included learning C#, working with Azure, learning about HTTP methods and working with REST APIs, working with Powershell and writing my own cmdlets, and working within existing storage solutions like SQL and MDS.  I also gained more experience working on an Agile sprint team, owning my own technical project, and working within a large and varied company.</p>
 
 						<div class="tag"><i class="fa fa-tag"></i> Summer 2015</div>
 						<div class="tag"><i class="fa fa-tag"></i> Work Experience</div>
