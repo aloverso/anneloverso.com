@@ -163,6 +163,83 @@
 					python common errors
 					-->
 
+					<a id="WritingaCompilerforBrainf*ck"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a16')" style="cursor:hand; cursor:pointer"><div class="title">Writing a Compiler for Brainf*ck</div></div>
+						<div class="date">October 4, 2015 22:46</div>
+						</br>
+
+						<p><img src="img/blog/annebf.png" width="35%" align="right" style="margin:5px 10px" alt="Brainf*ck example code" title="This brainf*ck program prints 'Anne'">For my Software Systems class, we're learning about C, operating systems, and all of those fun low-level things.  For this sprint, my team and I decided to each pick a topic and do research and a mini-project.  I chose to look into compilers, and ended up writing a small compiler for <a href="https://en.wikipedia.org/wiki/Brainf*ck">brainf*ck</a>.</p>
+
+						<p>I wanted to learn more about compilation without having to deal with reading source for something incredibly complicated like gcc.  To do this, I decided to write my own compiler for one of the most simple languages out there - brainf*ck!</p>
+
+						<div id="a16" style="display: none;">
+
+						<p>If you don't know, brainf*ck is an esoteric programming language with only 8 commands.  Its basic style is to have a single instruction pointer that can move across a "tape" of memory blocks and increment or decrement each.  It also has loops and i/o.  This program in brainf*ck prints "Hello World!":</p>
+						
+						<pre><code>++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.</code></pre>
+
+						<p>So I wrote <b><a href="https://github.com/aloverso/SoftwareSystems/tree/master/compilers">subfusc</a></b>.  Named as such because because it's a word that contains the letters "b", "f", "c" in order, and because it means "dull, gloomy, and devoid of appeal", and while this compiler was A LOT of fun to write and figure out, it is devoid of appeal for use in any real situation.</p>
+
+						<h4>How I Wrote It</h4>
+
+						<p>I was able to write it without knowing assembly by simply translating brainf*ck commands into C code.  Then, I'd compile the C code with gcc -S and look at the assembly output, and copy the relevant lines into my subfusc code.</p>
+
+						<p>Brainf*ck works by moving a cursor along a tape of memory.  So in C, we can have an empty array to be our tape.  A pointer to that array points to the memory address of [0] in the tape.  And incrementing/decrementing would just be changing the array values, and moving the cursor is just incrementing/decrementing the pointer value.</p>
+
+						<p>The following example shows how I started translating some of the simpler brainf*ck commands into their corresponding C code:</p>
+
+<pre><code>char tape[4000]; // the tape
+char *i = tape; // pointer to the array - the cursor
+int main()
+{
+	(*i)++; // increment the value - in bf, +
+	(*i)--; // decrement the value - in bf, -
+	i++; // increment the pointer - in bf, >
+	i--; // decrement the pointer - in bf, <
+}
+</code></pre>
+						
+						<p>The development of subfusc was heavily influenced by the <a href="https://igor.io/2014/10/27/compiling-brainfuck.html">naegleria compiler</a>, which was written in PHP. I used the same process as illustrated in the linked blog post, since I don't actually know how to write assembly code, but went through the process on my own to understand the C translation of each brainf*ck command.</p>
+
+						<h4>Usage</h4>
+
+						<p>First, compile the C program into an executable</p>
+
+						<pre><code>$ gcc subfusc.c -o subfusc</code></pre>
+						Then, run the program with the brainf*ck code as arguments. The argument structure of the program is as follows:
+
+						<pre><code>$ ./subfusc [brainf*ck source code] [target assembly file] [target executable file]</code></pre>
+						If you don't specify a target executable file, subfusc will create the assembly code, but you will have to assemble it yourself by running:
+
+						<pre><code>$ gcc [assembly file] -o [executable file name]</code></pre>
+						For example, the following lines will compile, assemble, and run the Hello World brainf*ck program (assuming you have compiled the subfusc source):
+<pre><code>$ ./subfusc examples/hello.bf hello.s hello
+$ ./hello
+</code></pre>
+
+						<h4>Limitations</h4>
+
+						<p>subfusc does absolutely no optimization - it goes through each command at face level without regard to what comes before or after.</p>
+
+						<p>subfusc does implement minimal syntax error checking - it takes two passes through the program, and on the first checks solely for syntax errors. Currently, the only syntax error it will detect are mismatched loop brackets. The following are all examples of mismatched loops it will catch:</p>
+
+<pre><code>[
+][
+[[]
+[]]</code></pre>
+						<p>and so on. If subfusc finds a syntax error, it will halt compilation and print an error message to the screen. In some cases, it will be able print the character location of the mismatching error.</p>
+
+						<p>Another limitation is that subfusc is a compiler in the most pure sense of the word - it compiles source code to assembly code, but does not perform the extra steps such as assembling, which programs like gcc typically include.</p>
+
+						<p><a href="https://github.com/aloverso/SoftwareSystems/tree/master/compilers">Link to the GitHub repo</a>, which contains the source code as well as some example brainf*ck programs to compile and run.</p>
+
+						</div>
+						</br>
+
+						<div id="read_a16" onClick="openClose('a16')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>				
+					</div>
+
 					<a id="TryingoutHerokuandFlaskwithPython"></a>
 					<div class="blogpost">
 						<div onClick="openClose('a15')" style="cursor:hand; cursor:pointer"><div class="title">Trying out Heroku and Flask with Python</div></div>
