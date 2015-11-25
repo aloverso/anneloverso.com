@@ -7,28 +7,61 @@
 		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css" />
 		<link type="text/css" rel="stylesheet" media="screen" href="github-commit-history/demo/style.css">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="fonts.googleapis.com/css?family=Varela+Round" />
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<style>
-			body {background-color: #F3F3F3}
-			html { 
-			  overflow-y: scroll; 
+
+
+			@font-face { 
+				font-family: 'Noto Serif';
+				font-style: normal; 
+				font-weight: 400;
+				src: local('Noto Serif'), local('NotoSerif'), url(https://themes.googleusercontent.com/static/fonts/notoserif/v2/eCpfeMZI7q4jLksXVRWPQxsxEYwM7FgeyaSgU71cLG0.woff) format('woff'); }
+
+			@font-face {
+			  font-family: 'Varela Round';
+			  font-style: normal;
+			  font-weight: 400;
+			  src: local('Varela Round'), local('VarelaRound-Regular'), url(http://fonts.gstatic.com/s/varelaround/v6/APH4jr0uSos5wiut5cpjrugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+			  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+			}
+
+			body {
+				background-color: #F3F3F3;
+				font-family: 'Lato';
+			}
+			html {
+				overflow-y: scroll;
+			}
+
+			p {
+			  margin: 18px;
+			}
+
+			li {
+			  margin: 10px;
 			}
 
 			.blogpost{
 				width: 100%;
 				height:100%;
-				padding: 18px 24px;
+				padding: 24px 36px;
 				margin-top:8px;
 				margin-bottom:8px;
+				margin-right: 24px;
+				margin-left: -24px;
 				background-color: white;
 				background-image: none;
-				font-size:15px;
+				font-size: 17px;
+				line-height: 1.6;
+				font-family: 'Noto Serif', serif;
 				border-radius: 15px;
 				-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
 				-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
 				box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
 			}
 			.title{
-				font-family:Cambria;
+				font-family: 'Noto Serif';
 				font-size:32px;
 				background-color: #a1b6d1;/*#81aad2; /*#c1c2cf; */
 				padding: 14px;
@@ -76,6 +109,8 @@
 			#pagename{
 				font-color:#FFFFFF;
 				font-size:34px;
+				font-family: 'Lato';
+				letter-spacing: 2px;
 			}
 			#pagename.hover{
 				font-color:#FFFFFF;
@@ -132,14 +167,14 @@
 				<div class="container">
 					<nav>
 						<ul class="nav nav-pills nav-pull-left">
-							<li><a href="index.html"><div id="pagename"><font style="Alpha54" color="#FFFFFF"><b>Anne LoVerso</b></font></div></a></li>
+							<li style="margin: 1px;"><a href="index.html"><div id="pagename"><font color="#FFFFFF"><b>Anne LoVerso</b></font></div></a></li>
 						</ul>
 						<ul class="nav nav-pills pull-right"> 
-							<li><a href="index.html"><div title="Home"><i class="fa fa-home fa-3x"></i></div></a></li>
-							<li><a href="about.html"><div title="About"><i class="fa fa-info-circle fa-3x"></i></div></a></li>
-							<li><a href="portfolio.html"><div title="Portfolio"><i class="fa fa-briefcase fa-3x"></i></div></a></li>
-							<li><a href="contact.html"><div title="Contact"><i class="fa fa-envelope fa-3x"></i></div></a></li>
-							<li class="active"><a href="blog.html"><div title="Blog"><i class="fa fa-comment fa-3x"></i></div></a></li>
+							<li style="margin: 1px;"><a href="index.html"><div title="Home"><font style="letter-spacing: 2px;">HOME</font></div></a></li>
+							<li style="margin: 1px;"><a href="about.html"><div title="About"><font style="letter-spacing: 2px;">ABOUT</font></div></a></li>
+							<li style="margin: 1px;"><a href="portfolio.html"><div title="Portfolio"><font style="letter-spacing: 2px;">PORTFOLIO</font></div></a></li>
+							<li style="margin: 1px;"><a href="contact.html"><div title="Contact"><font style="letter-spacing: 2px;">CONTACT</font></div></a></li>
+							<li style="margin: 1px;" class="active"><a href="blog.html"><div title="Blog"><font style="letter-spacing: 2px;">BLOG</font></div></a></li>
 						</ul>
 					</nav>
 				</div>
@@ -162,6 +197,36 @@
 					intlnat teaching
 					python common errors
 					-->
+
+					<a id="ReflectionsonEducationatOlinandBeyond"></a>
+					<div class="blogpost">
+						<div onClick="openClose('a17')" style="cursor:hand; cursor:pointer"><div class="title">Reflections on Education at Olin and Beyond</div></div>
+						<div class="date">October 13, 2015 12:09</div>
+						</br>
+
+						<p><img src="img/blog/olinsider.jpg" width="45%" align="right" style="margin:5px 10px" alt="Olin driveway"><i>I wrote this blog post for the <a href="http://www.olin.edu/blog/the-olinsider/">Olinsider student blog</a> as a reflection of my semester and how my view of my own educational path is changing, as a result of my activities in current and past semesters.  Originally published <a href="http://www.olin.edu/blog/the-olinsider/post/reflections-education-olin-and-beyond/">here</i></a>.
+
+						<div id="a17" style="display: none;">
+
+						<p>This semester is turning out to be an excellent amalgamation of reflecting on my education.  From the book I'm reading for fun to think about information dissemination in high schools, to my research that lets me think about how Olin education continues into lifelong learning, to the education course I'm taking at Wellesley that lets me think about my own education from K to Olin.</p>
+
+						<p>A lot of upperclassmen talk about going through their mid-college crisis.  They question whether engineering is really what they want to pursue in their life.  I'm thinking about the same thing sometimes, or at least trying to figure out how I can integrate my passions for coding and education into what I do later in life.</p>
+
+						<p>But the other thing about upperclassmen is they talk about being jaded.  They're grumpy and anti-social and grumble about how hard it is to meet first-years when we live in separate buildings.  They grumble about Olin.</p>
+
+						<p>My education class is giving me a new outlook.  In some cases - it does make me more jaded.  The first part of the course involved a lot of readings and discussions about inequalities in schools, and how some schools stifle their students' opportunities.  It's made me think about ways in which Olin can be improved.</p>
+
+						<p>But most importantly, it's making me think about all the things Olin has gotten right.  Our midterm project is to do observations in K-12 schools, and our professor reminds us how important it is to do what he calls "appreciative inquiry" - to look at schools through our newly focused critical lenses, but to remember to look for the good.</p>
+
+						<p>Last week, I had the privilege of accompanying a group of Oliners to a film screening of "Most Likely to Succeed", a movie whose producer also filmed footage at Olin.  It discussed elements of alternative schools and how they foster student growth and creativity.  And I was able to see Olin within the elements of the high school shown in the documentary, just like I'm able to see Olin in the discussions in my education class about progressive education.</p>
+
+						<p>It makes me really appreciative of what we do here.  I think it's important to be able to think critically about why we do what we do, because how else would we iterate and improve?  But the balance, and looking for the good, is also important.  And Olin is pretty cool.</p>
+
+						</div>
+						</br>
+
+						<div id="read_a17" onClick="openClose('a17')" style="cursor:hand; cursor:pointer"><font color="#0088cc">Read More</font></div>				
+					</div>
 
 					<a id="WritingaCompilerforBrainf*ck"></a>
 					<div class="blogpost">
@@ -1630,7 +1695,23 @@ printf ("%s\n", default_instruction);
 			</div>
 		</div>
 
-
+	<!-- Start of StatCounter Code for Default Guide -->
+		<script type="text/javascript">
+		var sc_project=10345071; 
+		var sc_invisible=1; 
+		var sc_security="5f412348"; 
+		var scJsHost = (("https:" == document.location.protocol) ?
+		"https://secure." : "http://www.");
+		document.write("<sc"+"ript type='text/javascript' src='" +
+		scJsHost+
+		"statcounter.com/counter/counter.js'></"+"script>");
+		</script>
+		<noscript><div class="statcounter"><a title="shopify
+		analytics tool" href="http://statcounter.com/shopify/"
+		target="_blank"><img class="statcounter"
+		src="http://c.statcounter.com/10345071/0/5f412348/1/"
+		alt="shopify analytics tool"></a></div></noscript>
+		<!-- End of StatCounter Code for Default Guide -->
 	</body>
 
 </html>

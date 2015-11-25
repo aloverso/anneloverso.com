@@ -8,6 +8,37 @@
  * Designed and built with all the love in the world by @mdo and @fat.
  */
 
+ @font-face { 
+  font-family: 'Noto Serif';
+  font-style: normal; 
+  font-weight: 400;
+  src: local('Noto Serif'), local('NotoSerif'), url(https://themes.googleusercontent.com/static/fonts/notoserif/v2/eCpfeMZI7q4jLksXVRWPQxsxEYwM7FgeyaSgU71cLG0.woff) format('woff'); }
+
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round'), local('VarelaRound-Regular'), url(http://fonts.gstatic.com/s/varelaround/v6/APH4jr0uSos5wiut5cpjrugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Varela';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela'), url(http://fonts.gstatic.com/s/varela/v7/e6Eh9PkdYKY9G5hStVtTFvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Varela';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela'), url(http://fonts.gstatic.com/s/varela/v7/G6yziUoU5w8QmZ32N_0XDQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
 .clearfix {
   *zoom: 1;
 }
