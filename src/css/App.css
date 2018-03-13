@@ -4,12 +4,40 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700');
-
+/*
 img.bg {
   min-height: 100%;
 
   width: 100%;
   height: auto;
+} */
+
+.header-img {
+  height: 100%;
+  object-fit: cover;
+  object-position: -40px 0%;
+}
+
+.header-role {
+  position: absolute;
+  margin-top: 15vh;
+  margin-left: 10px;
+  min-width: inherit;
+  width: 20%;
+  padding-left: 10px;
+  z-index: 2;
+}
+
+.opacity-full {
+  opacity: 1;
+}
+
+.opacity-light {
+  opacity: 0.35;
+}
+
+.front {
+  z-index: 4;
 }
 
 /* images */
@@ -21,16 +49,49 @@ img.bg {
 /* flexbox */
 
 .flex-child {
-  width: 20rem;
+  /* background-color: tomato; */
+  width: 25%;
+  height: 80vh;
+  overflow: hidden;
 }
 
 .flex-parent {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
+/* icons */
+a {
+color: #222;
+}
+
+a:hover {
+color: #777;
+}
+
+
 /* Typography */
+
+.text-white {
+  background-color: rgba(20,20,20,.6);
+  color: #fff;
+}
+
+.text-charcoal {
+  color: #222;
+  background-color: none;
+}
+
+.text-m {
+  font-size: 2rem;
+  line-height: normal;
+}
+
+.text-l {
+  font-size: 4rem;
+  line-height: normal;
+}
 
 .text-thin {
   font-weight: 200;
@@ -50,6 +111,10 @@ h1 {
 
 .center {
   text-align: center;
+}
+
+.right {
+  text-align: right;
 }
 
 .pointer {

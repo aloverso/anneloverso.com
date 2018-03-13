@@ -1,9 +1,14 @@
 import React, { Component, Image } from 'react';
 import logo from '../assets/logo.svg';
-import teaching from '../assets/img/teaching.jpg'
+import teaching from '../assets/img/wirecutter.jpg'
+import coding from '../assets/img/coding.png'
+import design from '../assets/img/trailer.jpg'
+import create from '../assets/img/zermatt-sq.png'
 
 import Thumbnail from './Thumbnail';
 import ThumbnailContainer from './ThumbnailContainer'
+import Column from './Column'
+
 
 import '../css/App.css';
 import '../css/basics.css';
@@ -79,32 +84,47 @@ class App extends Component {
 
   render() {
 
-    let { bg, drawersState } = this.state
-
-    let drawers = roles.map((role,i) => {
-      return (
-        <div key={i}>
-          <div
-            className={`pointer bold-focus ${drawersState[role] && 'bold'}`}
-            onClick={() => this.openClose(role)}
-            tabIndex="0"
-            onKeyPress={(event) => this.keyPressed(event, role)}>
-              + {role}
-          </div>
-          {drawersState[role] && this.getThumbnails(role) }
-        </div>
-      )
-    })
-
     return (
       <div>
-
-        <h1 className="hxl font-btm center">Anne LoVerso</h1>
-
-        <div className="container">
-        <div className="container">
-          {drawers}
+        <div className="flex-parent">
+          <Column title={"engineer"} img={coding} />
+          <Column title={"educator"} img={teaching} />
+          <Column title={"designer"} img={design} />
+          <Column title={"creator"} img={create} />
         </div>
+
+        <div className="container">
+          <div className="right hxl bold font-btm mbxs">Anne LoVerso</div>
+
+          <div className="row">
+            <div className="six columns">
+              sadfkjl asdfjl aksdhfkhas dfajsdf asjdhflkadsf
+              sadfkjl asdfjl aksdhfkhas dfajsdf asjdhflkadsf
+              sadfkjl asdfjl aksdhfkhas dfajsdf asjdhflkadsf
+              sadfkjl asdfjl aksdhfkhas dfajsdf asjdhflkadsf
+              sadfkjl asdfjl aksdhfkhas dfajsdf asjdhflkadsf
+              sadfkjl asdfjl aksdhfkhas dfajsdf asjdhflkadsf
+
+            </div>
+
+            <div className="five columns text-m">
+              <p>Engineer at Pivotal Labs</p>
+              <p>Olin College alum</p>
+            </div>
+
+            <div className="one column text-l front">
+              <a href="https://twitter.com/AnneLoVerso">
+                <i className="fab fa-twitter-square front"></i>
+              </a>
+              <a href="https://medium.com/@AnneLoVerso">
+                <i className="fab fa-medium"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/anne-loverso-818ab883">
+                <i className="fab fa-linkedin"></i>
+              </a>
+            </div>
+
+          </div>
         </div>
       </div>
     )
