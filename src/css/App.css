@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'BeyondTheMounatins';
+  src: url('../assets/beyond_the_mountains-webfont.woff');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700');
+
+img.bg {
+  min-height: 100%;
+
+  width: 100%;
+  height: auto;
+}
+
+/* images */
+
+.thumbnail {
+  width: 100%;
+}
+
+/* flexbox */
+
+.flex-child {
+  width: 20rem;
+}
+
+.flex-parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Typography */
+
+.text-thin {
+  font-weight: 200;
+}
+
+.font-btm {
+  font-family: BeyondTheMounatins;
+}
+
+.font-raleway {
+  font-family: 'Raleway', serif;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.center {
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bold-focus:hover {
+  font-weight: bold;
+}
+
+.bold-focus:focus {
+  outline: none;
+  font-weight: bold;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

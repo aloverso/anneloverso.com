@@ -1,0 +1,51 @@
+{
+  "pivotal": {
+      "title": "pivotal",
+      "imgurl": "teaching.jpg"
+  },
+  "microsoft": {
+      "title": "microsoft",
+      "imgurl": "teaching.jpg"
+  },
+  "red hat": {
+      "title": "red hat",
+      "imgurl": "teaching.jpg"
+  },
+  "congress": {
+      "title": "congress",
+      "imgurl": "teaching.jpg"
+  },
+  "abortion": {
+      "title": "abortion",
+      "imgurl": "teaching.jpg"
+  },
+  "pianobot": {
+      "title": "pianobot",
+      "imgurl": "teaching.jpg"
+  },
+  "raspi": {
+      "title": "raspi",
+      "imgurl": "teaching.jpg"
+  },
+  "consulting": {
+      "title": "consulting",
+      "imgurl": "teaching.jpg"
+  },
+  "insper": {
+      "title": "insper",
+      "imgurl": "teaching.jpg"
+  },
+  "teaching": {
+      "title": "teaching",
+      "imgurl": "teaching.jpg"
+  },
+  "schools": {
+      "title": "schools",
+      "imgurl": "teaching.jpg"
+  },
+  "fourthgrademath": {
+      "title": "fourthgrademath",
+      "imgurl": "teaching.jpg"
+  }
+
+}
