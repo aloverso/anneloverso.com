@@ -1,51 +1,51 @@
 {
   "pivotal": {
       "title": "pivotal",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "microsoft": {
       "title": "microsoft",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "red hat": {
       "title": "red hat",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "congress": {
       "title": "congress",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "abortion": {
       "title": "abortion",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "pianobot": {
       "title": "pianobot",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "raspi": {
       "title": "raspi",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "consulting": {
       "title": "consulting",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "insper": {
       "title": "insper",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "teaching": {
       "title": "teaching",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "schools": {
       "title": "schools",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   },
   "fourthgrademath": {
       "title": "fourthgrademath",
-      "imgurl": "teaching.jpg"
+      "imgurl": "pivotal.png"
   }
 
 }

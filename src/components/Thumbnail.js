@@ -6,9 +6,9 @@ export default class Thumbnail extends React.Component {
     const imgFile = require('../assets/img/' + this.props.imgurl)
 
     return (
-      <div className="flex-child mad">
+      <div className="mas width-30">
         <img className="thumbnail" src={imgFile} />
-        <div className="bold">
+        <div className="text-ml">
           {this.props.title}
         </div>
       </div>

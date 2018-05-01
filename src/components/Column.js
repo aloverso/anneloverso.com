@@ -1,28 +1,35 @@
 import React from 'react';
 
+import { getBgColor } from '../common'
+
 export default class Column extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      hover: false
+      hover: true
     }
   }
 
   toggleHover() {
-    this.setState({
-      hover: !this.state.hover
-    })
+    // this.setState((state) => ({
+    //   hover: !state.hover
+    // }))
   }
 
   render() {
     return (
       <div
-        className="flex-child"
+        className={`flex-child `}
         onMouseEnter={this.toggleHover.bind(this)}
         onMouseLeave={this.toggleHover.bind(this)}
       >
-        <div className={`header-role hl font-btm ${this.getColor()}`}>{this.props.title}</div>
+        <div className="header-role">
+          <div className={`hl font-btm bold ${this.getColor()}`}>{this.props.title}</div>
+          {!this.state.hover && <div className="bam pad">
+            {this.props.skills.map(skill => <div>{skill}</div>)}
+          </div>}
+        </div>
         <img src={this.props.img} className={`header-img ${this.getImgOpacity()}`}/>
       </div>
     )

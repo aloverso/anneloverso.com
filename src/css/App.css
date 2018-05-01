@@ -12,10 +12,64 @@ img.bg {
   height: auto;
 } */
 
+/* backgrounds */
+
+.bg-lightest {
+  background-color: #eff0f2;
+}
+
+.bg-light {
+  background-color: #D9E0F2;
+}
+
+.bg-med {
+  background-color: #CBD5EC;
+
+}
+
+.bg-dark {
+  background-color: #b0bbdd
+}
+
+.bg-darker {
+  background-color: #919ad6;
+}
+
+.bg-darkest-purple {
+  background-color: #1B2771;
+}
+
+/* images */
+
+.width-100 {
+  width: 100%;
+}
+
+.width-30 {
+  width: 30%;
+}
+
 .header-img {
   height: 100%;
   object-fit: cover;
   object-position: -40px 0%;
+}
+
+
+.square img {
+  width: 100%;
+}
+
+.bg-square {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+}
+
+.bg-square.padded {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0em;
 }
 
 .header-role {
@@ -33,7 +87,7 @@ img.bg {
 }
 
 .opacity-light {
-  opacity: 0.35;
+  opacity: 0.1;
 }
 
 .front {
@@ -58,23 +112,35 @@ img.bg {
 .flex-parent {
   display: flex;
   flex-direction: row;
+}
+
+.flex-nowrap {
   flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.pad-space {
+  padding: 5rem 0rem;
 }
 
 /* icons */
 a {
-color: #222;
+color: #46529E;
+text-decoration: none;
+font-weight: bold;
 }
 
 a:hover {
-color: #777;
+color: #0C1759;
 }
 
 
 /* Typography */
 
 .text-white {
-  background-color: rgba(20,20,20,.6);
   color: #fff;
 }
 
@@ -85,6 +151,11 @@ color: #777;
 
 .text-m {
   font-size: 2rem;
+  line-height: normal;
+}
+
+.text-ml {
+  font-size: 3rem;
   line-height: normal;
 }
 
