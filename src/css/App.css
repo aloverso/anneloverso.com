@@ -12,6 +12,13 @@ img.bg {
   height: auto;
 } */
 
+/* colors
+
+purple: 46529E
+
+
+ */
+
 /* backgrounds */
 
 .bg-lightest {
@@ -55,6 +62,10 @@ img.bg {
   object-position: -40px 0%;
 }
 
+.constrain img {
+  max-height: 100%;
+  max-width: 100%;
+}
 
 .square img {
   width: 100%;
@@ -104,7 +115,7 @@ img.bg {
 
 .flex-child {
   /* background-color: tomato; */
-  width: 25%;
+  width: 34%;
   height: 80vh;
   overflow: hidden;
 }
@@ -139,6 +150,18 @@ color: #0C1759;
 
 
 /* Typography */
+
+.text-green {
+  color: #15985C;
+}
+
+.text-blue {
+  color: #1D5590;
+}
+
+.text-purple {
+  color: #382699;
+}
 
 .text-white {
   color: #fff;

@@ -6,6 +6,7 @@ import design from '../assets/img/trailer.jpg'
 import create from '../assets/img/zermatt-sq.png'
 import pairing from '../assets/img/pairing.jpg'
 import pivotal from '../assets/img/pivotal.png'
+import shiftingrhythms from '../assets/img/shiftingrhythms.png'
 
 import Thumbnail from './Thumbnail';
 import ThumbnailContainer from './ThumbnailContainer'
@@ -119,10 +120,9 @@ class App extends Component {
     return (
       <div>
         <div className="flex-parent flex-nowrap">
-          <Column title={"engineer"} skills={catgeorizations['engineer'].skills} img={coding} order={1}/>
-          <Column title={"educator"} skills={catgeorizations['educator'].skills} img={teaching} order={2}/>
-          <Column title={"designer"} skills={catgeorizations['designer'].skills} img={design} order={3}/>
-          <Column title={"creator"} skills={catgeorizations['creator'].skills} img={create} order={4}/>
+          <Column title={"engineer"} img={coding} order={1}/>
+          <Column title={"educator"} img={teaching} order={2}/>
+          <Column title={"designer"} img={design} order={3}/>
         </div>
 
         <div className="container">
@@ -161,34 +161,100 @@ class App extends Component {
               </a>
             </div>
           </div>
+
+          <div className="pad-space" />
+          <div className="text-ml pbd">A few things I'm proud of</div>
+
+          <div className="row">
+            <div className="four columns">
+                <ul>
+                    <li className="bold text-green">Software consulting at Pivotal Labs</li>
+                    <li className="bold text-green">Internships at Microsoft & Red Hat</li>
+                    <li className="bold text-green">Software internships at Microsoft & Red Hat</li>
+                </ul>
+            </div>
+
+            <div className="four columns">
+              <ul>
+                <li className="bold text-blue">Education research and publication</li>
+                <li className="bold text-blue">Museum exhibit on standardized testing</li>
+                <li className="bold text-blue">Higher-ed consulting in Sao Paulo, Brazil</li>
+              </ul>
+            </div>
+
+
+            <div className="four columns">
+              <ul>
+                <li className="bold text-purple">Leading design of a rural mobile makerspace for youth</li>
+                <li className="bold text-purple">Designing pathways to certification for birth support professionals</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div className="pad-space" />
 
+
+
         <div className="container-full">
           <div className="row">
-            <div className="six columnsf square">
-              <img src={pairing}/>
-            </div>
 
-            <div className="six columnsf">
-                <div className="six columnsf square bold hm pad">
-                  As a software engineer, I work on a variety of consulting projects for Pivotal Labs,
-                  modeling and teaching test-driven development to clients through pair programming.
-
-                </div>
-                <div className="six columnsf square">
+            <div className="three columns">
+                <div className="square">
                   <img src={pivotal} />
                 </div>
-                <div className="six columnsf square bg-square bg-darker text-white hl padded">
+
+                <div className="bg-darker text-white hl padded">
                   some text here
                 </div>
-                <div className="six columnsf square pad">
-                  more specific details about what I do
-                </div>
+            </div>
+
+            <div className="four columns">
+                <p>At Pivotal Labs, we embrace Extreme Programming and my role as a software engineer means that I am teaching, practicing, and modeling techniques like pair-programming and test-driven development all day, every day.  I’ve worked with a variety of clients, from large enterprises to startups and nonprofits, and for each project, I’m able to hone my practice of selling Agile, lean practices, user-centered design, and sustainable, maintainable coding.</p>
+                <p>The tech stack of a project is different for each client and their unique needs.  I’m a fast learner who’s ready switch from a Java project to a Ruby/Rails project in a day, as I need to not only know, but also teach to our clients.  I have significant experience in Java and Kotlin with Spring framework, Python, JavaScript, React, and a variety of front-end tools.</p>
+                <p>Most importantly, besides the technology and technical skills I’ve learned at Pivotal, I am adept at consulting.  This is a broad range of skills that include empathy, listening, coaching, and making recommendations with strong opinions backed up by credible reasoning.  My favorite part of the job is when my pair challenges me - “why should we do it that way?”  I want to always be reminded to question why we do what we do, why we make certain decisions when writing code, and whether I can back up my thoughts with well-reasoned justification.</p>
+
+            </div>
+
+            <div className="four columns">
             </div>
 
           </div>
+        </div>
+
+        <div className="pad-space"/>
+
+        <div className="container">
+          <div className="row ptm">
+            <div className="four columns constrain">
+              <img src={shiftingrhythms} />
+            </div>
+
+            <div className="eight columns text-l bold text-purple">
+              Shifting Rhythms
+            </div>
+          </div>
+
+          <div className="row ptm">
+              <div className="four columns constrain">
+                  <img src={shiftingrhythms} />
+              </div>
+
+              <div className="eight columns text-l bold text-purple">
+                  Shifting Rhythms
+              </div>
+          </div>
+
+          <div className="row ptm">
+              <div className="four columns constrain">
+                  <img src={shiftingrhythms} />
+              </div>
+
+              <div className="eight columns text-l bold text-purple">
+                  Shifting Rhythms
+              </div>
+          </div>
+
         </div>
 
       </div>
