@@ -74,12 +74,14 @@
   .one.columns, .one.columnsf, .one.columnf                   { width: 4.66666666667%; }
   .two.columns, .two.columnsf                    { width: 13.3333333333%; }
   .three.columns, .three.columnsf                  { width: 22%;            }
-  .four.columns, .four.columnsf                   { width: 30.6666666667%; }
+  .four.columns                 { width: 30.6666666667%; }
+  .four.columnsf                   { width: 33.33333333333%; }
   .five.columns, .five.columnsf                   { width: 39.3333333333%; }
   .six.columns                    { width: 48%;            }
   .six.columnsf                    { width: 50%;            }
   .seven.columns, .seven.columnsf                  { width: 56.6666666667%; }
-  .eight.columns, .eight.columnsf                  { width: 65.3333333333%; }
+  .eight.columns                 { width: 65.3333333333%; }
+  .eight.columnsf                  { width: 66.6666666666667%; }
   .nine.columns, .nine.columnsf                   { width: 74.0%;          }
   .ten.columns, .ten.columnsf                    { width: 82.6666666667%; }
   .eleven.columns, .eleven.columnsf                 { width: 91.3333333333%; }

@@ -19,7 +19,36 @@ purple: 46529E
 
  */
 
+/* http://paletton.com/#uid=63C0A0krBrpgVyMlOtetllEzegL */
 /* backgrounds */
+
+.bg-light-green {
+  background-color: #B7EBD3;
+}
+
+.bg-light-blue {
+  background-color: #BACFE8;
+}
+
+.bg-light-purple {
+  background-color: #DBB8E9;
+}
+
+.bg-green {
+  background-color: #15975C;
+}
+
+.bg-blue {
+  background-color: #1E518F;
+}
+
+.bg-purple {
+  background-color: #3C2497;
+}
+
+.bg-black {
+  background-color: black;
+}
 
 .bg-lightest {
   background-color: #eff0f2;
@@ -46,6 +75,39 @@ purple: 46529E
   background-color: #1B2771;
 }
 
+.overlay-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay {
+  position:absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.title-overlay-green {
+  background-color: #15975C;
+  opacity: .8;
+}
+
+.title-overlay-blue {
+  background-color: #1E518F;
+  opacity: .8;
+}
+
+.title-overlay-purple {
+  background-color: #3C2497;
+  opacity: .8;
+}
+
+.block {
+  display: block;
+}
+
 /* images */
 
 .width-100 {
@@ -56,6 +118,20 @@ purple: 46529E
   width: 30%;
 }
 
+.position-top-left {
+  position: absolute;
+  z-index: 3;
+  top: 10%;
+  left: 10%;
+}
+
+.position-bottom-right {
+  position: absolute;
+  z-index: 3;
+  bottom: 10%;
+  right: 10%;
+}
+
 .header-img {
   height: 100%;
   object-fit: cover;
@@ -63,7 +139,6 @@ purple: 46529E
 }
 
 .constrain img {
-  max-height: 100%;
   max-width: 100%;
 }
 
@@ -85,11 +160,9 @@ purple: 46529E
 
 .header-role {
   position: absolute;
-  margin-top: 15vh;
-  margin-left: 10px;
+  margin-top: 10vh;
   min-width: inherit;
   width: 20%;
-  padding-left: 10px;
   z-index: 2;
 }
 
@@ -99,6 +172,10 @@ purple: 46529E
 
 .opacity-light {
   opacity: 0.1;
+}
+
+.opacity-m {
+  opacity: 0.5;
 }
 
 .front {
@@ -152,15 +229,15 @@ color: #0C1759;
 /* Typography */
 
 .text-green {
-  color: #15985C;
+  color: #15975C;
 }
 
 .text-blue {
-  color: #1D5590;
+  color: #1E518F;
 }
 
 .text-purple {
-  color: #382699;
+  color: #3C2497;
 }
 
 .text-white {
