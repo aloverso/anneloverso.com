@@ -206,7 +206,6 @@ class App extends Component {
                         </div>
                     </div>
 
-                    <div className="pad-space"/>
                     <div className="text-ml pbd">A few things I'm proud of</div>
 
                     <div className="row">
@@ -245,7 +244,7 @@ class App extends Component {
                 <div className="container-full">
                     <div className="row">
 
-                        <div className="three columns">
+                        <div className="three columns plxs">
                             <div className="square">
                                 <img src={pivotal}/>
                             </div>

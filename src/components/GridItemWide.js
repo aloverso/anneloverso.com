@@ -18,12 +18,18 @@ export default class GridItemWide extends React.Component {
 
         return (
             <div className="row paxs pointer" onClick={this.props.onClick}>
-                <div className="twelve columnsf constrain overlay-container">
-                    <img className={`${opacity} block`} src={this.props.img}/>
-                    {overlay}
+                <div className="row">
+                    <div className="twelve columnsf constrain overlay-container">
+                        <img className={`${opacity} block`} src={this.props.img}/>
+                        {overlay}
+                    </div>
                 </div>
 
-                <div>{this.props.childVisible && this.props.children}</div>
+                {this.props.childVisible &&
+                    <div className="ptm pad">
+                        {this.props.children}
+                    </div>
+                }
             </div>
         )
     }

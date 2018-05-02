@@ -4,9 +4,10 @@
     <list default="true" id="9bca4e10-d3b1-4b80-852c-a8ac546076d9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" afterPath="$PROJECT_DIR$/src/components/App.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/Column.js" afterPath="$PROJECT_DIR$/src/components/Column.js" />
-      <change beforePath="$PROJECT_DIR$/src/css/App.css" afterPath="$PROJECT_DIR$/src/css/App.css" />
-      <change beforePath="$PROJECT_DIR$/src/css/skeleton.css" afterPath="$PROJECT_DIR$/src/css/skeleton.css" />
+      <change beforePath="$PROJECT_DIR$/src/components/GridItemSideBySide.js" afterPath="$PROJECT_DIR$/src/components/GridItemSideBySide.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/GridItemWide.js" afterPath="$PROJECT_DIR$/src/components/GridItemWide.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/getDesignerBlocks.js" afterPath="$PROJECT_DIR$/src/components/getDesignerBlocks.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/getEducatorBlocks.js" afterPath="$PROJECT_DIR$/src/components/getEducatorBlocks.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +21,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="165" column="73" lean-forward="false" selection-start-line="165" selection-start-column="73" selection-end-line="165" selection-end-column="73" />
+            <state relative-caret-position="-446">
+              <caret line="247" column="50" lean-forward="false" selection-start-line="247" selection-start-column="50" selection-end-line="247" selection-end-column="50" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -29,7 +30,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Column.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getEducatorBlocks.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/getEducatorBlocks.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="27" column="255" lean-forward="false" selection-start-line="27" selection-start-column="255" selection-end-line="27" selection-end-column="255" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GridItemWide.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/GridItemWide.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="28" column="43" lean-forward="false" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Column.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Column.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
@@ -42,8 +63,8 @@
       <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="158" column="1" lean-forward="false" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
+            <state relative-caret-position="125">
+              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,11 +73,9 @@
       <file leaf-file-name="getDesignerBlocks.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/getDesignerBlocks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="45" lean-forward="false" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,11 +83,19 @@
       <file leaf-file-name="GridItemSideBySide.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/GridItemSideBySide.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-              <folding>
-                <marker date="1525229581000" expanded="true" signature="633:703" ph="..." />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="skeleton.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/skeleton.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="898">
+              <caret line="83" column="54" lean-forward="false" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,6 +114,7 @@
       <find>li</find>
       <find>position</find>
       <find>role</find>
+      <find>block</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -108,14 +136,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/css/skeleton.css" />
         <option value="$PROJECT_DIR$/src/components/GridItem.js" />
-        <option value="$PROJECT_DIR$/src/components/GridItemWide.js" />
         <option value="$PROJECT_DIR$/src/components/getEngineerBlocks.js" />
-        <option value="$PROJECT_DIR$/src/components/getEducatorBlocks.js" />
-        <option value="$PROJECT_DIR$/src/components/GridItemSideBySide.js" />
-        <option value="$PROJECT_DIR$/src/components/getDesignerBlocks.js" />
+        <option value="$PROJECT_DIR$/src/components/Column.js" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/css/App.css" />
-        <option value="$PROJECT_DIR$/src/components/Column.js" />
+        <option value="$PROJECT_DIR$/src/components/getDesignerBlocks.js" />
+        <option value="$PROJECT_DIR$/src/components/GridItemSideBySide.js" />
+        <option value="$PROJECT_DIR$/src/components/getEducatorBlocks.js" />
+        <option value="$PROJECT_DIR$/src/components/GridItemWide.js" />
       </list>
     </option>
   </component>
@@ -215,6 +243,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/pivotal/workspace/personal-website/src/components/getDesignerBlocks.js" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -329,12 +358,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525193262155</updated>
       <workItem from="1525193263645" duration="2412000" />
-      <workItem from="1525216028862" duration="14790000" />
+      <workItem from="1525216028862" duration="17390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17202000" />
+    <option name="totallyTimeSpent" value="19802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -435,14 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/skeleton.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="83" column="54" lean-forward="false" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -459,14 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/GridItemWide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/getEngineerBlocks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -475,51 +488,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/getEducatorBlocks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="47" column="58" lean-forward="false" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/GridItemSideBySide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <marker date="1525229581000" expanded="true" signature="633:703" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/getDesignerBlocks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="165" column="73" lean-forward="false" selection-start-line="165" selection-start-column="73" selection-end-line="165" selection-end-column="73" />
+        <state relative-caret-position="-446">
+          <caret line="247" column="50" lean-forward="false" selection-start-line="247" selection-start-column="50" selection-end-line="247" selection-end-column="50" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="158" column="1" lean-forward="false" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -527,6 +502,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/getDesignerBlocks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="45" lean-forward="false" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/skeleton.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="83" column="54" lean-forward="false" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/getEducatorBlocks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="27" column="255" lean-forward="false" selection-start-line="27" selection-start-column="255" selection-end-line="27" selection-end-column="255" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/GridItemSideBySide.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/GridItemWide.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="43" lean-forward="false" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
           <folding />
         </state>
       </provider>

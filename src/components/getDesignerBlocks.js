@@ -13,6 +13,11 @@ export default function getDesignerBlocks(callback, blockOpenStates) {
                 img={shiftingrhythms}
                 title="Shifting Rhythms"
                 color="purple"
+                snippet={
+                    <div>
+                        Co-designing a mobile makerspace offering hands-on learning experiences to youth in rural Mississippi
+                    </div>
+                }
                 onClick={() => {callback('insper')}}
                 childVisible={blockOpenStates['insper']}
             >
