@@ -108,6 +108,14 @@ purple: 46529E
   display: block;
 }
 
+.float {
+  float: left;
+}
+
+.slider {
+    transition: height 1s;
+}
+
 /* images */
 
 .width-100 {
@@ -153,9 +161,9 @@ purple: 46529E
 }
 
 .bg-square.padded {
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0em;
+  padding-left: 20px;
+  padding-right: 2em;
+  padding-top: 2em;
 }
 
 .header-role {
@@ -262,6 +270,10 @@ color: #0C1759;
 .text-l {
   font-size: 4rem;
   line-height: normal;
+}
+
+.lh-unset {
+  line-height: unset;
 }
 
 .text-thin {

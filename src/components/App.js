@@ -6,7 +6,9 @@ import design from '../assets/img/trailer.jpg'
 import workshop from '../assets/img/workshop.jpg'
 import workshopmobile from '../assets/img/folio-mobile/workshop.jpg'
 import pairing from '../assets/img/pairing.jpg'
+import pairingcomic from '../assets/img/pairingcomic.jpg'
 import pivotal from '../assets/img/pivotal.png'
+import postits from '../assets/img/postits.jpg'
 import shiftingrhythms from '../assets/img/shiftingrhythms.png'
 import shiftingrhythmsmobile from '../assets/img/folio-mobile/shiftingrhythms.png'
 
@@ -163,7 +165,7 @@ class App extends Component {
                 <div className="flex-parent flex-nowrap">
                     <Column title={"engineer"} img={coding} color="green" order={1}/>
                     <Column title={"educator"} img={teaching} color="blue" order={2}/>
-                    <Column title={"designer"} img={design} color="purple" order={3}/>
+                    <Column title={"designer"} img={postits} color="purple" order={3}/>
                 </div>
 
                 <div className="container">
@@ -236,25 +238,64 @@ class App extends Component {
                             </ul>
                         </div>
                     </div>
+
+                    <div className="text-ml pbd">A few skills I know</div>
+
+                    <div className="row">
+                        <div className="four columns">
+                            <ul>
+                                <li className="text-green">Python, JavaScript, React, Java, Kotlin, Spring framework, git, HTML/CSS</li>
+                                <li className="text-green">Dependency inversion, domain-driven design, application architecture patterns</li>
+                                <li className="text-green">Pair programming and mob programming</li>
+                                <li className="text-green">Test-driven development (incl. JUnit, jasmine, jest, mocha/chai, enzyme, rspec...)</li>
+                                <li className="text-green">Agile & Extreme Programming</li>
+                            </ul>
+                        </div>
+
+                        <div className="four columns">
+                            <ul>
+                                <li className="text-blue">Curriculum design</li>
+                                <li className="text-blue">Teaching</li>
+                                <li className="text-blue">Educational experience design</li>
+                                <li className="text-blue">Adapting material to a specific audience</li>
+                            </ul>
+                        </div>
+
+
+                        <div className="four columns">
+                            <ul>
+                                <li className="text-purple">Design thinking</li>
+                                <li className="text-purple">User research</li>
+                                <li className="text-purple">Persona synthesis</li>
+                                <li className="text-purple">Systems analysis</li>
+                                <li className="text-purple">Communication & presentation</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="pad-space"/>
 
+                <div className="text-l center">
+                    <i className="fas fa-wrench"/> Site under construction! More content soon
+                </div>
+
+                <div className="pad-space"/>
 
                 <div className="container-full">
                     <div className="row">
 
-                        <div className="three columns plxs">
+                        <div className="three columns phxs">
                             <div className="square">
                                 <img src={pivotal}/>
                             </div>
 
-                            <div className="bg-darker text-white hl padded">
-                                some text here
+                            <div className="font-btm text-m pas lh-unset">
+                                It doesn't just matter what you build, it matters how you build it
                             </div>
                         </div>
 
-                        <div className="four columns">
+                        <div className="five columns">
                             <p>At Pivotal Labs, we embrace Extreme Programming and my role as a software engineer means
                                 that I am teaching, practicing, and modeling techniques like pair-programming and
                                 test-driven development all day, every day. I’ve worked with a variety of clients, from
@@ -277,6 +318,13 @@ class App extends Component {
                         </div>
 
                         <div className="four columns">
+                            <div>sadf</div>
+
+                            <div className="row">
+                                <div className="six columns">
+                                    <img src={pairingcomic} href="https://builttoadapt.io/another-perspective-on-interrupting-developers-at-work-c154d8bacbf2"/>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -285,23 +333,33 @@ class App extends Component {
                 <div className="pad-space"/>
 
                 <div className="container-full">
-
-                    <div className="four columnsf">
-
-                        {getEngineerBlocks(this.onClick, this.state.blockOpenStates)}
-                    </div>
-
-                    <div className="four columnsf">
-                        {getEducatorBlocks(this.onClick, this.state.blockOpenStates)}
-                    </div>
-
-                    <div className="four columnsf">
-                        {getDesignerBlocks(this.onClick, this.state.blockOpenStates)}
-                    </div>
+                    {this.getRows()}
                 </div>
             </div>
 
         )
+    }
+
+    getRows() {
+        let rows = []
+        for (let i=0; i<4; i++) {
+            rows.push(
+                <div className="float slider" key={i}>
+                    <div className="four columnsf">
+                        {getEngineerBlocks(this.onClick, this.state.blockOpenStates)[i]}
+                    </div>
+
+                    <div className="four columnsf">
+                        {getEducatorBlocks(this.onClick, this.state.blockOpenStates)[i]}
+                    </div>
+
+                    <div className="four columnsf">
+                        {getDesignerBlocks(this.onClick, this.state.blockOpenStates)[i]}
+                    </div>
+                </div>
+            )
+        }
+        return rows;
     }
 }
 

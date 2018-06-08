@@ -23,7 +23,7 @@ export default class GridItemSideBySide extends React.Component {
                     </div>
                 </div>
 
-                <div className="block pad">
+                <div className="block">
                     {this.props.childVisible && this.props.children}
                 </div>
             </div>

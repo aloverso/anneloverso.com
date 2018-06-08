@@ -10,7 +10,7 @@ export default class Column extends React.Component {
         <div className="header-role">
           <div className={`hl font-btm plxs bold text-white opacity-full`}>
               {this.props.title}
-            <iv className={`overlay opacity-m bg-${this.props.color}`}/>
+            <div className={`overlay opacity-m bg-${this.props.color}`}/>
           </div>
         </div>
         <img src={this.props.img} className={`header-img`}/>

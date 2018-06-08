@@ -10,7 +10,7 @@ import React from 'react';
 
 export default function getEngineerBlocks(callback, blockOpenStates) {
     return (
-        <div>
+    [
             <GridItemWide
                 img={microsoft}
                 onClick={() => {callback('microsoft')}}
@@ -18,7 +18,7 @@ export default function getEngineerBlocks(callback, blockOpenStates) {
                 removeOverlay
             >
                 <div>sfd</div>
-            </GridItemWide>
+            </GridItemWide>,
 
             <GridItemWide
                 img={pianobot}
@@ -29,7 +29,7 @@ export default function getEngineerBlocks(callback, blockOpenStates) {
                 childVisible={blockOpenStates['pianobot']}
             >
                 <div>asfdasdfsda</div>
-            </GridItemWide>
+            </GridItemWide>,
 
             <GridItemWide
                 img={redhat}
@@ -38,7 +38,7 @@ export default function getEngineerBlocks(callback, blockOpenStates) {
                 removeOverlay
             >
                 <div>sfd</div>
-            </GridItemWide>
+            </GridItemWide>,
 
             <GridItemSideBySide
                 img={abortion}
@@ -49,6 +49,6 @@ export default function getEngineerBlocks(callback, blockOpenStates) {
             >
                 <div>asfdasdfsda</div>
             </GridItemSideBySide>
-        </div>
+        ]
     )
 }

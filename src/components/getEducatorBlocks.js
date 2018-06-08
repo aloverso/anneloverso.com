@@ -7,7 +7,7 @@ import React from 'react';
 
 export default function getEducatorBlocks(callback, blockOpenStates) {
     return (
-        <div>
+        [
             <GridItemWide
                 img={workshopmobile}
                 title="Teaching Portfolio"
@@ -27,7 +27,7 @@ export default function getEducatorBlocks(callback, blockOpenStates) {
 
                     <p>This teaching portfolio is centered on my experiences in Teaching and Learning, but includes my experiences in other classes and positions as well, and applies to my general attitude towards teaching, as developed in this class.</p>
                 </div>
-            </GridItemWide>
+            </GridItemWide>,
 
             <GridItemSideBySide
                 img={research}
@@ -47,7 +47,7 @@ export default function getEducatorBlocks(callback, blockOpenStates) {
                         <p>We continued the same study by selecting 14 respondents and conducting in-depth, hour-plus interviews with each. We read, coded, and analyzed those interviews using grounded theory and related synthesis techniques. In Spring 2016, we wrote a paper about our emergent theories from this work, which focuses on how participants define "teaching" in their own words, and how that definition compares to their descriptions of their actual teaching experiences, and the discrepancies between them. I led the team in writing and presenting this paper at the 2016 Frontiers in Education conference in Erie, PA.</p>
 
                 </div>
-            </GridItemSideBySide>
+            </GridItemSideBySide>,
 
             <GridItemWide
                 img={insper}
@@ -58,7 +58,7 @@ export default function getEducatorBlocks(callback, blockOpenStates) {
                 childVisible={blockOpenStates['insper']}
             >
                 <div>asfdasdfsda</div>
-            </GridItemWide>
+            </GridItemWide>,
 
             <GridItemSideBySide
                 img={research}
@@ -74,6 +74,6 @@ export default function getEducatorBlocks(callback, blockOpenStates) {
             >
                 <div>asfdasdfsda</div>
             </GridItemSideBySide>
-        </div>
+        ]
     )
 }

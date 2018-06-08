@@ -8,7 +8,7 @@ import React from 'react';
 
 export default function getDesignerBlocks(callback, blockOpenStates) {
     return (
-        <div>
+        [
             <GridItemSideBySide
                 img={shiftingrhythms}
                 title="Shifting Rhythms"
@@ -28,7 +28,7 @@ export default function getDesignerBlocks(callback, blockOpenStates) {
                     <p>Additionally, as community liaison for the team, I was responsible for all communication and planning between the team in Boston and our Mississippi partners.  I organized trips, planned meetings, facilitated conversations and workshops, and relayed status updates.</p>
 
                 </div>
-            </GridItemSideBySide>
+            </GridItemSideBySide>,
 
             <GridItemWide
                 img={tests}
@@ -39,7 +39,7 @@ export default function getDesignerBlocks(callback, blockOpenStates) {
                 childVisible={blockOpenStates['tests']}
             >
                 <div>sfd</div>
-            </GridItemWide>
+            </GridItemWide>,
 
             <GridItemSideBySide
                 img={hmhbga}
@@ -55,7 +55,7 @@ export default function getDesignerBlocks(callback, blockOpenStates) {
                     <p>Our development of the workshops and the design that drove them was passed along to HMHBGA at the end of the semester, so that they could continue to develop and implement the program under the umbrella of their organization.</p>
 
                 </div>
-            </GridItemSideBySide>
+            </GridItemSideBySide>,
 
             <GridItemWide
                 img={uocd}
@@ -67,6 +67,6 @@ export default function getDesignerBlocks(callback, blockOpenStates) {
             >
                 <div>asfdasdfsda</div>
             </GridItemWide>
-        </div>
+        ]
     )
 }
