@@ -140,11 +140,6 @@ purple: 46529E
   right: 10%;
 }
 
-.header-img {
-  height: 100%;
-  object-fit: cover;
-  object-position: -40px 0%;
-}
 
 .constrain img {
   max-width: 100%;
@@ -164,14 +159,6 @@ purple: 46529E
   padding-left: 20px;
   padding-right: 2em;
   padding-top: 2em;
-}
-
-.header-role {
-  position: absolute;
-  margin-top: 10vh;
-  min-width: inherit;
-  width: 20%;
-  z-index: 2;
 }
 
 .opacity-full {
@@ -198,16 +185,51 @@ purple: 46529E
 
 /* flexbox */
 
+.header-role {
+  position: absolute;
+  margin-top: 10vh;
+  min-width: inherit;
+  width: 20%;
+  z-index: 2;
+}
+
 .flex-child {
-  /* background-color: tomato; */
-  width: 34%;
-  height: 80vh;
+  width: 100%;
+  height: 30vh;
   overflow: hidden;
+}
+
+.header-img {
+  height: 100%;
+  object-fit: cover;
+  object-position: -40px 0%;
 }
 
 .flex-parent {
   display: flex;
   flex-direction: row;
+}
+
+.icon {
+  margin-right: 2rem;
+}
+
+@media (min-width: 550px) {
+  .flex-child {
+    width: 34%;
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  .header-role {
+    position: absolute;
+    margin-top: 10vh;
+    min-width: inherit;
+    width: 20%;
+    z-index: 2;
+  }
+
+  .icon {}
 }
 
 .flex-nowrap {
