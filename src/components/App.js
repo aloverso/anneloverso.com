@@ -48,13 +48,13 @@ class App extends Component {
                             <a href="https://medium.com/@AnneLoVerso">
                                 <i className="icon fab fa-medium" title="medium" />
                             </a>
-                            <a href="www.linkedin.com/in/anneloverso">
+                            <a href="http://www.linkedin.com/in/anneloverso">
                                 <i className="icon fab fa-linkedin" title="linkedin" />
                             </a>
                             <a href="https://github.com/aloverso">
                                 <i className="icon fab fa-github-square" title="github" />
                             </a>
-                            <a href="https://github.com/aloverso">
+                            <a href="LoVersoResume-web.pdf">
                                 <i className="icon fas fa-sticky-note" title="resume" />
                             </a>
                         </div>

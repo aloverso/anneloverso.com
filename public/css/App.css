@@ -1,0 +1,345 @@
+@font-face {
+  font-family: 'BeyondTheMounatins';
+  src: url('../assets/beyond_the_mountains-webfont.woff');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700');
+/*
+img.bg {
+  min-height: 100%;
+
+  width: 100%;
+  height: auto;
+} */
+
+/* colors
+
+purple: 46529E
+
+
+ */
+
+/* http://paletton.com/#uid=63C0A0krBrpgVyMlOtetllEzegL */
+/* backgrounds */
+
+.bg-light-green {
+  background-color: #B7EBD3;
+}
+
+.bg-light-blue {
+  background-color: #BACFE8;
+}
+
+.bg-light-purple {
+  background-color: #DBB8E9;
+}
+
+.bg-green {
+  background-color: #15975C;
+}
+
+.bg-blue {
+  background-color: #1E518F;
+}
+
+.bg-purple {
+  background-color: #3C2497;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-lightest {
+  background-color: #eff0f2;
+}
+
+.bg-light {
+  background-color: #D9E0F2;
+}
+
+.bg-med {
+  background-color: #CBD5EC;
+
+}
+
+.bg-dark {
+  background-color: #b0bbdd
+}
+
+.bg-darker {
+  background-color: #919ad6;
+}
+
+.bg-darkest-purple {
+  background-color: #1B2771;
+}
+
+.overlay-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay {
+  position:absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.title-overlay-green {
+  background-color: #15975C;
+  opacity: .8;
+}
+
+.title-overlay-blue {
+  background-color: #1E518F;
+  opacity: .8;
+}
+
+.title-overlay-purple {
+  background-color: #3C2497;
+  opacity: .8;
+}
+
+.block {
+  display: block;
+}
+
+.float {
+  float: left;
+}
+
+.slider {
+    transition: height 1s;
+}
+
+/* images */
+
+.width-100 {
+  width: 100%;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.position-top-left {
+  position: absolute;
+  z-index: 3;
+  top: 10%;
+  left: 10%;
+}
+
+.position-bottom-right {
+  position: absolute;
+  z-index: 3;
+  bottom: 10%;
+  right: 10%;
+}
+
+
+.constrain img {
+  max-width: 100%;
+}
+
+.square img {
+  width: 100%;
+}
+
+.bg-square {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+}
+
+.bg-square.padded {
+  padding-left: 20px;
+  padding-right: 2em;
+  padding-top: 2em;
+}
+
+.opacity-full {
+  opacity: 1;
+}
+
+.opacity-light {
+  opacity: 0.1;
+}
+
+.opacity-m {
+  opacity: 0.5;
+}
+
+.front {
+  z-index: 4;
+}
+
+/* images */
+
+.thumbnail {
+  width: 100%;
+}
+
+/* flexbox */
+
+.header-role {
+  position: absolute;
+  margin-top: 10vh;
+  min-width: inherit;
+  width: 20%;
+  z-index: 2;
+}
+
+.flex-child {
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.header-img {
+  height: 100%;
+  object-fit: cover;
+  object-position: -40px 0%;
+}
+
+.flex-parent {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  margin-right: 2rem;
+}
+
+@media (min-width: 550px) {
+  .flex-child {
+    width: 34%;
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  .header-role {
+    position: absolute;
+    margin-top: 10vh;
+    min-width: inherit;
+    width: 20%;
+    z-index: 2;
+  }
+
+  .icon {}
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.pad-space {
+  padding: 5rem 0rem;
+}
+
+/* icons */
+a {
+color: #46529E;
+text-decoration: none;
+font-weight: bold;
+}
+
+a:hover {
+color: #0C1759;
+}
+
+
+/* Typography */
+
+.text-green {
+  color: #15975C;
+}
+
+.text-blue {
+  color: #1E518F;
+}
+
+.text-purple {
+  color: #3C2497;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-charcoal {
+  color: #222;
+  background-color: none;
+}
+
+.text-m {
+  font-size: 2rem;
+  line-height: normal;
+}
+
+.text-ml {
+  font-size: 3rem;
+  line-height: normal;
+}
+
+.text-l {
+  font-size: 4rem;
+  line-height: normal;
+}
+
+.lh-unset {
+  line-height: unset;
+}
+
+.text-thin {
+  font-weight: 200;
+}
+
+.font-btm {
+  font-family: BeyondTheMounatins;
+}
+
+.font-raleway {
+  font-family: 'Raleway', serif;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bold-focus:hover {
+  font-weight: bold;
+}
+
+.bold-focus:focus {
+  outline: none;
+  font-weight: bold;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
