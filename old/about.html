@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>About</title>
+		<link rel="stylesheet" type="text/css" href="
+		bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="cal-heatmap-master/cal-heatmap.css" />
+		<script type="text/javascript" src="cal-heatmap-master/cal-heatmap.min.js"></script>
+		<style>
+
+			body {
+				font-family: 'Lato';
+			}
+			html {
+				overflow-y: scroll;
+			}
+
+
+			.about{
+				width: 100%;
+				height: 140px;
+				padding: 3px;
+				border: 20px;
+				border-color: black;
+				margin: 1%;
+				background-color: #202020;
+				background-image: none
+			}
+			.about:hover{
+				transition: all .4s, transform .4s;
+     			-moz-transition: all .4s, -moz-transform .4s;
+     			-webkit-transition: all .4s, -webkit-transform .4s;
+     			-o-transition: all .4s, -o-transform .4s;
+				height: 275px;
+
+			}
+			#pagename{
+				font-color:#FFFFFF;
+				font-size:34px;
+				font-family: 'Lato';
+				letter-spacing: 2px;
+			}
+			#pagename.hover{
+				font-color:#FFFFFF;
+			}
+			span.dropt {border-bottom: thin dotted;}
+			span.dropt:hover {text-decoration: none; background: #ffffff; z-index: 6; }
+			span.dropt span {position: absolute; left: -9999px;
+			  margin: 20px 0 0 0px; padding: 3px 3px 3px 3px;
+			  border-style:solid; border-color:black; border-width:1px; z-index: 6;  width:10px;}
+			span.dropt:hover span {left: 10%; background: #ffffff;} 
+			span.dropt span {position: absolute; left: -9999px;
+			  margin: 4px 0 0 0px; padding: 3px 3px 3px 3px; 
+			  border-style:solid; border-color:black; border-width:1px;}
+			span.dropt:hover span {margin: 20px 0 0 170px; background: #ffffff; z-index:6;} 
+		</style>
+	</head>
+	<body>
+		<a id="top"></a>
+		<header class="navbar navbar-inverse navbar-static-top"> 
+			<div class="navbar-inner">
+				<div class="container">
+					<nav>
+						<ul class="nav nav-pills nav-pull-left">
+							<li class="active"><a href="index.html"><div id="pagename"><b>Anne LoVerso</b></div></a></li>
+						</ul>
+						<ul class="nav nav-pills pull-right"> 
+							<li><a href="index.html"><div title="Home"><font style="letter-spacing: 2px;">HOME</font></div></a></li>
+							<li class="active"><a href="about.html"><div title="About"><font style="letter-spacing: 2px;">ABOUT</font></div></a></li>
+							<li><a href="portfolio.html"><div title="Portfolio"><font style="letter-spacing: 2px;">PORTFOLIO</font></div></a></li>
+							<li><a href="contact.html"><div title="Contact"><font style="letter-spacing: 2px;">CONTACT</font></div></a></li>
+							<li><a href="blog.html"><div title="Blog"><font style="letter-spacing: 2px;">BLOG</font></div></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		</br>
+
+		<div class="container">
+			<div class="row">
+				<div class="span6">
+					<h3>The Basics</h3>
+					<ul>
+						<li>Anne LoVerso</li>
+						<li><a href="http://www.olin.edu">Olin College of Engineering</a> Class of 2017</li>
+						<li><b>Major:</b> Engineering with a Concentration in Computing <span class="dropt"><i class="fa fa-question-circle"></i><span style="width:500px;">Olin only offers three majors: Mechanical Engineering, Electrical and Computer Engineering, and General Engineering (with a self-defined concentration).  In order to major in Computing, I need the third option.  It's a common path at Olin and the classes required for the Engineering with Computing (E:C) major are well-defined.  This major includes a few classes that combine theory of computer science, as well as classes in software engineering, computer engineering, and general engineering with more breadth.</span></span></li>
+					</ul>
+					<h4>Work Experience</h4>
+					<ul>
+						<li><b>Summer 2015:</b> <a href="portfolio.html#microsoft">Software Engineering Intern, Microsoft</a></li>
+						<li><b>Spring 2015:</b> <a href="portfolio.html#insper">Education Consultant, Insper (Brazil)</a></li>
+						<li><b>Summer 2014:</b> <a href="portfolio.html#redhat">Software Engineering Intern, Red Hat</a></li>
+					</ul>
+					<h4>Skills</h4>
+					<p>Python, git, MATLAB, Arduino, ROS, Java, C, C++</p>
+					<p>Olin is a heavily project-based environment which has given me skills in team-driven projects, project management, presentations and public speaking, and an ability to scope and plan long-term project completion.</p>
+
+				</div>
+				<div class="span3">
+					<img src="img/face4.jpg" alt="Anne LoVerso">
+				</div>
+				<div class="span3">
+					<img src="img/lyra.jpg" alt="Anne on the lyra">
+				</div>
+			</div>
+			</br>
+			<div class="row">
+				<div class="span6">
+					<h3>My Passions</h3>
+
+					<h4>Education and Curricular Design</h4>
+					<p>I'm very passionate about engineering education - I <a href="portfolio.html##4thgrademath">teach math to grade-schoolers</a> through our engineering outreach club.  I am also involved in <a href="portfolio.html#research">research on engineering education</a> at Olin with Professor Yevgeniya Zastavker.  Our research group focuses on studying what motivates students to pursue teaching-related careers during and after their time at Olin College.</p>
+
+					<p>This passion is what led me to take a semester-long Leave of Absence from Olin in Spring 2015 to pursue an opportunity <a href="portfolio.html#insper">designing Insper</a>, a new engineering school in Brazil.  That was an amazing experience and gave me incredible insights into teaching (especially internationally), education, and curricular design.</p>
+
+					<h4>Advocating for Women in STEM</h4>
+
+					<p>My first-year <a href="portfolio.html#girlcurve">Media Activism class project</a> was just one example of my activism in this area.  As a woman in STEM, I had strong female role models, encouraging parents and teachers, and other important factors that many girls are not so lucky to have.</p>
+
+					<p>For my Girl Scout Silver Award project, I designed, organized, and ran an engineering workshop for local elementary-school girls, and the response was overwhelmingly positive.  At Olin, I participate in the Gender and Engineering Co-Curricular group and have had many discussions about gender equality in engineering, both at Olin and outside of it.</p>
+
+					<h4>Activities</h4>
+
+					<p>One of my passions is circus arts.  In 2007, I tried flying trapeze for the first time and have been going to TSNY Boston regularly since then learning flying trapeze.  I've also trained with Simply Circus in Newton, MA for six years learning all other forms of circus - wirewalking, juggling, rolling globe, partner acrobatics, and more - but my passion is for aerials.  At Simply Circus, I learned static trapeze, lyra, aerial fabrics, and cloudswing, and I've been developing my cloudswing skills intensely and performed in front of several hundred people at the First Night celebration in Boston.</p>
+
+					<p>I've also fallen in love with rock climbing.  Another passion of mine is social dancing - on Olin's campus, I've learned blues dancing and introductions to swing.  Also at Olin, I participate in the Human Powered Vehicles team, a club focused on building bikes from scratch for competition at <a href="https://www.asme.org/events/competitions/human-powered-vehicle-challenge-(hpvc)/2013-hpvc-east">ASME HPVC East</a>.</p>
+
+					<h4>Other</h4>
+
+					<p>I'm a Girl Scout Gold Award recipient.  In 2013, I completed my Gold Award project, which was focused on creating a curriculum for teaching aerial circus arts in school gym classes.  I brought this to my community through circus outreach events to advocate for "unconventional" forms of exercise.</p>
+
+					<p>One constant hobby of mine is tinkering and mini coding projects.  Right now, I have several projects in various stages of completion.  The closest to finishing is a Python app for the card game Set, which I coded from scratch in Pygame and am now re-coding in Kivy to port to Android.  I'm also making a music app for fans of my favorite band.  Additionally, I love tinkering with my Raspberry Pi and my Leap Motion for fun mini projects and games.</p>
+
+				</div>
+				<div class="span6">
+				<!-- start feedwind code -->
+					<script type="text/javascript">
+						document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');
+					</script>
+					<script type="text/javascript">
+						(function() {
+							var params = {rssmikle_url: "https://github.com/aloverso.atom",
+										  rssmikle_frame_width: "300",
+										  rssmikle_frame_height: "700",
+										  frame_height_by_article: "0",
+										  rssmikle_target: "_blank",
+										  rssmikle_font: "Varela, Varela, sans-serif",
+										  rssmikle_font_size: "12",
+										  rssmikle_border: "on",
+										  responsive: "on",
+										  rssmikle_css_url: "",
+										  text_align: "left",
+										  text_align2: "left",
+										  corner: "on",
+										  scrollbar: "on",
+										  autoscroll: "off",
+										  scrolldirection: "up",
+										  scrollstep: "3",
+										  mcspeed: "20",
+										  sort: "Off",
+										  rssmikle_title: "on",
+										  rssmikle_title_sentence: "GitHub activity - aloverso",
+										  rssmikle_title_link: "",
+										  rssmikle_title_bgcolor: "#A1B6D1",
+										  rssmikle_title_color: "#FFFFFF",
+										  rssmikle_title_bgimage: "",
+										  rssmikle_item_bgcolor: "#FFFFFF",
+										  rssmikle_item_bgimage: "",
+										  rssmikle_item_title_length: "55",
+										  rssmikle_item_title_color: "#0088CC",//"#0066FF",
+										  rssmikle_item_border_bottom: "on",
+										  rssmikle_item_description: "on",
+										  item_link: "off",
+										  rssmikle_item_description_length: "300",
+										  rssmikle_item_description_color: "#666666",
+										  rssmikle_item_date: "off",
+										  rssmikle_timezone: "Etc/GMT",
+										  datetime_format: "%b %e, %Y %k:%M:%S",
+										  item_description_style: "text",
+										  item_thumbnail: "crop",
+										  item_thumbnail_selection: "auto",
+										  article_num: "50",
+										  rssmikle_item_podcast: "off",
+										  keyword_inc: "",
+										  keyword_exc: ""};
+
+						feedwind_show_widget_iframe(params); })();
+					</script>
+					<div style="font-size:10px; text-align:center; "><a href="http://feed.mikle.com/" target="_blank" style="color:#DDDDDD;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div><!-- end feedwind code -->
+					<div>
+						<h4>All Work Experience</h4>
+						<b><a href="portfolio.html#microsoft">Software Engineering Intern</a></b>, Summer 2015
+						<p><i>Microsoft Corporation</i></p>
+						<b><a href="portfolio.html#insper">Engineering Education Consultant</a></b>, Spring 2015
+						<p><i>Insper (Brazil)</i></p>
+						<b><a href="portfolio.html#redhat">Software Engineering Intern</b></a>, Summer 2014
+						<p><i>Red Hat, Inc</i></p>
+						<b><a href="portfolio.html#4thgrademath">Volunteer Extracurricular Math Teacher</b></a>, Fall 2014
+						<p><i>Needham Public Schools</i></p>
+						<b>Modeling and Simulation Course Assistant</b>, Fall 2014
+						<p><i>Olin College of Engineering</i></p>
+						<b>Office of Student Life Assistant</b>, Spring 2014 - Present
+						<p><i>Olin College of Engineering</i></p>
+						<b>Campus Tour Volunteer</b>, Fall 2013 - Present
+						<p><i>Olin College of Engineering</i></p>
+						<b>Library Page</b>, 2010 - 2013
+						<p><i>Southborough Public Library</i></p>
+						<b>Circus Camp Counselor</b>, summer 2011 and 2012
+						<p><i>Concord Academy Summer Camp</i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</br>
+		</br>
+		
+		<div class="container">
+			<div class="row">
+				<div class="span2">
+					<div class="about" onMouseOver="HideMe1.style.visibility='visible'"
+				           onMouseOut="HideMe1.style.visibility='hidden'">
+						<p>
+				           <img src="img/hpvbike.png" alt="Human-Powered Vehicles">
+				        </p>
+				        <div id="HideMe1"> <p><font color="white">On the Human-Powered Vehicles Team, we build bikes for competition, which gives me breadth in my engineering skills.</font></p></div>
+						
+					</div>
+				</div>
+				<div class="span2">
+					<div class="about" onMouseOver="HideMe2.style.visibility='visible'"
+				           onMouseOut="HideMe2.style.visibility='hidden'">
+						<p>
+							<img src="img/ofac.png" alt="Fire Arts Club">
+				        </p>
+				        <div id="HideMe2"> <p><font color="white">In the Olin Fire Arts Club we learn to spin fire poi and perform.</font></p></div>
+					</div>
+					</div>
+				<div class="span2">
+					<div class="about" onMouseOver="HideMe3.style.visibility='visible'"
+				           onMouseOut="HideMe3.style.visibility='hidden'">
+						<p>
+							<img src="img/glass.png" alt="Glass Club">
+				        </p>
+				        <div id="HideMe3"><p><font color="white">In Glass Club, I've learned glass torchworking and glass fusion methods.</font>
+</p></div>
+					</div>
+				</div>
+				<div class="span2">
+					<div class="about"  onMouseOver="HideMe4.style.visibility='visible'"
+				           onMouseOut="HideMe4.style.visibility='hidden'">
+						<p>
+				           	<img src="img/edisco.png" alt="Engineering Outreach">
+				        </p>
+				        <div id="HideMe4"> <p><font color="white">I teach third graders math with our engineering outreach club.  We used this pineapple to teach Fibonacci spirals.</font></p></div>
+					</div>
+				</div>
+				<div class="span2">
+					<div class="about" onMouseOver="HideMe5.style.visibility='visible'"
+				           onMouseOut="HideMe5.style.visibility='hidden'">
+						<p>
+							<img src="img/ccc.png" alt="Curriculum Innovation">
+				        </p>
+				        <div id="HideMe5"> <p><font color="white">I'm in a Think Tank group that connects students and faculty to work to continuously innovate Olin education.</font></p></div>
+						
+					</div>
+				</div>
+				<div class="span2">
+					<div class="about" onMouseOver="HideMe6.style.visibility='visible'"
+				           onMouseOut="HideMe6.style.visibility='hidden'">
+						<p>
+							<img src="img/blues.png" alt="Blues dancing">
+				        </p>
+				        <div id="HideMe6"> <p><font color="white">For fun, I enjoy blues dancing with my friends.  Blues is a casual dance style that borrows from swing and tango.</font></p></div>
+					</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		</br>
+	<!-- Start of StatCounter Code for Default Guide -->
+		<script type="text/javascript">
+		var sc_project=10345071; 
+		var sc_invisible=1; 
+		var sc_security="5f412348"; 
+		var scJsHost = (("https:" == document.location.protocol) ?
+		"https://secure." : "http://www.");
+		document.write("<sc"+"ript type='text/javascript' src='" +
+		scJsHost+
+		"statcounter.com/counter/counter.js'></"+"script>");
+		</script>
+		<noscript><div class="statcounter"><a title="shopify
+		analytics tool" href="http://statcounter.com/shopify/"
+		target="_blank"><img class="statcounter"
+		src="http://c.statcounter.com/10345071/0/5f412348/1/"
+		alt="shopify analytics tool"></a></div></noscript>
+		<!-- End of StatCounter Code for Default Guide -->
+	</body>
+</html>

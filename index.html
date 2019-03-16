@@ -1,256 +1,502 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
 
-<html>
-	<head>
-		<title>Anne LoVerso</title>
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
-		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css" />
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<style>
-			html { 
-			  overflow-y: scroll; 
-			}
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Anne LoVerso</title>
 
-			body {
-				font-family: 'Lato';
-			}
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/basics.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 
-			.snippet{
-				background-color: rgba(0,0,0,0.78);
-				margin-left:36px;
-				text-align: center;
-				padding: 16px 16px 16px 16px;
-				border-radius: 8px;
-				color: #fff;
-				top: 36%;
-				left: 65%;
-				right: 5%;  
-				position: absolute;
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" href="images/favicon.ico">
 
-			}
+  <script src="assets/magic-grid.min.js"></script>
+</head>
+<body>
 
-			.circle-container {
-			  position: relative;
-			  left: -10%;
-			  /* [1] */
-			  width: 36em;
-			  height: 36em;
-			  padding: 0;
-			  border-radius: 50%;
-			  list-style: none;
-			  /* [2] */
-			  -moz-box-sizing: content-box;
-			  -webkit-box-sizing: content-box;
-			  box-sizing: content-box;
-			  /* [3] */
-			  margin: 5em auto 0;
-			  border: solid 5px tomato;
-			}
-			.circle-container > * {
-			  /* [4] */
-			  display: block;
-			  position: absolute;
-			  top: 50%;
-			  left: 50%;
-			  width: 10em;
-			  height: 10em;
-			  margin: -5em;
-			}
-			.circle-container > *:nth-of-type(0) {
-			  -moz-transform: rotate(0deg) translate(0em) rotate(-0deg);
-			  -ms-transform: rotate(0deg) translate(0em) rotate(-0deg);
-			  -webkit-transform: rotate(0deg) translate(0em) rotate(-0deg);
-			  transform: rotate(0deg) translate(0em) rotate(-0deg);
-			}
-			.circle-container > *:nth-of-type(1) {
-			  -moz-transform: rotate(0deg) translate(18em) rotate(-0deg);
-			  -ms-transform: rotate(0deg) translate(18em) rotate(-0deg);
-			  -webkit-transform: rotate(0deg) translate(18em) rotate(-0deg);
-			  transform: rotate(0deg) translate(18em) rotate(-0deg);
-			}
-			.circle-container > *:nth-of-type(2) {
-			  -moz-transform: rotate(45deg) translate(18em) rotate(-45deg);
-			  -ms-transform: rotate(45deg) translate(18em) rotate(-45deg);
-			  -webkit-transform: rotate(45deg) translate(18em) rotate(-45deg);
-			  transform: rotate(45deg) translate(18em) rotate(-45deg);
-			}
-			.circle-container > *:nth-of-type(3) {
-			  -moz-transform: rotate(90deg) translate(18em) rotate(-90deg);
-			  -ms-transform: rotate(90deg) translate(18em) rotate(-90deg);
-			  -webkit-transform: rotate(90deg) translate(18em) rotate(-90deg);
-			  transform: rotate(90deg) translate(18em) rotate(-90deg);
-			}
-			.circle-container > *:nth-of-type(4) {
-			  -moz-transform: rotate(135deg) translate(18em) rotate(-135deg);
-			  -ms-transform: rotate(135deg) translate(18em) rotate(-135deg);
-			  -webkit-transform: rotate(135deg) translate(18em) rotate(-135deg);
-			  transform: rotate(135deg) translate(18em) rotate(-135deg);
-			}
-			.circle-container > *:nth-of-type(5) {
-			  -moz-transform: rotate(180deg) translate(18em) rotate(-180deg);
-			  -ms-transform: rotate(180deg) translate(18em) rotate(-180deg);
-			  -webkit-transform: rotate(180deg) translate(18em) rotate(-180deg);
-			  transform: rotate(180deg) translate(18em) rotate(-180deg);
-			}
-			.circle-container > *:nth-of-type(6) {
-			  -moz-transform: rotate(225deg) translate(18em) rotate(-225deg);
-			  -ms-transform: rotate(225deg) translate(18em) rotate(-225deg);
-			  -webkit-transform: rotate(225deg) translate(18em) rotate(-225deg);
-			  transform: rotate(225deg) translate(18em) rotate(-225deg);
-			}
-			.circle-container > *:nth-of-type(7) {
-			  -moz-transform: rotate(270deg) translate(18em) rotate(-270deg);
-			  -ms-transform: rotate(270deg) translate(18em) rotate(-270deg);
-			  -webkit-transform: rotate(270deg) translate(18em) rotate(-270deg);
-			  transform: rotate(270deg) translate(18em) rotate(-270deg);
-			}
-			.circle-container > *:nth-of-type(8) {
-			  -moz-transform: rotate(315deg) translate(18em) rotate(-315deg);
-			  -ms-transform: rotate(315deg) translate(18em) rotate(-315deg);
-			  -webkit-transform: rotate(315deg) translate(18em) rotate(-315deg);
-			  transform: rotate(315deg) translate(18em) rotate(-315deg);
-			}
-			.circle-container a {
-			  display: block;
-			  border-radius: 50%;
-			  box-shadow: 0 0 0 5px tomato;
-			  z-index: 100
-			}
-			.circle-container img {
-			  display: block;
-			  width: 100%;
-			  border-radius: 50%;
-			  /*-webkit-filter: grayscale(100%);
-			  filter: grayscale(100%);*/
-			}
-			.circle-container .caption:hover{
-			  -webkit-filter: grayscale(0);
-			  filter: grayscale(0);
-			  opacity: 1;
-			}
-			.circle-container .caption {  
-				display: block;
-				  position: absolute;
-				  top: 50%;
-				  left: 50%;
-				  width: 10em;
-				  height: 10em;
-				  margin: -5em;
-			    background-color: rgba(0,0,0,0.8);  
-			    color: #fff;  
-			    z-index: 1;  
-			    border-radius: 50%;
-			    -webkit-transition: all 300ms ease-out;  
-			    -moz-transition: all 300ms ease-out;  
-			    -o-transition: all 300ms ease-out;  
-			    -ms-transition: all 300ms ease-out;  
-			    transition: all 300ms ease-out;  
-				opacity: 0;
-				text-align: center; 
-				line-height: 10em;
-			}  
-			#pagename{
-					font-color:#FFFFFF;
-					font-size:34px;
-					letter-spacing: 2px;
-			}
-			#pagename.hover{
-					font-color:#FFFFFF;
-			}
-		</style>
+<div class="container">
 
-		<script language="JavaScript" type="text/javascript">
+  <div class="row photogrid mtd h50">
+    <div class="seven columns wh100">
+      <img src="images/teaching.jpg" class="cover" alt="assisting a student building a hot-wirecutter">
+    </div>
 
-			/** Konami Code Easter Egg **/
-			if (window.addEventListener) {
-			    var index = 0;
-			    var konami = [38,38,40,40,37,39,37,39,66,65];
+    <div class="five columns wh100">
+      <div class="h20 override-grid">
+        <div class="photogrid-flex mb5">
+          <div class="photogrid-item">
+            <img src="images/thumbsup.jpg" class="contain" alt="with a laptop giving a thumbs up">
+          </div>
 
-			    window.addEventListener("keydown", function(e){
-			        if (e.keyCode == konami[index])
-			        {
-			            index++; //valid key at the valid point
+          <div class="photogrid-item override">
+            <div class="purple h10">
+            </div>
+          </div>
+        </div>
 
-			            if (index == konami.length)
-			            {
-			                document.getElementById('face').innerHTML = '<a href="about.html"><img src="img/face-konami.jpg" alt="About"><div class="caption fade-caption"><h3>Anne LoVerso</h3></div></a>';
-			            } 
-			        } else {
-			            // incorrect code restart
-			            index = 0;
-			        }
-			   });
-			}
-		
-			/**
-			 * Apply a class to each child
-			 * Required for IE8-**/
-			$('.circle-container').children().each(function() {
-			  $(this).addClass('item'+($(this).index() + 1));
-			});
-		</script>
-	</head>
+        <div class="h20">
+          <div class="photogrid-flex">
+            <div class="photogrid-item override">
+              <div class="purple-transp h10">
+              </div>
+            </div>
 
-	<body>
-		<a id="top"></a>
-		<header class="navbar navbar-inverse navbar-static-top"> 
-			<div class="navbar-inner">
-				<div class="container">
-					<nav>
-						<ul class="nav nav-pills nav-pull-left">
-							<li class="active"><a href="index.html"><div id="pagename"><b>Anne LoVerso</b></div></a></li>
-						</ul>
-						<ul class="nav nav-pills pull-right"> 
-							<li class="active"><a href="index.html"><div title="Home"><font style="letter-spacing: 2px;">HOME</font></div></a></li>
-							<li><a href="about.html"><div title="About"><font style="letter-spacing: 2px;">ABOUT</font></div></a></li>
-							<li><a href="portfolio.html"><div title="Portfolio"><font style="letter-spacing: 2px;">PORTFOLIO</font></div></a></li>
-							<li><a href="contact.html"><div title="Contact"><font style="letter-spacing: 2px;">CONTACT</font></div></a></li>
-							<li><a href="blog.html"><div title="Blog"><font style="letter-spacing: 2px;">BLOG</font></div></a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
+            <div class="photogrid-item">
+              <img src="images/square.jpeg" class="contain" alt="headshot">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-		</br>
-		<div class="snippet">
-			<h2><font color="tomato">Hi, I'm Anne LoVerso</font></h2>
-			<h4>Engineering with Computing student</br>Olin College of Engineering</h4>
-			Passionate about engineering, coding, and education</br></br>
-			<i>Skills:</i> Python, git, MATLAB, Arduino, ROS, Java, C, C++</br></br>
-			<h4>anne@loverso.org</h4>
-		</div>
 
-		<ul class='circle-container'>
-		  <li><a href='portfolio.html'><img src="img/portfolio-square.png" alt="Portfolio page"><div class="caption fade-caption"><h3></br>Portfolio</h3></div></a></li>
-		  <li><a href='https://github.com/aloverso'><img src='img/github-logo.jpg' alt="aloverso on GitHub"><div class="caption fade-caption"><h3></br>GitHub</h3></div></a></li>
-		  <li><a href='LoVersoResume2015_v3Web.pdf'><img src="img/resume-square.png" alt="My Resume"><div class="caption fade-caption"><h3></br>Resume</h3></div></a></li>
-		  <li><a href='http://www.linkedin.com/pub/anne-loverso/83/ab8/818'><img src="img/linkedin-square.png" alt="Anne Loverso on LinkedIn"><div class="caption fade-caption"><h3></br>LinkedIn</h3></div></a></li>
-		  <li><a href='blog.html'><img src="img/blog-square.png" alt="Blog page"><div class="caption fade-caption"><h3></br>Blog</h3></div></a></li>
-		  <!--top left--><li><a href='portfolio.html#pianobot'><img src="img/pianobot.png" alt="My PianoBot Project"><div class="caption fade-caption"><h3></br>PianoBot</h3></div></a></li>
-		  <!--top middle--><li><a href='portfolio.html#microsoft'><img src="img/microsoft.jpg" alt="Work at Microsoft"><div class="caption fade-caption"><h3></br>Microsoft</h3></div></a></li>
-		  <!--top right--><li><a href='portfolio.html#insper'><img src="img/wirecutter.jpg" alt="Work at Insper"><div class="caption fade-caption"><h3></br>Insper</h3></div></a></li>
-		  <li id="face"><a href='about.html'><img src='img/face3.jpg' alt="About Me"><div class="caption fade-caption"><h3>Anne LoVerso</h3></div></a></li>
-		</ul>
+  <div class="right hxl pbs font-btm mbxs">Anne LoVerso</div>
 
-		<!-- Start of StatCounter Code for Default Guide -->
-		<script type="text/javascript">
-		var sc_project=10345071; 
-		var sc_invisible=1; 
-		var sc_security="5f412348"; 
-		var scJsHost = (("https:" == document.location.protocol) ?
-		"https://secure." : "http://www.");
-		document.write("<sc"+"ript type='text/javascript' src='" +
-		scJsHost+
-		"statcounter.com/counter/counter.js'></"+"script>");
-		</script>
-		<noscript><div class="statcounter"><a title="shopify
-		analytics tool" href="http://statcounter.com/shopify/"
-		target="_blank"><img class="statcounter"
-		src="http://c.statcounter.com/10345071/0/5f412348/1/"
-		alt="shopify analytics tool"></a></div></noscript>
-		<!-- End of StatCounter Code for Default Guide -->
-	</body>
+  <div class="row main-row">
+    <div class="six columns">
+      <p class="bold">I write software to solve problems and help people.</p>
+
+      <p>I get excited when I can use software to solve a real problem.
+        And I think engineering can be playful, but software is at its most powerful
+        when it is developed in a human-centered context.</p>
+
+      <p>I am interested in doing what I love, teaching what I know, and
+        learning from those around me to never stop growing.</p>
+    </div>
+
+    <div class="five columns text-m">
+      <p>Full-stack engineer at <a href="https://pivotal.io/labs/">Pivotal Labs</a></p>
+      <p><a href="http://olin.edu/">Olin College</a> alum</p>
+      <p>Leader, learner, and listener</p>
+    </div>
+
+    <div class="one column text-l front mbd">
+      <a href="https://twitter.com/AnneLoVerso">
+        <i class="fab fa-twitter-square" title="twitter"></i>
+      </a>
+      <a href="https://medium.com/@AnneLoVerso">
+        <i class="fab fa-medium" title="medium"></i>
+      </a>
+      <a href="http://www.linkedin.com/in/anneloverso">
+        <i class="fab fa-linkedin" title="linkedin"></i>
+      </a>
+      <a href="https://github.com/aloverso">
+        <i class="fab fa-github-square" title="github"></i>
+      </a>
+      <a href="LoVersoResume-web.pdf">
+        <i class="fas fa-sticky-note" title="resume"></i>
+      </a>
+    </div>
+  </div>
+
+  <!--<div class="hm pbd mtl">A few things I'm proud of</div>-->
+
+  <!--<div class="row">-->
+  <!--<div class="four columns">-->
+  <!--<ul>-->
+  <!--<li class="bold text-green">Software consulting at Pivotal Labs</li>-->
+  <!--<li class="bold text-green">Speaking engagements at local orgs & national tech conferences</li>-->
+  <!--<li class="bold text-green">Internships at Microsoft & Red Hat</li>-->
+  <!--</ul>-->
+  <!--</div>-->
+
+  <!--<div class="four columns">-->
+  <!--<ul>-->
+  <!--<li class="bold text-blue">Research and publication in the space of education and academic culture</li>-->
+  <!--<li class="bold text-blue">Designing and constructing a museum exhibit on standardized testing</li>-->
+  <!--<li class="bold text-blue">Higher-ed consulting in São Paulo, Brazil</li>-->
+  <!--</ul>-->
+  <!--</div>-->
+
+
+  <!--<div class="four columns">-->
+  <!--<ul>-->
+  <!--<li class="bold text-purple">Leading design of a rural mobile makerspace for youth-->
+  <!--</li>-->
+  <!--<li class="bold text-purple">Designing pathways to certification for birth support-->
+  <!--professionals-->
+  <!--</li>-->
+  <!--</ul>-->
+  <!--</div>-->
+  <!--</div>-->
+
+  <div class="hm pbd mtl">Expertise</div>
+
+  <div class="row mbl">
+    <div class="six columns">
+      <ul>
+        <li class="text-green">Python, JavaScript, React, Angular, Java, Kotlin, Spring framework, git, HTML/CSS</li>
+        <li class="text-green">Pair programming and mob programming</li>
+        <li class="text-green">Agile & Extreme Programming</li>
+        <li class="text-green">Test-driven development (incl. JUnit, jasmine, jest, mocha/chai, enzyme, rspec...)</li>
+        <li class="text-green">Dependency inversion, domain-driven design, application architecture patterns</li>
+
+      </ul>
+    </div>
+
+    <div class="six columns">
+      <ul>
+        <li class="text-blue">Curriculum design</li>
+        <li class="text-blue">Teaching and coaching</li>
+        <li class="text-blue">Educational experience design</li>
+        <li class="text-purple">Design thinking, user research, & synthesis</li>
+        <li class="text-purple">Systems analysis</li>
+        <li class="text-purple">Communication & presentation</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="row mtxl">
+    <div class="flex-container" id="portfolio">
+
+      <div class="flex-item">
+        <img src="images/dnd-computer-1.jpg" alt="with a computer"/>
+        <div class="pad">
+          <h5>Pivotal Labs</h5>
+
+          <p>Expert in pair programming and test-driven development</p>
+          <p>Consulting for enterprise-scale clients and teaching Agile/XP methodology</p>
+          <p>Projects spanning various full-stack web technologies (React, Angular, Java/Spring, Kotlin, Python, and
+            more)</p>
+        </div>
+      </div>
+
+      <div class="flex-item">
+        <img src="images/speaking.jpg" alt="presenting a talk at Write/Speak/Code 2018"/>
+        <div class="pad">
+          <h5>Speaking & Thought Leadership</h5>
+          <button class="more-button" onclick="toggle(event, 'speaking')">more</button>
+
+          <div class="more" id="speaking">
+            <p><span class="bold smallcase">Pair Programming - </span>tech talk given to MongoDB
+            engineering team, 2018</p>
+
+            <p><span class="bold smallcase">Mob Programming - </span>tech lightning talk given to Pivotal Labs NYC
+              engineering team, 2018</p>
+
+            <p><span class="bold smallcase">Ship-It - </span>lightning talk at Write/Speak/Code conference, 2018</p>
+
+            <p>
+              <span class="bold smallcase">
+              <a href="https://builttoadapt.io/another-perspective-on-interrupting-developers-at-work-c154d8bacbf2">
+                Interrupting Developers</a></span> - a comic about collaboration
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-item">
+        <img src="images/shiftingrhythms.png" alt="students showing off completed projects"/>
+
+        <div class="pad">
+
+          <p>Collaborated with community leaders to co-design and develop a mobile makerspace to
+            empower youth in Coahoma County, Mississippi in extracurricular learning opportunities</p>
+          <p>Led a design team to earn more than $40,000 in grants</p>
+        </div>
+
+        <div class="links-container">
+          <a class="link" href="https://www.youtube.com/watch?v=YunNCrvPaNs">
+            Video
+          </a>
+          <a class="link" href="assets/mobile_education_proposal_onepage_v2.pdf">
+            Proposal
+          </a>
+          <a class="link" href="">
+            Posters
+          </a>
+          <a class="link"
+             href="https://campustechnology.com/articles/2017/08/22/blues-guitar-to-get-mod-makeover-in-mobile-education-units.aspx?admgarea=news">
+            in the press 1
+          </a>
+          <a class="link"
+             href="http://www.olin.edu/news-events/2017/olinbabsonwellesley-student-team-wins-25000-grant-ford-motor-company-fund-community/">
+            in the press 2
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-item">
+        <img src="images/workshop.jpg" alt="helping a student take apart a computer"/>
+
+        <div class="pad">
+          <p>As a teacher and educator, I've put a lot of thought and learning into
+          teaching philosophies, principles, and practices</p>
+        </div>
+
+        <div class="links-container">
+          <a class="link" href="http://anneloverso.com/teaching/">
+            Teaching Portfolio
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-item">
+        <div class="ptd phd">
+          <div class="smallcase pbs">Healthy Mothers Healthy Babies Coalition of Georgia (HMHBGA)</div>
+          <h5>Doula Professional Development</h5>
+
+          <p>Expanding access to certification for birth support professionals (primarily doulas)</p>
+
+          <p>Designed and tested a curriculum focused on empowering doulas to build confidence in the
+            business side of their profession</p>
+        </div>
+
+        <img src="images/hmhbga.jpg" alt="systems diagram of birth support"/>
+
+        <div class="links-container">
+          <a class="link" href="">
+            Final report
+          </a>
+          <a class="link" href="">
+            posters
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-item">
+        <div class="pad">
+          <div class="smallcase pbs">S&atilde;o Paulo, Brazil</div>
+          <h5>Engineering Education Consultant</h5>
+          <p>Worked at Insper Learning Institution to help found an engineering collegiate program</p>
+
+          <button class="more-button" onclick="toggle(event, 'insper')">more</button>
+        </div>
+
+        <div class="more" id="insper">
+          <div class="pbd phd">
+            <p>Acted as course assistant for first-time courses and hosted additional engineering workshops</p>
+            <p>Evaluated and created a proposal for re-design of the 5-year computer engineering curriculum</p>
+          </div>
+
+          <div class="links-container">
+            <a class="link"
+               href="https://medium.com/@AnneLoVerso/the-insper-computing-curriculum-project-e1779e3ec355">
+              curriculum blog
+            </a>
+            <a class="link" href="https://medium.com/@AnneLoVerso/insper-reflections-99a426826bd9">
+              course assistant blog
+            </a>
+            <a class="link"
+               href="https://medium.com/@AnneLoVerso/intel-galileo-workshop-reflections-on-teaching-4979d05b060d">
+              workshop blog
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-item">
+        <div class="phd ptd">
+          <h5>Formal Researcher</h5>
+          <p>Using grounded theory and qualitative data to study <i>what makes a person
+            interested in becoming a teacher?</i></p>
+
+          <button class="more-button" onclick="toggle(event, 'eduresearch')">more</button>
+
+          <div class="more" id="eduresearch">
+            <p>Organized follow-up in-depth interviews to examine how study participants
+              define "teaching" in their own words, and discrepancies between definition and description
+              of teaching practices.</p>
+            <p>Published and presented research at 2014 and 2016 IEEE Frontiers in Education conference</p>
+          </div>
+        </div>
+
+        <div class="links-container">
+          <a class="link" href="assets/FIE-2016-FINAL.pdf">
+            2014 paper
+          </a>
+          <a class="link" href="assets/FIE-2014-FINAL.pdf">
+            2016 paper
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-item">
+        <div class="ptd phd">
+          <h5>Museum exhibit design: Testing</h5>
+        </div>
+
+        <img src="images/pencils.jpeg" alt="pencils at the exhibit"/>
+
+        <div class="pad">
+          <p>Designed and created an interactive museum exhibit based on learner-centric
+            teaching principles</p>
+
+          <p>Exhibit investigated standardized testing from a systems perspective, drawing visitors
+            into the human experiences of various human roles</p>
+        </div>
+
+        <div class="links-container">
+          <a class="link" href="https://medium.com/@AnneLoVerso/humans-and-tests-photo-blog-6d0c5604a8ba">
+            Photoblog
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-item">
+        <img src="images/birth.jpg"/>
+        <div class="pvs phm">
+          <button class="more-button" onclick="toggle(event, 'uocd')">more</button>
+        </div>
+
+        <div class="more pbs phm" id="uocd">
+          <p>Human-centered design project focused on future-facing design proposals for doulas</p>
+
+          <p>Developed skills in user interviewing, personas, interview synthesis, design frameworks,
+            visual prototyping, cardsorting, & solution prioritization</p>
+
+          <p>Developed an awareness campaign around expanding and challenging the cultural notions of birth
+            and birth options, focused on fostering choice and empowerment</p>
+        </div>
+      </div>
+
+      <div class="flex-item">
+        <div class="pad">
+          <h5>Technology Internships</h5>
+
+          <p><span class="bold smallcase">Microsoft 2015 -</span> Created a diagnostic toolkit for Skype for Business People
+            Search team including data visualization in a web portal, saving the team several hours of manual
+            debugging work.</p>
+
+          <p><span class="bold smallcase">Red Hat 2014 -</span> Worked on the <a href="https://github.com/projectatomic/rpm-ostree">OSTree</a> operating system management tool to
+            improve options and usability for the command-line interface</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row mvxl">
+    <button class="more-button" onclick="toggle(event, 'older')">more</button>
+    <div class="flex-container more" id="older">
+
+      <div class="flex-item">
+        <img src="images/pianobot.jpeg" alt="piano-playing robot"/>
+        <div class="pad">
+          <h5>Piano-Playing Robot</h5>
+          <p>A fully integrated mechanical, electrical, and software system that reads sheet music and
+            plays the notes on three octaves of a piano in just 8 weeks</p>
+
+          <button class="more-button" onclick="toggle(event, 'piano')">more</button>
+
+          <div class="more" id="piano">
+            <p>My role was creating the optical music recognition system that took a PDF or image of sheet
+              music as input, and used computer vision to extract and identify each note into a format
+              playable by our piano robot</p>
+          </div>
+
+        </div>
+
+        <div class="links-container">
+          <a class="link" href="https://www.youtube.com/watch?v=2dFiBN1aTZY">
+            playing fur elise
+          </a>
+          <a class="link" href="https://www.youtube.com/watch?v=ZoTS7dsrz7c">
+            playing ode to joy
+          </a>
+          <a class="link" href="http://poe.olin.edu/poe2014/pianobot/">
+            site
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-item">
+        <img src="images/abortion.gif" alt="abortion data visualization"/>
+        <div class="pad">
+          <h5>Data Visualization projects</h5>
+          <p>Learning data science and tools like d3 via political action statistics projects</p>
+
+          <button class="more-button" onclick="toggle(event, 'ds')">more</button>
+
+          <div class="more" id="ds">
+            <p>Created a tool to explore abortion regulation by exposing the problems with affordable
+              and nearby access to abortion clinics in most of the United States via interactive data</p>
+
+            <p>Cleaned and processed 227 years of Congressional voting data to create visuals that analyze Congress
+              through time, such as partisanship and party evolution</p>
+          </div>
+
+        </div>
+
+        <div class="links-container">
+          <a class="link" href="http://aloverso.github.io/DataScience16CTW/">
+            abortion site
+          </a>
+          <a class="link" href="https://aloverso.github.io/DataScienceFinalProject/">
+            congress site
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    var magicGrid = new MagicGrid({
+      container: '#portfolio',
+      gutter: 30,
+      static: true,
+      useMin: true,
+      // useTransform: false,
+      maxColumns: 3
+    });
+
+    magicGrid.listen();
+
+    var magicGridOld = new MagicGrid({
+      container: '#older',
+      gutter: 30,
+      static: true,
+      useMin: true,
+      // useTransform: false,
+      maxColumns: 3
+    });
+
+    magicGridOld.listen();
+
+    setTimeout(function () {
+      magicGrid.positionItems();
+    }, 1000);
+
+    function toggle(event, elem) {
+      event.preventDefault();
+      if (document.getElementById(elem).style.display !== 'block') {
+        document.getElementById(elem).style.display = 'block';
+        event.srcElement.textContent = 'less';
+      } else {
+        document.getElementById(elem).style.display = 'none';
+        event.srcElement.textContent = 'more';
+      }
+
+      magicGrid.positionItems();
+      magicGridOld.positionItems();
+    }
+
+  </script>
+</div>
+
+</body>
 </html>
