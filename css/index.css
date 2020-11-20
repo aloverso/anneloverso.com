@@ -5,41 +5,7 @@
     src: url('../assets/beyond_the_mountains-webfont.woff');
 }
 
-@media (max-width: 549px) {
-    .main-row {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    
-    .override {
-        display: none;
-    }
 
-    .override-grid {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-    }
-
-    .h20 {
-        height: 100%;
-    }
-
-    .photogrid-flex {
-        display: block;
-        height: 100%;
-        /*flex-wrap: nowrap;*/
-        /*flex-direction: row;*/
-        /*align-items: flex-start;*/
-        /*align-content: flex-start;*/
-        /*width: 100%;*/
-        /*height: calc(100% - 0.25rem);*/
-    }
-
-    .contain {
-        object-fit: cover;
-    }
-}
 
 @media (min-width: 550px) {
     .photogrid-flex {
@@ -72,6 +38,16 @@
 
 .font-btm {
     font-family: BeyondTheMounatins, serif;
+}
+
+.border-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.border-item img {
+    object-fit: contain;
+    width: 100%;
 }
 
 .flex-item {
@@ -201,5 +177,49 @@
 .photogrid-item {
     height: 100%;
     /*flex: flex-grow;*/
+}
+
+/*@media (max-width: 750px) {*/
+/*    .flex-item {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
+
+@media (max-width: 549px) {
+    .main-row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .override {
+        display: none;
+    }
+
+    .override-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .h20 {
+        height: 100%;
+    }
+
+    .photogrid-flex {
+        display: block;
+        height: 100%;
+        /*flex-wrap: nowrap;*/
+        /*flex-direction: row;*/
+        /*align-items: flex-start;*/
+        /*align-content: flex-start;*/
+        /*width: 100%;*/
+        /*height: calc(100% - 0.25rem);*/
+    }
+
+    .contain {
+        object-fit: cover;
+    }
+
+
 }
 
