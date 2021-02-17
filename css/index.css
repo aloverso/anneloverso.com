@@ -20,7 +20,7 @@
 
     .h20 {
         height: 20vw;
-        max-height: 20vh;
+        max-height: 180px;
     }
 
     .contain {
@@ -111,8 +111,8 @@
 
 .link:hover {
     color: #222;
+    border: 1px solid #222;
 
-    /*background-color: #0C1759;*/
 }
 
 .smallcase {
@@ -179,6 +179,15 @@
     /*flex: flex-grow;*/
 }
 
+.wide-row {
+    margin-left: calc((85vw - 100%) / -2);
+    width: 85vw;
+}
+
+.wide-row-wrapper {
+    max-width: 1200px;
+}
+
 /*@media (max-width: 750px) {*/
 /*    .flex-item {*/
 /*        width: 100%;*/
@@ -203,6 +212,7 @@
 
     .h20 {
         height: 100%;
+        max-height: 180px;
     }
 
     .photogrid-flex {
