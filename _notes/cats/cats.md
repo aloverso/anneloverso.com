@@ -29,8 +29,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et risus at i
 
 Nunc porttitor lacus ullamcorper mauris porttitor feugiat. Vestibulum condimentum lacus vitae orci lobortis pellentesque in ac dolor. Nullam libero justo, suscipit id suscipit vel, tincidunt vitae lectus. Phasellus gravida iaculis ligula, at pharetra urna. Nunc vel tellus eleifend, aliquet magna non, condimentum est. Pellentesque vulputate posuere felis eget sodales. Cras finibus tortor porta libero bibendum, vel bibendum orci luctus. Donec ac eros vitae erat malesuada imperdiet at tempor turpis.
 
-<div class="footnotes" role="doc-endnotes">
-  <ol>
+{% FootnoteContainer %}
     {% Footnote num: "1" %}
         noted for <a href="https://edwardtufte.github.io/tufte-css/">his</a> writings on information design and as a pioneer in the field of data visualization
     {% endFootnote %}
@@ -38,5 +37,4 @@ Nunc porttitor lacus ullamcorper mauris porttitor feugiat. Vestibulum condimentu
     {% Footnote num: "2" %}
         Yes, I know jQuery is old school and the youngins probably use fancier alternatives today but I love me some jQuery and it gets the job done.
     {% endFootnote %}
-  </ol>
-</div>
+{% endFootnoteContainer %}

@@ -6,6 +6,22 @@ $color-box-background: mix($color-primary, white, 4%);
 $border-radius: 4px;
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
   sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$purple: #46529E;
+$purple-med: #7A7BD4;
+$purple-light: #8b88e6;
+
+.text-xl {
+  font-size: 5rem;
+}
+
+@font-face {
+  font-family: 'BeyondTheMounatins';
+  src: url('../assets/fonts/beyond_the_mountains-webfont.woff');
+}
+
+.font-btm {
+  font-family: BeyondTheMounatins, serif;
+}
 
 body {
   box-sizing: content-box;
@@ -27,6 +43,12 @@ body {
   color: red;
 }
 
+.callout-box {
+  padding: 3em 1em;
+  background: #f5f7ff;
+  border-radius: 4px;
+}
+
 .footnotes {
   border-bottom: 1px solid #797979;
   border-top: 1px solid #797979;
@@ -46,9 +68,14 @@ body {
   line-height: 1.4;
 }
 
+.footnote {
+  font-weight: 500;
+  color: $purple-med;
+}
+
 .sidenote-hover {
-  color: #8b88e6;
-  border-color: #8b88e6;
+  color: $purple-med;
+  border-color: $purple-med;
 }
 
 #notes-entry-container {
@@ -142,6 +169,10 @@ a {
   &.reversefootnote:after {
     content: "";
   }
+}
+
+.sidenote a, .footnote a {
+  color: inherit;
 }
 
 .sidenote a:after {

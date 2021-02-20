@@ -41,7 +41,7 @@
       .html(footnoteText)
       .addClass("sidenote");
 
-    // remove arrow backlink indicator
+    // remove arrow backlink indicator`
     $('.reversefootnote').remove()
 
     const topPosition = superscript.offset();

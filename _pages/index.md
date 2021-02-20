@@ -7,7 +7,9 @@ permalink: /
 
 # Welcome! 🌱
 
-<p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
+<h1 class="font-btm text-xl">Anne LoVerso</h1>
+
+<p class="callout-box">
   Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
 </p>
 
