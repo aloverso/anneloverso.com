@@ -1,0 +1,20 @@
+<side style="font-size: 0.9em">
+  <h3 style="margin-bottom: 1em">Notes mentioning this note</h3>
+  {% if page.backlinks.size > 0 %}
+  <div>
+    {% for backlink in page.backlinks %}
+    <div class="backlink-box">
+      <a class="no-icon" href="{{ site.baseurl }}{{ backlink.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">{{ backlink.title }}</a><br>
+      <div style="font-size: 0.9em">{{ backlink.excerpt | strip_html | truncatewords: 20 }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+
+  <div style="font-size: 0.9em">
+    <p>
+      There are no notes linking to this note.
+    </p>
+  </div>
+  {% endif %}
+</side>

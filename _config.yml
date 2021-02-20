@@ -1,4 +1,4 @@
-title:               My digital garden
+title:               Anne LoVerso
 include:             ['_pages']
 exclude:             ['_includes/notes_graph.json']
 # You may need to change the base URL depending on your deploy configuration.
@@ -38,9 +38,9 @@ defaults:
     values:
       layout: "index"
   - scope:
-      path: "_notes/cats/*.md"
+      path: "_notes/illustration/*.md"
     values:
-      layout: "cat"
+      layout: "illustration"
   - scope:
       path: "_notes/**/*.md"
     values:

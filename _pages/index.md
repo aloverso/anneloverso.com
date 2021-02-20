@@ -5,8 +5,6 @@ id: home
 permalink: /
 ---
 
-# Welcome! 🌱
-
 <h1 class="font-btm text-xl">Anne LoVerso</h1>
 
 <p class="callout-box">

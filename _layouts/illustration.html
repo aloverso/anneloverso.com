@@ -11,17 +11,29 @@ layout: default
     </time>
   </div>
 
-  <div id="notes-entry-container">
+  <div>
     <section>
       {{ content }}
     </section>
 
-    {% include backlink-box.html %}
   </div>
 </article>
 
+<div class="bottom">
+
+{% include backlink-box-never-sidebar.html %}
 <hr>
 
-<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
+</div>
 
-<!--{% include notes_graph.html %}-->
+
+<style>
+    .bottom {
+        margin-top: 5rem;
+        max-width: 46em;
+    }
+
+    .wrapper {
+        max-width: 52em;
+    }
+</style>

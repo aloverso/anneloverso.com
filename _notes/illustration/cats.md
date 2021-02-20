@@ -17,6 +17,8 @@ Here's a link to a note that explains why it's important to [[move your body eve
 >
 > but a box is best when I want to think.
 
+link to [[Mob Programming]]
+
 I’ve been looking into <a href="https://edwardtufte.github.io/tufte-css/">Tufte
 CSS</a> recently. Tufte CSS -inspired by
 the teachings of the legendary Edward Tufte<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>- provides suggestions and

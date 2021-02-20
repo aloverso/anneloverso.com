@@ -39,6 +39,43 @@ body {
   }
 }
 
+.slide {
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  h1, h2, h3, h4, h5 {
+    margin-top: 0;
+  }
+
+  @media (min-width: 600px) {
+    margin-bottom: 3rem;
+    flex-wrap: nowrap;
+
+
+  }
+}
+
+.illustration {
+  margin-left: 0;
+  width: 100%;
+
+  @media (min-width: 600px) {
+    margin-right: 4rem;
+    width: 66%;
+  }
+}
+
+.caption {
+  margin-bottom: 0;
+
+  @media (min-width: 600px) {
+    margin-bottom: 8rem;
+  }
+}
+
 .cat {
   color: red;
 }
@@ -143,6 +180,11 @@ h6 {
   padding-bottom: 0;
 }
 
+a.internal-link {
+  border-color: #8b88e6;
+  background-color: #efefff;
+}
+
 a {
   transition: background 300ms;
   padding: 0 0.1em;
@@ -167,6 +209,9 @@ a {
     content: "";
   }
   &.reversefootnote:after {
+    content: "";
+  }
+  &.no-icon:after {
     content: "";
   }
 }
