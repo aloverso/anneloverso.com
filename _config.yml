@@ -24,6 +24,9 @@ collections:
   notes:
     output: true
     permalink: /:slug
+  cats:
+    output: true
+    permalink: /:slug
 
 defaults:
   - scope:
@@ -31,6 +34,15 @@ defaults:
     values:
       layout: "default"
   - scope:
+      path: "/"
+    values:
+      layout: "index"
+  - scope:
+      path: "_notes/cats/*.md"
+    values:
+      layout: "cat"
+  - scope:
       path: "_notes/**/*.md"
     values:
       layout: "note"
+

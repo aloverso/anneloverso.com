@@ -13,6 +13,9 @@
 
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
 
+  <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/sidenotes.js"></script>
+
   {% if page.excerpt %}
   <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}"/>
   {% else %}
