@@ -119,14 +119,6 @@ time {
   margin-bottom: 0;
 
   @media (min-width: $xxs) {
-    margin-bottom: 8rem;
-  }
-}
-
-.caption-long {
-  margin-bottom: 0;
-
-  @media (min-width: 600px) {
     margin-bottom: 2rem;
   }
 }
