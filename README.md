@@ -1,56 +1,48 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8cfa8785-8df8-4aad-ad35-8f1c790b8baf/deploy-status)](https://app.netlify.com/sites/digital-garden-jekyll-template/deploys)
+# www.anneloverso.com
 
-# Digital garden Jekyll template
+This is the source code for [anneloverso.com](http://anneloverso.com/) - my personal website, digital garden, and little corner of the internet.
 
-Use this template repository to get started with your own digital garden.
+It's a static site created in Jekyll and deployed on Netlify.
 
-**I wrote a tutorial explaining how to set it up: [Setting up your own digital garden with Jekyll](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll)**
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4f604e93-85b2-42d4-ae3e-8e113df4ba40/deploy-status)](https://app.netlify.com/sites/gracious-williams-ccb54f/deploys)
 
-Preview the template here: https://digital-garden-jekyll-template.netlify.app/
+## Attributions
 
-- Based on Jekyll, a static website generator
-- Supports Roam-style double bracket link syntax to other notes
-- Creates backlinks to other notes automatically
-- Features link previews on hover
-- Includes graph visualization of the notes and their links
-- Features a simple and responsive design
-- Supports Markdown or HTML notes
+This site was bootstrapped from [digital-garden-jekyll-template](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
 
-<img width="1522" alt="Screen Shot 2020-05-19 at 23 05 46" src="https://user-images.githubusercontent.com/8457808/82400515-7d026d80-9a25-11ea-83f1-3b9cb8347e07.png">
+It uses [jekyll-spark](https://github.com/helpscout/jekyll-spark) to handle some reusable components.
 
-## License
-
-Source code is available under the [MIT license](LICENSE.md).
+Footnotes are created using a modified version of [Kaushik Gopal's scripting method](https://blog.jkl.gg/jekyll-footnote-tufte-sidenote/).
 
 ## Todo:
 
-[ ] readme
-[ ] copy posts from obsidian
-[ ] k8s post
-[ ] homepage
-[ ] about page
-[ ] footer
-[ ] add weights
-[x] favicon
-[ ] pages
-- retros
-- feedback
-- black box
-- UCD
-- dependency inversion
-- co-creation
-- consulting
-- teaching
-- lean
-- communicating technical ideas
-- DDD
-- reafctoriung
-- BDD testing
-- clean arcghitecture design / microservices
-- trunk based development
-- blue/green deploys
+- [x] k8s post
+- [x] favicon
+- [x] copy posts from obsidian
+- [x] add weights
+- [x] readme
+- [ ] homepage
+- [ ] about page
+- [ ] footer
+- [ ] pages
+    - retros
+    - feedback
+    - black box
+    - UCD
+    - dependency inversion
+    - co-creation
+    - consulting
+    - teaching
+    - lean
+    - communicating technical ideas
+    - DDD
+    - reafctoriung
+    - BDD testing
+    - clean architecture design / microservices
+    - trunk based development
+    - blue/green deploys
+- [ ] test doubles footnote on classic TDD
 
-[ ] test doubles note on classic TDD
 
 
 
