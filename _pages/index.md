@@ -4,56 +4,76 @@ title: Home
 id: home
 permalink: /
 ---
+<div class="narrower mbxl">
+    <h1 class="font-btm text-xl">Anne LoVerso</h1>
+    engineer with a passion for software, education, and playing [[tabletop RPGs]] 
+    <p markdown="1">I work for New Jersey [Office of Innovation](https://innovation.nj.gov/) now! Formerly [[VMware Pivotal Labs|Pivotal Labs]]</p>
 
-<h1 class="font-btm text-xl">Anne LoVerso</h1>
-
-<p class="callout-box">
-  Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
-</p>
-
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
-
-do i auto update
-
-The easiest way to get started is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll). If you need any help, my [DMs are open on Twitter (@vaillancourtmax)](https://twitter.com/vaillancourtmax). Say hi! 👋
-
-If this template helps you in any way, [consider buying me a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
-
-<div class="grid-element">
-  <h2>Podcast appearances</h2>
-
-  {% assign podcast_limit = 2 %}
-  {% for podcast in site.data.podcasts limit: podcast_limit %}
-  <div class="list-entry">
-    <div><a target="_blank" rel="noopener" href="{{ podcast.url }}">{{ podcast.name }}</a> <span class="faded">({{ podcast.date | date: "%Y-%m-%d" }})</span></div>
-    <div>{{ podcast.description_html }}</div>
-  </div>
-  {% endfor %}
-
-  {% assign additional_podcasts = site.data.podcasts.size | minus: podcast_limit %}
-  {% if additional_podcasts > 0 %}
-  <div>
-    <p>
-      <a class="internal-link" href="/podcasts">
-        View all podcasts ({{ additional_podcasts }} more podcasts)
-      </a>
+    <p class="callout-box">
+        Welcome to my digital garden.
+      Take a look at <strong>[[tabletop RPGs]]</strong> to get started on your exploration.
     </p>
-  </div>
-  {% endif %}
 </div>
 
-<h1>tags</h1>
-{% for tag in site.tags %}
-<h3>{{ tag[0] }}</h3>
-  <ul>
-    {% for note in tag[1] %}
-      <li><a href="{{ note.url }}">{{ note.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
+## Featured articles
 
-<style>
-  .wrapper {
-    max-width: 46em;
-  }
-</style>
+<ul class="mbxl">
+{% assign notes_list = site.notes %}  
+{% for post in notes_list %}
+{% if post.tags contains "featured" %}
+
+<li>
+    <strong>
+        <a class="internal-link" href="{{ post.url }}">
+            {{ post.title }}
+        </a>
+    </strong>
+</li>
+
+{% endif %}
+{% endfor %}
+</ul>
+
+## Illustrated notes
+
+<div class="fdr card-container mbxl">
+{% assign notes_list = site.notes %}  
+{% for post in notes_list %}
+{% if post.tags contains "illustrations" %}
+<div class="card">
+    <div class="card-inner">
+    <strong>
+        <a class="internal-link" href="{{ post.url }}">
+            {{ post.title }}
+        </a>
+    </strong>
+    <img class="mtd" src="{{ post.img }}" alt=""/>
+</div>
+</div>
+
+{% endif %}
+{% endfor %}
+</div>
+
+
+## Fun projects
+
+<div class="fdr card-container">
+{% assign notes_list = site.notes | sort:"weight" %}  
+{% for post in notes_list %}
+{% if post.tags contains "projects" %}
+<div class="card">
+<div class="card-inner">
+    <strong>
+        <a class="internal-link" href="{{ post.url }}">
+            {{ post.title }}
+        </a>
+    </strong>
+    <img class="mtd" src="{{ post.img }}" alt=""/>
+</div>
+</div>
+
+{% endif %}
+{% endfor %}
+</div>
+    

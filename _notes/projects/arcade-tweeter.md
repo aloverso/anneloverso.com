@@ -1,5 +1,8 @@
 ---
-weight: 100
+weight: 200
+title: Arcade Tweeter
+img: /assets/images/arcade-tweeter-demo.png
+tags: projects
 ---
 
 The **[arcade-tweeter app](https://arcade-tweet.herokuapp.com/)** lets you craft your tweets like you're entering your initials in a video game.

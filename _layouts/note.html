@@ -3,10 +3,14 @@ layout: default
 ---
 
 <article>
-  <div>
+  <div class="mbm">
     <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
-      Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
+    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
+      {% if page.published %}
+        Originally published: {{ page.published }} •
+      {% endif %}
+      {% if page.type != 'pages' %}
+        Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
       {% endif %}
     </time>
   </div>
@@ -20,8 +24,8 @@ layout: default
   </div>
 </article>
 
-<hr>
+<!--<hr>-->
 
-<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
+<!--<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>-->
 
 <!--{% include notes_graph.html %}-->

@@ -1,5 +1,9 @@
 ---
 title: An Illustrated Guide to Mob Programming
+img: "/assets/images/mob-programming/31-happy-mob.jpg"
+ext: https://medium.com/@AnneLoVerso/an-illustrated-guide-to-mob-programming-the-why-how-960e1c4f9202
+weight: 100
+tags: illustrations
 ---
 
 <div class="slide">
@@ -294,3 +298,5 @@ Be kind. Listen. And most importantly, reflect on what worked, and keep iteratin
 Or, when you’re implementing a brand new pattern, and want everyone to be on the same page about it. Or when doing a big refactor, and more people’s context facilitates better decisions.
 </div>
 </div>
+
+Externally published on [Medium](https://medium.com/@AnneLoVerso/an-illustrated-guide-to-mob-programming-the-why-how-960e1c4f9202)

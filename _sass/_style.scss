@@ -9,9 +9,21 @@ $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
 $purple: #46529E;
 $purple-med: #7A7BD4;
 $purple-light: #8b88e6;
+$purple-bg: #f5f7ff;
+
+$md: 1200px;
+$sm: 992px;
+$xs: 768px;
+$xxs: 522px;
+
 
 .text-xl {
-  font-size: 5rem;
+  font-size: 3.5rem;
+  margin-left: 1rem;
+
+  @media (min-width: 600px) {
+    font-size: 5rem;
+  }
 }
 
 @font-face {
@@ -32,10 +44,47 @@ body {
   overflow-x: hidden;
   color: $color-text;
   font-size: 1rem;
-  max-width: 63em;
+  max-width: 1209px;
 
-  @media (min-width: 820px) {
+  @media (min-width: $sm) {
     font-size: 1.2rem;
+  }
+}
+
+time {
+  color: $color-subtext;
+  font-size: .9rem;
+}
+
+.narrower {
+  max-width: 46em;
+}
+
+.card-container {
+  flex-wrap: wrap;
+}
+
+.card-inner {
+  padding: 16px;
+  box-shadow:
+          0 1.2px 2.7px -4px rgba(0, 0, 0, 0.022),
+          0 3px 6.9px -4px rgba(0, 0, 0, 0.031),
+          0 6.2px 14.2px -4px rgba(0, 0, 0, 0.039),
+          0 12.8px 29.2px -4px rgba(0, 0, 0, 0.048),
+          0 35px 80px -4px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+}
+
+.card {
+  flex-basis: 100%;
+  padding: 4px;
+
+  @media (min-width: $xxs) {
+    flex-basis: 48%;
+  }
+
+  @media (min-width: $md) {
+    flex-basis: 32%;
   }
 }
 
@@ -50,11 +99,9 @@ body {
     margin-top: 0;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: $xs) {
     margin-bottom: 3rem;
     flex-wrap: nowrap;
-
-
   }
 }
 
@@ -62,7 +109,7 @@ body {
   margin-left: 0;
   width: 100%;
 
-  @media (min-width: 600px) {
+  @media (min-width: $xxs) {
     margin-right: 4rem;
     width: 66%;
   }
@@ -71,18 +118,22 @@ body {
 .caption {
   margin-bottom: 0;
 
-  @media (min-width: 600px) {
+  @media (min-width: $xxs) {
     margin-bottom: 8rem;
   }
 }
 
-.cat {
-  color: red;
+.caption-long {
+  margin-bottom: 0;
+
+  @media (min-width: 600px) {
+    margin-bottom: 2rem;
+  }
 }
 
 .callout-box {
   padding: 3em 1em;
-  background: #f5f7ff;
+  background: $purple-bg;
   border-radius: 4px;
 }
 
@@ -119,12 +170,12 @@ body {
   display: grid;
   grid-gap: 2em;
   grid-template-areas:
-    "anything"
+    "section"
     "side";
 
-  @media (min-width: 870px) {
+  @media (min-width: $sm) {
     grid-template-columns: 3fr 1fr;
-    grid-template-areas: "anything side small";
+    grid-template-areas: "section side";
   }
 }
 
@@ -147,13 +198,14 @@ img {
   margin: 0 auto;
   max-height: 75vh;
   border-radius: $border-radius;
+  margin-bottom: .5rem;
 }
 
 blockquote {
   padding: 1.5em;
   margin: 0;
   font-size: 0.88em;
-  background: $color-box-background;
+  background: $purple-bg;
   border-radius: $border-radius;
 
   p {

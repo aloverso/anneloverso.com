@@ -21,3 +21,37 @@ Preview the template here: https://digital-garden-jekyll-template.netlify.app/
 ## License
 
 Source code is available under the [MIT license](LICENSE.md).
+
+## Todo:
+
+[ ] readme
+[ ] copy posts from obsidian
+[ ] k8s post
+[ ] homepage
+[ ] about page
+[ ] footer
+[ ] add weights
+[x] favicon
+[ ] pages
+- retros
+- feedback
+- black box
+- UCD
+- dependency inversion
+- co-creation
+- consulting
+- teaching
+- lean
+- communicating technical ideas
+- DDD
+- reafctoriung
+- BDD testing
+- clean arcghitecture design / microservices
+- trunk based development
+- blue/green deploys
+
+[ ] test doubles note on classic TDD
+
+
+
+

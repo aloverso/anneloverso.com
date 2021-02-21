@@ -41,15 +41,31 @@
       .html(footnoteText)
       .addClass("sidenote");
 
-    // remove arrow backlink indicator`
-    $('.reversefootnote').remove()
+    // ideal position
+    let topPosition = superscript.offset().top;
 
-    const topPosition = superscript.offset();
+    // move down below backlink box if necessary
+    const $backlinkBox = $('.backlink-box');
+    const backlinkBoxBottom = $backlinkBox.offset().top + $backlinkBox.height();
+    if (topPosition < backlinkBoxBottom) {
+        topPosition = backlinkBoxBottom + 40;
+    }
+
+    // move down below another overlapping footnote if necessary
+    const $allSidenotes = $('.sidenote')
+    if ($allSidenotes.length > 0) {
+      const $lastSidenote = $allSidenotes.last()
+      const lastSidenoteBottom = $lastSidenote.offset().top + $lastSidenote.height();
+
+      if (topPosition < lastSidenoteBottom) {
+        topPosition = lastSidenoteBottom + 10;
+      }
+    }
 
     div.css({
       position: "absolute",
       left: sidebar.position().left,
-      top: topPosition["top"],
+      top: topPosition,
       width: sidebar.width(),
     });
 
@@ -60,6 +76,9 @@
     });
 
     $(document.body).append(div);
+
+    // remove arrow backlink indicator
+    $('.reversefootnote').remove()
   }
 
 })();
