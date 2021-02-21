@@ -6,7 +6,7 @@ tags: software
 
 Software teams like shipping software. We like doing it fast, and doing it well. We like to avoid making mistakes when doing so — especially costly or time-consuming ones. My team wanted to optimize for these values with automated feedback mechanisms in place.
 
-Enter: ship-it — a script developed by my team to help us deploy better software faster, and get quicker feedback when things went wrong. Read on to find out what it is, what motivated its creation, and how those ideas could help you, too.
+Enter: `ship-it` — a script developed by my team{% Foot num:"1" %} to help us deploy better software faster, and get quicker feedback when things went wrong. Read on to find out what it is, what motivated its creation, and how those ideas could help you, too.
 
 # Deployment Process
 
@@ -40,7 +40,7 @@ We wanted those fast feedback loops. We wanted to smooth development. We wanted 
 
 We removed the concept of `git push` from our vocabulary. It just wasn’t a thing we did anymore. Instead, it was always `./ship-it.sh`.
 
-And what was in ship-it.sh, exactly? Well, in its first iteration, it was pretty simple. Here’s 🚢 v1:{% Foot num: "1" %}
+And what was in ship-it.sh, exactly? Well, in its first iteration, it was pretty simple. Here’s 🚢 v1:{% Foot num: "2" %}
 
 ```shell
 #!/bin/bash
@@ -54,7 +54,7 @@ Thanks to this — the combination of the team habit, and the script itself — 
 
 ship-it would fail on our local computer, and catch any unit test failures before the commit got pushed. Faster feedback loops! Cleaner commit trees! Incredible! We’re done, right?
 
-Well… not so fast. This pipeline illustration is, of course, oversimplified. There’s more to each step than the one-word descriptor shown above.
+Well... not so fast. This pipeline illustration is, of course, oversimplified. There’s more to each step than the one-word descriptor shown above.
 
 Specifically, I want to call out the box labelled “test” in the CI stage of the process. It just says “test” here, but to be more specific, the “test” stage of our CI pipeline had two steps involved: it ran our entire unit test suite, and it also ran end-to-end feature tests.
 
@@ -183,6 +183,9 @@ Until then, I would encourage teams to try out their own `ship-it` and see how i
    
 {% FootnoteContainer %}
    {% Footnote num: "1" %}
+      Specifically, shoutout to <a href="https://github.com/walterscarborough">Walter Scarborough</a> for pairing on the development of ideas presented here!
+   {% endFootnote %}
+   {% Footnote num: "2" %}
       {{ "`./runUnitTests.sh` is an abstraction here — for us it was `yarn test` and `./gradlew test`, but the idea is not specific to those systems" | markdownify }}
    {% endFootnote %}
 {% endFootnoteContainer %}

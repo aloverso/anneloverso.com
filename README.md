@@ -14,6 +14,8 @@ It uses [jekyll-spark](https://github.com/helpscout/jekyll-spark) to handle some
 
 Footnotes are created using a modified version of [Kaushik Gopal's scripting method](https://blog.jkl.gg/jekyll-footnote-tufte-sidenote/).
 
+I generate box shadows with [Philipp Brumm's webapp](https://brumm.af/shadows).
+
 ## Todo:
 
 - [x] k8s post
