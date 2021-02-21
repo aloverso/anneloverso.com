@@ -118,4 +118,4 @@ It’s technically accurate, but it’s not very helpful to me. Applying analogi
 
 ![many fish tanks and happy aquarium director](/assets/images/k8s-aquarium/21-aquarium.png)
 
-Externally published on [Medium](https://medium.com/@AnneLoVerso/the-kubernetes-aquarium-6a3d1d7a2afd)
+**Externally published on [Medium](https://medium.com/@AnneLoVerso/the-kubernetes-aquarium-6a3d1d7a2afd)**

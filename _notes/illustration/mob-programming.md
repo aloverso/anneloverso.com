@@ -173,4 +173,4 @@ Be kind. Listen. And most importantly, reflect on what worked, and keep iteratin
 Or, when you’re implementing a brand new pattern, and want everyone to be on the same page about it. Or when doing a big refactor, and more people’s context facilitates better decisions.
 " | markdownify }} {% endSlide %}
 
-Externally published on [Medium](https://medium.com/@AnneLoVerso/an-illustrated-guide-to-mob-programming-the-why-how-960e1c4f9202)
+**Externally published on [Medium](https://medium.com/@AnneLoVerso/an-illustrated-guide-to-mob-programming-the-why-how-960e1c4f9202)**
