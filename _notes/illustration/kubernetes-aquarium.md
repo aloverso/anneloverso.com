@@ -1,9 +1,10 @@
 ---
 title: The Kubernetes Aquarium
-img: /assets/images/k8s-aquarium/container .png
+img: /assets/images/k8s-aquarium/container.png
 ext: https://medium.com/@AnneLoVerso/the-kubernetes-aquarium-6a3d1d7a2afd
 weight: 100
 tags: illustrations
+published: December 2020
 ---
 
 {% Slide src: "/assets/images/k8s-aquarium/01-fish.png" alt: "fish" %} {{

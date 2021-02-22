@@ -20,7 +20,7 @@
 
     // show as footnotes if the sidebar is at the bottom
     const $sidebar = $('side');
-    if ( $sidebar.position().top > $sidebar.position().left) {
+    if ($sidebar.position() && ($sidebar.position().top > $sidebar.position().left)) {
       $footnotes.show();
       return;
     }

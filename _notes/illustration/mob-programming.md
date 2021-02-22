@@ -3,6 +3,7 @@ title: An Illustrated Guide to Mob Programming
 img: "/assets/images/mob-programming/31-happy-mob.jpg"
 ext: https://medium.com/@AnneLoVerso/an-illustrated-guide-to-mob-programming-the-why-how-960e1c4f9202
 weight: 100
+published: January 2020
 tags: illustrations
 ---
 

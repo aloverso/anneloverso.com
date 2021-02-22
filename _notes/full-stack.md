@@ -1,7 +1,7 @@
 ---
 title: Full-Stack Engineer
 weight: 500
-tags:
+tags: experience
 ---
 
 I am a full-stack engineer because I believe in the value of the vertical slice. By putting user value as the top priority, it becomes necessary for an engineer to be able to work in the whole stack of the application, to successfully deliver a feature that provides value.

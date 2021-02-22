@@ -13,6 +13,31 @@ layout: default
         Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
       {% endif %}
     </time>
+    <div>
+      {% assign tagnum = page.tags | size %}
+      {% if tagnum == 0 %}
+        <span class="tag mrd text-sm">
+            <span class="mrs">
+                {{ site.data.icons.default }}
+            </span>
+            <span>
+                seedling
+            </span>
+          </span>
+      {% endif %}
+      {% for tag in page.tags %}
+        {% if site.data.icons[tag] %}
+          <span class="tag mrd text-sm">
+            <span class="mrs">
+                {{ site.data.icons[tag] }}
+            </span>
+            <span>
+                {{ tag }}
+            </span>
+          </span>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 
   <div id="notes-entry-container">

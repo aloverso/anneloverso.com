@@ -26,6 +26,14 @@ $xxs: 522px;
   }
 }
 
+.text-l {
+  font-size: 2rem;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
 @font-face {
   font-family: 'BeyondTheMounatins';
   src: url('../assets/fonts/beyond_the_mountains-webfont.woff');
@@ -40,7 +48,7 @@ body {
   font-family: $font-family;
   margin: 0 auto;
   line-height: 1.7;
-  padding: 4vh 6vw;
+  padding: 4vh 6vw 0 6vw;
   overflow-x: hidden;
   color: $color-text;
   font-size: 1rem;
@@ -49,6 +57,13 @@ body {
   @media (min-width: $sm) {
     font-size: 1.2rem;
   }
+}
+
+footer {
+  margin: 2em 0;
+  font-size: 0.8em;
+  color: mix($color-text, white, 80%);
+  padding-top: 1em;
 }
 
 time {
@@ -73,6 +88,7 @@ time {
           0 12.8px 29.2px -4px rgba(0, 0, 0, 0.048),
           0 35px 80px -4px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
+  height: 90%;
 }
 
 .card {
@@ -87,6 +103,40 @@ time {
     flex-basis: 32%;
   }
 }
+
+.caterpillar-container {
+  flex-wrap: wrap;
+}
+
+.caterpillar-inner {
+  padding: 12px 16px;
+  box-shadow:
+          0 1.2px 8px rgba(0, 0, 0, 0.014),
+          0 2.8px 17.4px rgba(0, 0, 0, 0.02),
+          0 5.3px 27.3px rgba(0, 0, 0, 0.026),
+          0 12px 38px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+}
+
+.caterpillar {
+  flex-basis: 100%;
+  padding: 4px;
+
+  @media (min-width: $xxs) {
+    flex-basis: 48%;
+  }
+}
+
+.tag {
+  box-shadow:
+          0 1.2px 8px rgba(0, 0, 0, 0.014),
+          0 2.8px 17.4px rgba(0, 0, 0, 0.02),
+          0 5.3px 27.3px rgba(0, 0, 0, 0.026),
+          0 12px 38px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  padding: .5rem;
+}
+
 
 .slide {
   margin-bottom: 6rem;
@@ -177,13 +227,6 @@ time {
   margin: 0.5em 0 1em;
 }
 
-footer {
-  margin: 2em 0;
-  font-size: 0.8em;
-  color: mix($color-text, white, 80%);
-  padding-top: 1em;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -235,6 +278,9 @@ a {
   text-decoration: none;
   border-bottom: 1px solid $color-border;
   color: $color-primary;
+  &.no-style {
+    border-bottom: none;
+  }
   &:hover {
     color: black !important;
     background: #fffaf1;
@@ -246,16 +292,11 @@ a {
     content: "↗";
     color: #aaaaaa;
   }
-  &.internal-link:after {
-    content: "";
-  }
-  &.footnote:after {
-    content: "";
-  }
-  &.reversefootnote:after {
-    content: "";
-  }
-  &.no-icon:after {
+  &.internal-link:after,
+  &.footnote:after,
+  &.reversefootnote:after,
+  &.no-icon:after,
+  &.no-style:after {
     content: "";
   }
 }

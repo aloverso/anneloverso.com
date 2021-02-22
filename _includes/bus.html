@@ -1,0 +1,553 @@
+<div class="bus">
+  <div class="bus-container">
+    <div class="engine">
+      <div class="wheel-well"></div>
+    </div>
+    <div class="frame">
+      <div class="wheel-well"></div>
+    </div>
+    <div class="top"></div>
+    <div class="windshield"></div>
+
+    <div class="wheel back-wheel"></div>
+    <div class="wheel front-wheel"></div>
+
+    <div class="door">
+      <div class="door-window left"></div>
+      <div class="door-window right"></div>
+    </div>
+
+    <div class="window win1"></div>
+    <div class="window-top win1"></div>
+
+    <div class="window win2"></div>
+    <div class="window-top win2"></div>
+
+    <div class="window win3"></div>
+    <div class="window-top win3"></div>
+
+    <div class="window win4"></div>
+    <div class="window-top win4"></div>
+
+    <div class="line highest"></div>
+    <div class="line highest2"></div>
+
+    <div class="line high"></div>
+    <div class="line high2"></div>
+
+    <div class="line mid"></div>
+    <div class="line mid2"></div>
+
+    <div class="shortline low"></div>
+    <div class="shortline low2"></div>
+
+    <div class="backline low"></div>
+    <div class="backline low2"></div>
+
+    <div class="bottomline lowest"></div>
+    <div class="bottomline lowest2"></div>
+
+    <div class="engine-shade"></div>
+    <div class="roof-shade"></div>
+
+    <div class="mirror"></div>
+
+    <div class="headlight"></div>
+    <div class="top-light"></div>
+    <div class="taillight"></div>
+    <div class="side-light lower"></div>
+    <div class="side-light upper"></div>
+
+    <div class="back-bumper"></div>
+    <div class="front-bumper"></div>
+
+    <div class="side-windshield"></div>
+  </div>
+</div>
+
+<style>
+    .bus {
+        width: 700px;
+        height: 400px;
+    }
+
+    .bus-container * {
+        position: absolute;
+    }
+
+    .bus-container *:before, *:after {
+        position: absolute;
+        content: "";
+    }
+
+    .bus-container {
+        transform: translate(0, 50px);
+        top: 50%;
+        left: 50%;
+        width: 700px;
+        height: 300px;
+    }
+
+    .frame {
+        background-color: #222831;
+        width: 620px;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .top {
+        background-color: #222831;
+        width: 670px;
+        height: 100px;
+        left: 0;
+        top: -75px;
+        border-radius: 30px;
+    }
+
+    .engine {
+        background-color: #222831;
+        width: 300px;
+        height: 150px;
+        bottom: 0;
+        right: -90px;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .windshield {
+        z-index: -1;
+        background-color: #d0e7f4;
+        height: 200px;
+        width: 200px;
+        top: 50px;
+        right: 10px;
+        transform: rotate(-30deg);
+        border: 2px solid #aaa;
+    }
+
+    .windshield:before {
+        top: 45px;
+        left: 90px;
+        width: 180px;
+        height: 20px;
+        background-color: #e8f2f9;
+        transform: rotate(85deg);
+    }
+
+    .windshield:after {
+        background-color: #222831;
+        width: 240px;
+        height: 100px;
+        bottom: -20px;
+        right: -67px;
+        border-radius: 30px;
+        transform: rotate(37deg);
+    }
+
+    .wheel {
+        width: 120px;
+        height: 120px;
+        background-color: #444;
+        bottom: -50px;
+        border-radius: 120px;
+    }
+
+    .wheel.back-wheel {
+        left: 150px;
+    }
+
+    .wheel.front-wheel {
+        left: 640px;
+    }
+
+    .wheel:before {
+        width: 60px;
+        height: 60px;
+        background-color: #222831;
+        bottom: 30px;
+        left: 30px;
+        border-radius: 120px;
+    }
+
+    .wheel:after {
+        width: 40px;
+        height: 50px;
+        background-color: #777;
+        bottom: 30px;
+        left: 50px;
+        border-radius: 120px;
+    }
+
+    .wheel-well {
+        width: 140px;
+        height: 140px;
+        background-color: #111;
+        bottom: -64px;
+        border-radius: 220px;
+        left: 137px;
+        border: 4px solid #777;
+    }
+
+    .door {
+        width: 120px;
+        height: 350px;
+        background-color: #111;
+        bottom: -10px;
+        left: 480px;
+    }
+
+    .window {
+        width: 100px;
+        height: 60px;
+        background-color: #d0e7f4;
+        top: 10px;
+    }
+
+    .window:after {
+        top: 23px;
+        width: 90px;
+        height: 15px;
+        background-color: #e8f2f9;
+        transform: rotate(-30deg);
+    }
+
+    .window.win1 {
+        left: 30px;
+    }
+
+    .window.win2 {
+        left: 140px;
+    }
+
+    .window.win3 {
+        left: 250px;
+    }
+
+    .window.win4 {
+        left: 360px;
+    }
+
+    .window-top {
+        width: 100px;
+        height: 60px;
+        background-color: #d0e7f4;
+        top: 73px;
+    }
+
+    .window-top:after {
+        top: 30px;
+        width: 90px;
+        height: 6px;
+        background-color: #e8f2f9;
+        transform: rotate(-30deg);
+    }
+
+    .window-top.win1 {
+        left: 30px;
+    }
+
+    .window-top.win2 {
+        left: 140px;
+    }
+
+    .window-top.win3 {
+        left: 250px;
+    }
+
+    .window-top.win4 {
+        left: 360px;
+    }
+
+    .line {
+        width: 470px;
+        height: 10px;
+        background-color: #111;
+        left: 0px;
+    }
+
+    .line.highest {
+        top: 0;
+    }
+
+    .line.highest2 {
+        top: -10px;
+    }
+
+    .line.high {
+        top: 140px;
+    }
+
+    .line.high2 {
+        top: 150px;
+    }
+
+    .line.mid {
+        top: 190px;
+    }
+
+    .line.mid2 {
+        top: 200px;
+    }
+
+    .line:before {
+        width: 470px;
+        height: 3px;
+        background-color: #aaa;
+        left: 0px;
+    }
+
+    .shortline {
+        width: 185px;
+        height: 10px;
+        background-color: #111;
+        right: 230px;
+    }
+
+    .shortline.low {
+        top: 240px;
+    }
+
+    .shortline.low2 {
+        top: 250px;
+    }
+
+    .shortline:before {
+        width: 185px;
+        height: 3px;
+        background-color: #aaa;
+        left: 0px;
+    }
+
+    .backline {
+        width: 144px;
+        height: 10px;
+        background-color: #111;
+        left: 0;
+    }
+
+    .backline.low {
+        top: 240px;
+    }
+
+    .backline.low2 {
+        top: 250px;
+    }
+
+    .backline:before {
+        width: 144px;
+        height: 3px;
+        background-color: #aaa;
+        left: 0px;
+    }
+
+    .bottomline {
+        width: 134px;
+        height: 10px;
+        background-color: #111;
+        left: 0;
+    }
+
+    .bottomline.lowest {
+        top: 280px;
+    }
+
+    .bottomline.lowest2 {
+        top: 290px;
+    }
+
+    .bottomline:before {
+        width: 134px;
+        height: 3px;
+        background-color: #aaa;
+        left: 0px;
+    }
+
+    .door-window {
+        width: 50px;
+        height: 335px;
+        background-color: #d0e7f4;
+        top: 5px;
+    }
+
+    .door-window.left {
+        left: 6px;
+    }
+
+    .door-window.right {
+        left: 63px;
+    }
+
+    .door-window:after {
+        top: 5px;
+        left: 30px;
+        width: 15px;
+        height: 320px;
+        background-color: #e8f2f9;
+        transform: rotate(1deg);
+    }
+
+    .engine-shade {
+        background-color: #485569;
+        width: 150px;
+        height: 30px;
+        top: 180px;
+        right: -80px;
+        border-radius: 10px;
+    }
+
+    .roof-shade {
+        background-color: #485569;
+        width: 200px;
+        height: 33px;
+        top: -50px;
+        left: 5px;
+        border-radius: 10px;
+    }
+
+    .roof-shade:before {
+        background-color: #485569;
+        width: 100px;
+        height: 18px;
+        top: -20px;
+        left: 12px;
+        border-radius: 30px;
+    }
+
+    .roof-shade:after {
+        background-color: #485569;
+        width: 300px;
+        height: 10px;
+        top: -15px;
+        right: -400px;
+        border-radius: 30px;
+    }
+
+    .mirror {
+        top: 25px;
+        right: -30px;
+        width: 30px;
+        height: 50px;
+        background-color: #222831;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .mirror:before {
+        top: 0px;
+        right: 0px;
+        width: 120px;
+        height: 5px;
+        background-color: #222831;
+        border-top-right-radius: 10px;
+    }
+
+    .mirror:after {
+        top: 36px;
+        right: 12px;
+        width: 0;
+        height: 0;
+        border-top: 21px solid transparent;
+        border-bottom: 21px solid transparent;
+        border-right: 21px solid #222831;
+        transform: rotate(45deg);
+    }
+
+    .headlight {
+        top: 175px;
+        right: -90px;
+        width: 15px;
+        height: 50px;
+        background-color: orange;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-left: 3px solid #aaa;
+        border-top: 3px solid #aaa;
+        border-bottom: 3px solid #aaa;
+    }
+
+    .top-light {
+        top: -40px;
+        right: 24px;
+        width: 6px;
+        height: 35px;
+        background-color: tomato;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .taillight {
+        top: 170px;
+        left: -6px;
+        width: 6px;
+        height: 35px;
+        background-color: tomato;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .side-light {
+        width: 10px;
+        height: 7px;
+        background-color: orange;
+        border-radius: 2px;
+        border-left: 5px solid #aaa;
+        border-right: 5px solid #aaa;
+        border-top: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+    }
+
+    .side-light.lower {
+        bottom: 70px;
+        right: 240px;
+    }
+
+    .side-light.upper {
+        top: -12px;
+        right: 40px;
+    }
+
+    .back-bumper {
+        bottom: -3px;
+        left: -2px;
+        width: 35px;
+        height: 30px;
+        background-color: #111;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 3px;
+        border-top-left-radius: 3px;
+    }
+
+    .front-bumper {
+        bottom: -2px;
+        right: -93px;
+        width: 26px;
+        height: 30px;
+        background-color: #111;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+    .side-windshield {
+        background-color: #d0e7f4;
+        height: 150px;
+        width: 45px;
+        bottom: 60px;
+        right: 45px;
+        border: solid 5px #222831;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+
+    .side-windshield:before {
+        border-top-right-radius: 100px;
+        height: 130px;
+        width: 15px;
+        bottom: 4px;
+        right: 8px;
+        background-color: #e8f2f9;
+        transform: rotate(-2deg);
+    }
+</style>

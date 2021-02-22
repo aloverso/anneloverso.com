@@ -1,7 +1,8 @@
 ---
 title: ship-it - a humble script for low-risk deployment
 weight: 200
-tags: software
+published: November 2018
+tags: software featured
 ---
 
 Software teams like shipping software. We like doing it fast, and doing it well. We like to avoid making mistakes when doing so — especially costly or time-consuming ones. My team wanted to optimize for these values with automated feedback mechanisms in place.
