@@ -17,23 +17,27 @@ layout: default
       {% assign tagnum = page.tags | size %}
       {% if tagnum == 0 %}
         <span class="tag mrd">
-          <span class="mrs">
-              {{ site.data.icons.default }}
-          </span>
-          <span>
-              seedling
-          </span>
+          <a class="no-style" href="/notes#seedling">
+            <span class="mrs">
+                {{ site.data.icons.default }}
+            </span>
+            <span>
+                seedling
+            </span>
+          </a>
         </span>
       {% endif %}
       {% for tag in page.tags %}
         {% if site.data.icons[tag] %}
           <span class="tag mrd">
-            <span class="mrs">
-                {{ site.data.icons[tag] }}
-            </span>
-            <span>
-                {{ tag }}
-            </span>
+            <a class="no-style" href="{{ '/notes#' | append: tag }}">
+              <span class="mrs">
+                  {{ site.data.icons[tag] }}
+              </span>
+              <span>
+                  {{ tag }}
+              </span>
+            </a>
           </span>
         {% endif %}
       {% endfor %}
