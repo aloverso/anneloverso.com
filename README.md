@@ -24,8 +24,8 @@ I generate box shadows with [Philipp Brumm's webapp](https://brumm.af/shadows).
 - [x] add weights
 - [x] readme
 - [ ] homepage
-- [ ] about page
-- [ ] footer
+- [x] about page
+- [x] footer
 - [ ] pages
     - retros
     - feedback
@@ -44,6 +44,8 @@ I generate box shadows with [Philipp Brumm's webapp](https://brumm.af/shadows).
     - trunk based development
     - blue/green deploys
 - [ ] test doubles footnote on classic TDD
+- [ ] shipit mobile is broken?
+- [x] filter All by tags
 
 
 

@@ -8,15 +8,37 @@ permalink: /
 <div class="narrower mbxl">
     <h1 class="font-btm text-xl">Anne LoVerso</h1>
     engineer with a passion for software, education, and playing [[tabletop RPGs]] 
-    <p markdown="1">I work for New Jersey [Office of Innovation](https://innovation.nj.gov/) now! Formerly senior software engineer @ [[VMware Pivotal Labs|Pivotal Labs]]</p>
+    <p markdown="1">I work for [[New Jersey Office of Innovation]] now! Formerly senior software engineer @ [[VMware Pivotal Labs|Pivotal Labs]]</p>
 
     <p class="callout-box">
-        Welcome to my digital garden.
-      Take a look at <strong>[[tabletop RPGs]]</strong> to get started on your exploration.
+        Welcome to my digital garden.  This site is a constantly-evolving collection of notes, thoughts, essays, and illustrations.
+
+        Get started on your exploration below, or check out <strong><a href="/notes" class="internal-link">everything</a></strong>.
     </p>
 </div>
 
-## Featured articles
+## Illustrated notes
+
+<div class="fdr card-container mbxl">
+{% for post in site.notes %}
+{% if post.tags contains "illustrations" %}
+<div class="card">
+    <div class="card-inner">
+    <strong>
+        <a class="internal-link" href="{{ post.url }}">
+            {{ post.title }}
+        </a>
+    </strong>
+    <img class="mtd" src="{{ post.img }}" alt=""/>
+</div>
+</div>
+
+{% endif %}
+{% endfor %}
+</div>
+
+
+## Featured notes
 
 <div class="mbxl caterpillar-container fdr mtd">
 {% for post in site.notes %}
@@ -76,27 +98,6 @@ permalink: /
 </div>
 {% endfor %}
 </div>
-
-## Illustrated notes
-
-<div class="fdr card-container mbxl">
-{% for post in site.notes %}
-{% if post.tags contains "illustrations" %}
-<div class="card">
-    <div class="card-inner">
-    <strong>
-        <a class="internal-link" href="{{ post.url }}">
-            {{ post.title }}
-        </a>
-    </strong>
-    <img class="mtd" src="{{ post.img }}" alt=""/>
-</div>
-</div>
-
-{% endif %}
-{% endfor %}
-</div>
-
 
 ## Fun projects
 

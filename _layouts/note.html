@@ -16,18 +16,18 @@ layout: default
     <div>
       {% assign tagnum = page.tags | size %}
       {% if tagnum == 0 %}
-        <span class="tag mrd text-sm">
-            <span class="mrs">
-                {{ site.data.icons.default }}
-            </span>
-            <span>
-                seedling
-            </span>
+        <span class="tag mrd">
+          <span class="mrs">
+              {{ site.data.icons.default }}
           </span>
+          <span>
+              seedling
+          </span>
+        </span>
       {% endif %}
       {% for tag in page.tags %}
         {% if site.data.icons[tag] %}
-          <span class="tag mrd text-sm">
+          <span class="tag mrd">
             <span class="mrs">
                 {{ site.data.icons[tag] }}
             </span>

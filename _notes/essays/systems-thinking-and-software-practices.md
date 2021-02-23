@@ -5,7 +5,7 @@ tags: essays featured
 published: November 2020
 ---
 
-A system is not just a collection of things.{% Foot num: "1" %} In the words of systems thought leader Donella Meadows, it is "an interconnected set of elements that is coherently organized in a way that achieves something."" Put another way, a system has elements, relationships, and a purpose.
+A system is not just a collection of things.{% Foot num: "1" %} In the words of systems thought leader Donella Meadows, it is "an interconnected set of elements that is coherently organized in a way that achieves something." Put another way, a system has elements, relationships, and a purpose.
 
 What, then, is systems thinking? It is a holistic approach to analysis that takes all of these constituent parts into account for decision-making. A systems thinker does not just observe events and actors (the parts that are most tangible and visible), but considers interconnections—those flows of tangible goods and intangible concepts that tie elements together. They observe patterns of behavior, and look for the rules which govern that behavior, all while considering the values and paradigms that create structures of rules and incentives.
 

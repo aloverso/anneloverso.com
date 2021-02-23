@@ -34,6 +34,48 @@ $xxs: 522px;
   font-size: 0.9rem;
 }
 
+.center {
+  text-align: center;
+}
+
+.about-text {
+  margin-left: 0.5em;
+  text-align: center;
+  font-size: 4rem;
+
+  @media (max-width: 422px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: $xs) {
+    font-size: 3rem;
+    width: 250px;
+  }
+
+  @media (min-width: $sm) {
+    font-size: 4rem;
+    width: 340px;
+  }
+
+  @media (min-width: $md) {
+    font-size: 5rem;
+    width: 420px;
+  }
+}
+
+.about-box {
+  @media (min-width: $xs) {
+    width: 250px;
+    padding: 1.5em !important;
+  }
+  @media (min-width: $sm) {
+    width: 340px;
+  }
+  @media (min-width: $md) {
+    width: 420px;
+  }
+}
+
 @font-face {
   font-family: 'BeyondTheMounatins';
   src: url('../assets/fonts/beyond_the_mountains-webfont.woff');
@@ -73,6 +115,25 @@ time {
 
 .narrower {
   max-width: 46em;
+}
+
+.hidden {
+  display: none!important;
+  visibility: hidden!important;
+}
+
+.taglist {
+  display:inline-block;
+  cursor: pointer;
+  border: 1px solid #fff;
+
+  &:hover {
+    background: #fffaf1;
+  }
+}
+
+.active-tag {
+  border: 1px solid #333333;
 }
 
 .card-container {
@@ -135,6 +196,7 @@ time {
           0 12px 38px rgba(0, 0, 0, 0.04);
   border-radius: 5px;
   padding: .5rem;
+  font-size: 0.9rem;
 }
 
 
@@ -174,7 +236,7 @@ time {
 }
 
 .callout-box {
-  padding: 3em 1em;
+  padding: 3em 1.5em;
   background: $purple-bg;
   border-radius: 4px;
 }

@@ -4,7 +4,7 @@ weight: 500
 tags: experience
 ---
 
-I  worked at Pivotal Labs (bought by VMware in 2020, now called VMware Pivotal Labs) from August 2017 - January 2021.
+I worked at Pivotal Labs (bought by VMware in 2020, now called VMware Pivotal Labs) from August 2017 - January 2021.
 [Pivotal Labs](https://tanzu.vmware.com/labs) is a software consultancy focused on [[Agile]] and [[Extreme Programming|XP]] 
 digital transformations for our clients.  For me, consulting is about knowing when to be teaching and when to be listening.
 
@@ -33,12 +33,23 @@ Mentored client engineers to be [[Extreme Programming|XP]] evangelists in their 
 ## A handful of projects
 
 ### Medicare enrollment portal
-#vuejs #node #typescript #dotnet #mysql
+
+<span class="tag mrs">Vue.js</span>
+<span class="tag mrs">Node</span>
+<span class="tag mrs">TypeScript</span>
+<span class="tag mrs">.NET</span>
+<span class="tag mrs">mySQL</span>
+
 - Championed refactoring for the team, including “code clean-up Fridays”. 
   Taught behavior-driven testing practices. Introduced domain-driven design principles.
 
 ### New Jersey Dept of Labor Training Search
-#react #node #typescript #postgresql
+
+<span class="tag mrs">React</span>
+<span class="tag mrs">Node</span>
+<span class="tag mrs">TypeScript</span>
+<span class="tag mrs">PostgreSQL</span>
+
 - Built a user-facing tool for unemployed New Jerseyans to find training/certification programs backed by a 
   PostgreSQL text search engine. Was in production in four weeks.
 - Being the sole engineer, made all full-stack technical decisions for the product.  
@@ -47,13 +58,21 @@ Mentored client engineers to be [[Extreme Programming|XP]] evangelists in their 
 
 
 ### Prescription-tracking software for pharmacists
-#java #spring
+
+<span class="tag mrs">Java</span>
+<span class="tag mrs">Spring</span>
+
 - Advised on and implemented architectural decisions in microservice distributed architecture. 
   Refactored domain boundary decisions and message queue structure.
 - Improved end-to-end test runtime from 10min to 40sec.
 
 ### Consumer retail online return application
-#react #kotlin #typescript #mysql
+
+<span class="tag mrs">React</span>
+<span class="tag mrs">Kotlin</span>
+<span class="tag mrs">TypeScript</span>
+<span class="tag mrs">mySQL</span>
+
 - Led the team through getting an app in production within one week.
 - Created a CI/CD pipeline for trunk-based development with blue/green deploys.
 - Mentored client engineers into [[test-driven development|TDD]]/[[Extreme Programming|XP]] 
@@ -61,7 +80,12 @@ Mentored client engineers to be [[Extreme Programming|XP]] evangelists in their 
 - Proposed and handled compromises with collaborating technology teams.
 
 ### Knowledge Management tool for lawyers
-#react #java #spring #elasticsearch
+
+<span class="tag mrs">React</span>
+<span class="tag mrs">Java</span>
+<span class="tag mrs">Spring</span>
+<span class="tag mrs">ElasticSearch</span>
+
 - Led engineering on a team of 10 - mentored other engineers, facilitated tech decisions, 
   ran psychological safety workshops, ran meetings with difficult external stakeholders.
 - Built a search engine on ElasticSearch, and taught it  to the rest of the engineering team.

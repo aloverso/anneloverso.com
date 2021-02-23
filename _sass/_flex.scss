@@ -61,3 +61,17 @@
 .vam {
   vertical-align: middle;
 }
+
+.fw-mobile {
+  flex-wrap: wrap;
+  @media (min-width: $xs) {
+    flex-wrap: nowrap;
+  }
+}
+
+.flex-half-mobile {
+  flex: 0 0 100%;
+  @media (min-width: $xs) {
+    flex: 0 0 50%;
+  }
+}
