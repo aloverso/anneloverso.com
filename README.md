@@ -23,7 +23,7 @@ I generate box shadows with [Philipp Brumm's webapp](https://brumm.af/shadows).
 - [x] copy posts from obsidian
 - [x] add weights
 - [x] readme
-- [ ] homepage
+- [x] homepage
 - [x] about page
 - [x] footer
 - [ ] pages

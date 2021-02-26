@@ -25,8 +25,14 @@ A **Mock** is just like a Spy, except it has *built-in verification*. You can as
 A **Fake** is meant to replicate the behavior of the real thing that it pretends to be. A good example is an in-memory database, where we actually assert against its state. Since a Fake mimics the precise behavior of the real, it *must be tested using the same tests as the real implementation* to ensure it can be trusted.
 
 # Using test doubles
-We use test doubles when we want to avoid using "the real thing" in a test context. Often (especially if you come from a classicist TDD background), this happens with external integrations with APIs and databases where we don't want to use the real version of an object in a test.
+We use test doubles when we want to avoid using "the real thing" in a test context. Often (especially if you have a classicist TDD {% Foot num:"1" %} approach), this happens with external integrations with APIs and databases where we don't want to use the real version of an object in a test.
 
 # More Resources
 - [A high-level overview of test doubles](https://github.com/alexbasson/test-doubles) (Alex Basson)
 - [Mocks aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html) (Martin Fowler)
+
+{% FootnoteContainer %}
+    {% Footnote num:"1" %}
+        I'm sure I'll add more on the classicist/mockist (ie, "Detroit"/"London") styles at some point, but for now, I recommend the <a href="https://martinfowler.com/articles/mocksArentStubs.html">Martin Fowler post</a> as a starting point.
+    {% endFootnote %}
+{% endFootnoteContainer %}

@@ -11,7 +11,7 @@ permalink: /
     <p markdown="1">I work for [[New Jersey Office of Innovation]] now! Formerly senior software engineer @ [[VMware Pivotal Labs|Pivotal Labs]]</p>
 
     <p class="callout-box">
-        Welcome to my digital garden.  This site is a constantly-evolving collection of notes, thoughts, essays, and illustrations.
+        Welcome to my <strong>[[digital garden]]</strong>.  This site is a constantly-evolving collection of notes, thoughts, essays, and illustrations.
 
         Get started on your exploration below, or check out <strong><a href="/notes" class="internal-link">everything</a></strong>.
     </p>

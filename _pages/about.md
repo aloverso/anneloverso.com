@@ -35,6 +35,8 @@ permalink: /about
 
 # About me
 
+Currently, software engineering innovation fellow at [[New Jersey Office of Innovation]]
+
 Formerly, Senior Software Engineer at [[VMware Pivotal Labs]]
 
 Graduate, [[Olin College of Engineering]]
@@ -45,7 +47,7 @@ I am a well-rounded [[full-stack engineer]]:
 -  Practitioner, coach, and consultant for [[Agile]] & [[Extreme Programming]].  
 -  Teacher and advocate for clean architecture design & domain patterns.
 
-I love being creative, visual thinking, drawing, and cartooning, and you'll find a number of <a class="internal-link" href="/all#illustrations">illustrated essays</a> here.
+I love being creative, visual thinking, drawing, and cartooning, and you'll find a number of <a class="internal-link" href="/notes#illustrations">illustrated essays</a> here.
 
 <div class="fdr fw-mobile">
 <div class="flex-half-mobile">
@@ -88,7 +90,7 @@ I walk everywhere, and I loving knowing many obscure [[facts about the subway sy
 
 In my free time, I play a *lot* of [[tabletop RPGs]].
 
-Check out a compilation of my [[speaking & writing]].
+Check out a compilation of my external [[speaking & writing]].
 
 </div>
 
