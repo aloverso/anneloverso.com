@@ -34,6 +34,7 @@ I generate box shadows with [Philipp Brumm's webapp](https://brumm.af/shadows).
 - [ ] clean architecture design / microservices
 - [ ] trunk based development
 - [ ] blue/green deploys
+- [ ] facilitation
 
 
 
