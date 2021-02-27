@@ -8,7 +8,7 @@ permalink: /
 <div class="narrower mbxl">
     <h1 class="font-btm text-xl">Anne LoVerso</h1>
     <div class="small-caps mbm">engineer with a passion for software, education, and playing [[tabletop RPGs]] </div>
-    <p markdown="1">I work for [[New Jersey Office of Innovation]] now! Formerly senior software engineer @ [[VMware Pivotal Labs|Pivotal Labs]]</p>
+    <p markdown="1">I work for the [[New Jersey Office of Innovation]] now! Formerly senior software engineer @ [[VMware Pivotal Labs|Pivotal Labs]]</p>
 
     <p class="callout-box">
         Welcome to my <strong>[[digital garden]]</strong>.  This site is a constantly-evolving collection of notes, thoughts, essays, and illustrations.

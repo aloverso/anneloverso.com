@@ -35,7 +35,7 @@ permalink: /about
 
 # About me
 
-Currently, Software Engineering Innovation Fellow at [[New Jersey Office of Innovation]]
+Currently, Software Engineering Innovation Fellow at the [[New Jersey Office of Innovation]]
 
 Formerly, Senior Software Engineer at [[VMware Pivotal Labs]]
 
