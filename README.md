@@ -18,34 +18,22 @@ I generate box shadows with [Philipp Brumm's webapp](https://brumm.af/shadows).
 
 ## Todo:
 
-- [x] k8s post
-- [x] favicon
-- [x] copy posts from obsidian
-- [x] add weights
-- [x] readme
-- [x] homepage
-- [x] about page
-- [x] footer
-- [ ] pages
-    - retros
-    - feedback
-    - black box
-    - UCD
-    - dependency inversion
-    - co-creation
-    - consulting
-    - teaching
-    - lean
-    - communicating technical ideas
-    - DDD
-    - reafctoriung
-    - BDD testing
-    - clean architecture design / microservices
-    - trunk based development
-    - blue/green deploys
-- [ ] test doubles footnote on classic TDD
-- [ ] shipit mobile is broken?
-- [x] filter All by tags
+- [ ] retros
+- [ ] feedback
+- [ ] black box
+- [ ] UCD
+- [ ] dependency inversion
+- [ ] co-creation
+- [ ] consulting
+- [ ] teaching
+- [ ] lean
+- [ ] communicating technical ideas
+- [ ] DDD
+- [ ] refactoring
+- [ ] BDD testing
+- [ ] clean architecture design / microservices
+- [ ] trunk based development
+- [ ] blue/green deploys
 
 
 

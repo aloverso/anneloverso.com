@@ -7,7 +7,7 @@ permalink: /
 
 <div class="narrower mbxl">
     <h1 class="font-btm text-xl">Anne LoVerso</h1>
-    engineer with a passion for software, education, and playing [[tabletop RPGs]] 
+    <div class="small-caps mbm">engineer with a passion for software, education, and playing [[tabletop RPGs]] </div>
     <p markdown="1">I work for [[New Jersey Office of Innovation]] now! Formerly senior software engineer @ [[VMware Pivotal Labs|Pivotal Labs]]</p>
 
     <p class="callout-box">
