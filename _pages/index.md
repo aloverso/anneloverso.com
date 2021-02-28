@@ -72,7 +72,7 @@ permalink: /
 ## Most recently tended
 
 <div class="mbxl caterpillar-container fdr mtd">
-{% assign new_notes_list = site.notes | sort: "last-modified-date" | reverse %}
+{% assign new_notes_list = site.notes | sort: "last_modified_at" | reverse %}
 {% for post in new_notes_list limit:8 %}
 <div class="caterpillar">
     <div class="caterpillar-inner fdr">
