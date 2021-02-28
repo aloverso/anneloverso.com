@@ -1,7 +1,7 @@
 ---
 title: Test Doubles
 weight: 400
-tags: software budding information featured
+tags: software budding information
 ---
 
 # Five types of test double

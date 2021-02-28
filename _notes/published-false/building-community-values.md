@@ -12,3 +12,5 @@ x-card
 techniques
 
 lines and veils
+
+invest in B and C - less effort,spotlight others
