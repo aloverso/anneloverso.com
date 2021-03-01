@@ -1,6 +1,7 @@
 ---
 title: Works I Reference Regularly
 weight: 500
+tags: information
 ---
 
 This is a non-complete unordered list of works that I find myself constantly re-referencing or pointing other people to.

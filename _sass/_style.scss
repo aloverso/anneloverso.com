@@ -172,6 +172,30 @@ time {
   }
 }
 
+.card-small {
+  flex-basis: 48%;
+  padding: 4px;
+  min-width: 0;
+
+  @media (min-width: $xxs) {
+    flex-basis: 31%;
+  }
+
+  @media (min-width: $xs) {
+    flex-basis: 23%;
+  }
+
+  @media (min-width: $sm) {
+    flex-basis: 19%;
+  }
+}
+
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .caterpillar-container {
   flex-wrap: wrap;
 }
