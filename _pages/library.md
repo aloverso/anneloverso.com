@@ -4,7 +4,17 @@ title: Library
 permalink: /library
 ---
 
-# Currently reading
+# The Library
+
+<div class="narrower" markdown="1">
+I tend to read an eclectic collection generally covering: political philosophy, culture & social commentary, fiction/novels, technology, design, psychology, and more. My book notes are likely unedited, stream-of-consciousness, and rough.
+
+**Disclaimer:** I don't *necessarily* recommend all of these as "good" books. Their inclusion here is for my own note-taking and archival purposes. See the ratings and notes on individual books for my recommendation. Think of this Library like my own personal GoodReads where I have control over the format and the way I link my reviews to other notes and concepts.
+
+Finished books list is obviously incomplete. I plan slowly add entries for older books that I read before I started note-taking.
+</div>
+
+## Currently reading
 
 <div class="fdr card-container">
 {% assign notes_list = site.notes %}  
@@ -26,7 +36,7 @@ permalink: /library
 {% endfor %}
 </div>
 
-# Finished
+## Finished
 
 <div class="fdr card-container">
 {% assign notes_list = site.notes | sort: "rating" | reverse %}  
