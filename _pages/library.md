@@ -19,7 +19,7 @@ Finished books list is obviously incomplete. I plan slowly add entries for older
 <div class="fdr card-container">
 {% assign notes_list = site.notes %}  
 {% for post in notes_list %}
-    {% if post.tags contains "library" and post.tags contains "current" %}
+    {% if post.tags contains "library" and post.library contains "current" %}
     <div class="card-small">
         <div class="card-inner">
             <div class="card-title">
@@ -42,7 +42,7 @@ Finished books list is obviously incomplete. I plan slowly add entries for older
 {% assign notes_list = site.notes | sort: "rating" | reverse %}  
 {% for post in notes_list %}
     {% if post.tags contains "library" %}
-    {% unless post.tags contains "current" %}
+    {% unless post.library contains "current" %}
     <div class="card-small">
         <div class="card-inner">
             <div class="card-title">
