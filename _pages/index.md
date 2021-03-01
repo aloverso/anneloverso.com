@@ -21,19 +21,18 @@ permalink: /
 
 <div class="fdr card-container mbxl">
 {% for post in site.notes %}
-{% if post.tags contains "illustrations" %}
-<div class="card">
-    <div class="card-inner">
-    <strong>
-        <a class="internal-link" href="{{ post.url }}">
-            {{ post.title }}
-        </a>
-    </strong>
-    <img class="mtd" src="{{ post.img }}" alt=""/>
-</div>
-</div>
-
-{% endif %}
+    {% if post.tags contains "illustrations" %}
+    <div class="card">
+        <div class="card-inner">
+            <strong>
+                <a class="internal-link" href="{{ post.url }}">
+                    {{ post.title }}
+                </a>
+            </strong>
+            <img class="mtd" src="{{ post.img }}" alt=""/>
+        </div>
+    </div>
+    {% endif %}
 {% endfor %}
 </div>
 
@@ -42,30 +41,30 @@ permalink: /
 
 <div class="mbxl caterpillar-container fdr mtd">
 {% for post in site.notes %}
-{% if post.tags contains "featured" %}
-<div class="caterpillar">
-    <div class="caterpillar-inner fdr">
-        <div class="text-l mrm">
-            {% assign maintag = post.tags[0] %}
-            {% if site.data.icons[maintag] %}
-                {{ site.data.icons[maintag] }}
-            {% else %}
-                {{ site.data.icons.default }}
-            {% endif %}
-        </div>
-        <div>
-            <strong>
-                <a class="no-icon" href="{{ post.url }}">
-                    {{ post.title }}
-                </a>
-            </strong>
-            <div class="text-sm">
-                {{ page.last_modified_at | date: "%B %-d, %Y" }}
+    {% if post.tags contains "featured" %}
+    <div class="caterpillar">
+        <div class="caterpillar-inner fdr">
+            <div class="text-l mrm">
+                {% assign maintag = post.tags[0] %}
+                {% if site.data.icons[maintag] %}
+                    {{ site.data.icons[maintag] }}
+                {% else %}
+                    {{ site.data.icons.default }}
+                {% endif %}
+            </div>
+            <div>
+                <strong>
+                    <a class="no-icon" href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </strong>
+                <div class="text-sm">
+                    {{ post.last_modified_at | date: "%B %-d, %Y" }}
+                </div>
             </div>
         </div>
     </div>
-</div>
-{% endif %}
+    {% endif %}
 {% endfor %}
 </div>
 
@@ -91,7 +90,7 @@ permalink: /
                 </a>
             </strong>
             <div class="text-sm">
-                {{ page.last_modified_at | date: "%B %-d, %Y" }}
+                {{ post.last_modified_at | date: "%B %-d, %Y" }}
             </div>
         </div>
     </div>
@@ -104,19 +103,17 @@ permalink: /
 <div class="fdr card-container">
 {% assign notes_list = site.notes | sort:"weight" %}  
 {% for post in notes_list %}
-{% if post.tags contains "projects" %}
-<div class="card">
-<div class="card-inner">
-    <strong>
-        <a class="internal-link" href="{{ post.url }}">
-            {{ post.title }}
-        </a>
-    </strong>
-    <img class="mtd" src="{{ post.img }}" alt=""/>
-</div>
-</div>
-
-{% endif %}
+    {% if post.tags contains "projects" %}
+    <div class="card">
+        <div class="card-inner">
+            <strong>
+                <a class="internal-link" href="{{ post.url }}">
+                    {{ post.title }}
+                </a>
+            </strong>
+            <img class="mtd" src="{{ post.img }}" alt=""/>
+        </div>
+    </div>
+    {% endif %}
 {% endfor %}
 </div>
-    
