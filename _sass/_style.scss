@@ -258,6 +258,27 @@ time {
   }
 }
 
+.frame {
+  //margin-left: 0;
+  //
+  //@media (min-width: $xxs) {
+  //  margin-left: 2rem;
+  //  width: 66%;
+  //  margin-right: 4rem;
+  //}
+}
+
+.illustration-framed {
+  margin-left: 0;
+  width: 100%;
+
+  @media (min-width: $xxs) {
+    margin-right: 4rem;
+    width: 66%;
+  }
+}
+
+
 .caption {
   margin-bottom: 0;
 

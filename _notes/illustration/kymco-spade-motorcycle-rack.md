@@ -136,6 +136,8 @@ Here's what the final product looked like!
 
 # The End
 
+![](/assets/images/motorcycle-rack/with-bags.jpg)
+
 The final reflection: it works great! It's so much easier to go shopping now when I can just snap the bags on and off the bike.  Saddlebagging-up has gone from a period of minutes of strap management, to just a few seconds.
 
 Best of all, the whole thing cost me $22 and two afternoons (one to do each side of the bike).  How about that to compete with a $120 out-of-stock purchasable rack?
