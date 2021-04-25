@@ -2,6 +2,7 @@
 title: Joyful Militancy
 weight: 900
 tags: books library
+library: this year,4 stars,nonfiction
 img: /assets/images/library/joyful-militancy.jpg
 rating: 4
 ---

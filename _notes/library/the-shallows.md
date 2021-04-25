@@ -2,6 +2,7 @@
 title: The Shallows - What the Internet Is Doing to Our Brains
 weight: 900
 tags: books library
+library: nonfiction,this year,4 stars
 img: /assets/images/library/the-shallows.jpg
 ---
 

@@ -2,6 +2,7 @@
 title: Extrastatecraft - The Power of Infrastructure Space
 weight: 900
 tags: books library
+library: this year,2 stars,nonfiction
 img: /assets/images/library/extrastatecraft.jpg
 ---
 

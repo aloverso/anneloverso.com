@@ -2,6 +2,7 @@
 title: An Absolutely Remarkable Thing
 weight: 900
 tags: books library
+library: older than this year,3 stars,fiction
 img: /assets/images/library/an-absolutely-remarkable-thing.jpg
 rating: 3
 ---

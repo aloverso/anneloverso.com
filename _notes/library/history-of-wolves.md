@@ -2,6 +2,7 @@
 title: History of Wolves
 weight: 900
 tags: books library
+library: this year,3 stars,fiction
 img: /assets/images/library/history-of-wolves.jpg
 ---
 

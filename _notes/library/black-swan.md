@@ -2,6 +2,7 @@
 title: The Black Swan
 weight: 900
 tags: books library
+library: older than this year,3 stars,nonfiction
 img: /assets/images/library/black-swan.jpg
 rating: 3
 ---

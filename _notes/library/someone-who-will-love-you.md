@@ -2,6 +2,7 @@
 title: Someone Who Will Love You in All Your Damaged Glory
 weight: 900
 tags: books library
+library: this year,4 stars,fiction
 img: /assets/images/library/someone-who-will-love-you.jpg
 rating: 4
 ---

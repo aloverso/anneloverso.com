@@ -2,6 +2,7 @@
 title: Thinking in Systems
 weight: 900
 tags: books library
+library: older than this year,5 stars,nonfiction
 img: /assets/images/library/thinking-in-systems.jpg
 rating: 5
 ---
