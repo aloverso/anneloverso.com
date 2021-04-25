@@ -42,6 +42,10 @@ defaults:
     values:
       layout: "illustration"
   - scope:
+      path: "_notes/library/*.md"
+    values:
+      layout: "book"
+  - scope:
       path: "_notes/**/*.md"
     values:
       layout: "note"
