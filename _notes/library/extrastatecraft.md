@@ -2,7 +2,6 @@
 title: Extrastatecraft - The Power of Infrastructure Space
 weight: 900
 tags: books library
-library: current
 img: /assets/images/library/extrastatecraft.jpg
 ---
 
@@ -20,7 +19,19 @@ Keller Easterling reveals the nexus of emerging governmental and corporate force
 
 # Notes
 
-## Introduction
+**Finished:** Apr 2021
+
+**Rating (out of 5):** ⭐⭐
+
+I hated this book, mostly for its writing style coupled with a lack of real, tangible content. The author appears to be constantly on the verge of finally saying something interesting, but fails to do so repeatedly over the course of the entire book.
+
+The book reads more like someone's rambling notes from a lecture series. Too focused on specific names and places, just constantly laying out information and then saying *nothing* about it. There is no "so what", no analysis, no inkling of what the author intends to be saying. But it doesn't work as a history or informational text either, because there's not enough actual detail. No stories, no linear series of events, nothing. It just says things, about zones and broadband and so on, without them being backed up by any analysis nor clear prose of information. Just empty words. And written constantly in the passive voice, as if zones just popped into being by happenstance alone.
+
+This book came highly recommended from others and despite the way it might conceptually touch on interesting ideas (this is what gives it 2 stars instead of 1), it just doesn't actually say anything about these that is worth reading. Would not recommend.
+
+Below follows my notes on the first part of the book, before I got so annoyed at it that I just stopped taking notes:
+
+### Introduction
 
 Infrastructure space has become a medium of information. And as we know from [[Thinking in Systems]] and Donella Meadows, controlling information flows is a form of power and a leverage point on the way that systems organize.
 
@@ -30,7 +41,7 @@ They follow this up with addendum-ing it as "the action is the form." To me, thi
 
 We define **extrastatecraft** as the undisclosed activities outside of, in addition to, and sometimes even in partnership with the state.
 
-## Zone
+### Zone
 
 We learn that most free trade zones were created as a temporary measure by the state to spark economic development, with the intention of eventually re-restricting these areas. It doesn't shock me that their numbers have, in fact, only continued to increase. Those who benefit from the free-trade zones likely have a strong interest vested in keeping them that way.
 
