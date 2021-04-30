@@ -7,7 +7,7 @@ img: /assets/images/library/save-the-cat.jpg
 rating: 4
 ---
 
-{% Slide src: "/assets/images/library/joyful-militancy.jpg" alt: "" %} {{ "
+{% Slide src: "/assets/images/library/save-the-cat.jpg" alt: "" %} {{ "
 ### [Save the Cat! Writes a Novel](https://savethecat.com/products/books/save-the-cat-writes-a-novel) by Jessica Brody
 " | markdownify }}
 
