@@ -29,7 +29,7 @@ Finished books list is obviously incomplete. I plan slowly add entries for older
                     </a>
                 </strong>
             </div>
-            <img class="pvd" src="{{ post.img }}" alt=""/>
+            <img class="ptd" src="{{ post.img }}" alt=""/>
         </div>
     </div>
     {% endif %}
@@ -69,7 +69,7 @@ Finished books list is obviously incomplete. I plan slowly add entries for older
                     </a>
                 </strong>
             </div>
-            <img class="pvd" src="{{ post.img }}" alt=""/>
+            <img class="ptd" src="{{ post.img }}" alt=""/>
         </div>
     </div>
     {% endunless %}

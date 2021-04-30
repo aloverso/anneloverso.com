@@ -16,7 +16,7 @@ layout: default
     <div>
       {% assign tagnum = page.tags | size %}
       {% if tagnum == 0 %}
-        <span class="tag mrd">
+        <span class="tag mrxs mbxs">
           <a class="no-style" href="/notes#seedling">
             <span class="mrs">
                 {{ site.data.icons.default }}
@@ -29,7 +29,7 @@ layout: default
       {% endif %}
       {% for tag in page.tags %}
         {% if site.data.icons[tag] %}
-          <span class="tag mrd">
+          <span class="tag mrxs mbxs">
             <a class="no-style" href="{{ '/notes#' | append: tag }}">
               <span class="mrs">
                   {{ site.data.icons[tag] }}
