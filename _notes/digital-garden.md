@@ -6,7 +6,7 @@ tags: information seedling
 
 # What is a digital garden?
 
-An unfinished, everplace for exploring and publishing topics and links between them.
+An unfinished everplace for exploring and publishing topics and links between them.
 
 # A collection of resources
 

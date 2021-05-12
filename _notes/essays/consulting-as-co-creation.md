@@ -19,7 +19,8 @@ We dance this line, wielding some power and lacking some power. In the context o
 
 An aside: in this post, and the upcoming section, I talk a lot about power and especially "structural power" or "systemic power".  For those unfamiliar, some quick term definitions. When I speak of a "system", I mean a collection of people, things, rules, relationships, flows, and goals (e.g. a company: its goal is to make profit, there are people which create things and relationships that flow according to a set of rules, in order to achieve that goal).  Systemic or structural power comes from the rules and goals of the system. A CEO does not inherently have power, they have power because the intra- and inter-company system is organized in a way that bestows and recognizes their authority.  When I say systemic power, I mean that the social system in which a person operates recognizes them to have legitimate power or authority, outside of that individual’s sole control.
 
-### Sharing Knowledge From a Position of Power
+## Sharing Knowledge From a Position of Power
+
 In a traditional educational setting (like a school or university), a teacher has power and a student does not, due to the assumption that the teacher has some knowledge or information, and that their responsibility is to transfer that to the student. Many modern educational theorists call this the "banking model" of teaching, as per the analysis of Paulo Freire,{% Foot num: "2" %} because teachers are seen as "depositing" information; the students are passive receptacles. This view of the learning relationship disempowers the student, takes away their autonomy and individualism, and negates their own experiences and expertise. Why?  Because according to the dynamics of power, the teacher is the one who knows, so the student must listen.
 
 Another common example of this power paradigm is in social innovation work. A well-meaning student, volunteer, designer, or other privileged outsider enters into a community to which they do not belong, a community with less structural power and some identified problem (such as being considered "in need" or "underdeveloped").  They draw upon their wealth of knowledge to identify a solution, and impose it upon this community. Often, communities are cynical to these efforts. They recognize that outsiders do not have the context necessary to understand their unique struggle and provide an adequate solution within their social or cultural fabric. However, they are disempowered from acting because the outsider has power (often in the form of capital - be it monetary, social, economic, knowledge) and they do not.  This is how we end up with, for example, NGOs that provide clever but worthless tools to underdeveloped countries that become quickly junked.{% Foot num: "3" %}{% Foot num: "4" %}
@@ -34,7 +35,8 @@ The first step to achieving this collaboration requires being humble. Sure, I ha
 
 Therefore, in order for a consulting engagement to be successful, it must be a collaborative experience that draws upon the expertise of both consultant and client. To me, this requires a shift in mindset from transmission of knowledge (from consultant to client) to something else.
 
-### The Road To Co-Creation
+## The Road To Co-Creation
+
 Transmission means leveraging the established power of the consultancy role. It says: "I am the expert and for that reason, you should listen to my opinion." It reinforces the power dynamic. It turns our clients into passive receptacles for our opinions about pairing, testing, or product principles.
 
 That may not sound so bad, you might think. Isn’t that what we’re hired to do? To teach these principles which we know and they do not? No, because our goal is not to dump a textbook’s worth of information about [[test-driven development]] and dependency inversion onto our clients.
@@ -47,7 +49,8 @@ This process of being simultaneously learner and teacher, mentor and mentee, que
 
 The consultant who considers themselves a teacher without being a learner, or who doesn't expect to learn anything from their clients, is the consultant that closes themselves off to growth, and at the same time, closes their entire team off from successfully co-creating their working practice.  That is the consultant who creates who adopts practices without understanding - which leads to a team whose practices fall apart when the consultant leaves.
 
-### Models of Co-Creation
+## Models of Co-Creation
+
 What does it mean to co-create a learning experience? What does it mean to co-design with a community, not for them?
 
 ![the ladder metaphor for participation in projects by subjects](/assets/images/participation-ladder.png)
@@ -62,7 +65,8 @@ In both Participatory Action Research (PAR) and ABCD, the strategy involves taki
 
 This strategy of stepping back, of raising up client voices, of taking what we know and using it to support the goals of clients is co-creation. Prioritizing decision-making to come from all, especially those without power, is co-creation. Leveraging your structural power as a consultant to purposefully empower others is co-creation.
 
-### How to Implement a Co-Creation Mindset
+## How to Implement a Co-Creation Mindset
+
 On a day-to-day level: what does it look like to prioritize co-creation? Let’s say your engineering team is having a full-group discussion about strategy—for example, we’re about to add a new type of user to the application, and we’re brainstorming the ways in which our architecture might have to change to support these new use cases. You have some opinions about what it should look like, whether it should all be in a shared database, or split out into separate tables, and other possibilities. What is your role here?
 
 To start, a useful heuristic for a conversation like this (I've pulled this from the guidelines for write/speak/code{% Foot num: "10" %}) is to ensure that two people talk once before you speak twice. This is a conversation—not your soapbox for speeches about database architectures.

@@ -107,7 +107,7 @@ I also exist here on the internet:
 
 ## This site is for us both
 
-This site is a work-in-progress. There will be incomplete pages. 
+This site is a work-in-progress. There will be incomplete pages. This is the nature of a [[digital garden]].
 
 It's intended to be a growing, living document of my work and experiences, and by that nature, will always have tendrils of new ideas in the form of unfinished pages that I want to expand.
 
